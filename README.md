@@ -1,6 +1,6 @@
 # 1dv607-OOP
 
-## Deltagare
+## Contributors
 * Carolina Skov Pedersen
 * Anna Aldenmark
 * Roy Nilsson
