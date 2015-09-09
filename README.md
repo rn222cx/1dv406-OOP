@@ -7,3 +7,9 @@
 
 ##Workshop 1 - Domain Modeling
 * [Image on UML for workshop 1, grade 2](workshop 1/UML_grade2.png)
+
+##Workshop 2 - Design
+* -
+
+##Workshop 3 - Design Using Patterns
+* -
