@@ -7,7 +7,7 @@
 * Roy Nilsson
 
 ##Workshop 1 - Domain Modeling
-* [Image on UML for workshop 1, grade 2](Workshop 1 - Domain Modeling/UML_grade2-first.png)
+* [Image on UML for workshop 1, grade 2](Workshop 1 - Domain Modeling/UML_grade2.png)
 
 
 ##Workshop 2 - Design
