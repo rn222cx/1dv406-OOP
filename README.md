@@ -15,10 +15,3 @@
 
 ##Workshop 3 - Design Using Patterns
 * -
-
-
-Carolina Skov Pedersen
-Anna Aldenmark
-Roy Nilsson
-[Image on UML for workshop 1, grade 2](Workshop 1 - Domain Modeling/UML_grade2-first.png)
-
