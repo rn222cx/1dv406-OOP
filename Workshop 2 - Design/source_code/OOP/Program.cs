@@ -1,9 +1,9 @@
-﻿using OOP.Model;
+﻿using Workshop_2.Model;
 using System;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace OOP
+namespace Workshop_2
 {
     class Program
     {
