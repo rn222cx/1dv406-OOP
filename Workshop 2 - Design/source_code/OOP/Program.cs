@@ -9,6 +9,7 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(View.StringResource.Welcome);
             Console.Write("type member name         :");
             string name = Console.ReadLine();
             Console.Write("type member personal identification         :");
@@ -18,6 +19,5 @@ namespace OOP
             member.add();
 
         }
-
     }
 }
