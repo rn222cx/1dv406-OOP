@@ -9,6 +9,8 @@ namespace Workshop_2
     {
         static void Main(string[] args)
         {
+
+            // Ett test för att se om det funkar med slack :)
             const char keyToYes = 'y';
             Console.WriteLine(View.StringResource.Welcome);
 
