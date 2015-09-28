@@ -15,47 +15,60 @@ namespace Workshop_2.View
             Console.WriteLine(StringResource.Welcome);
         }
 
-        public void render()
+        public void listMenu()
         {
-            // Ett test för att se om det funkar med slack :)
-            const char keyToYes = 'y';
+            Console.WriteLine("1. Add a new member");
+            Console.WriteLine("2. Add a boat to an existing user");
+            Console.WriteLine("Enter any Key: ");
 
-
-            Console.WriteLine("Do you want to add new member? press y if yes: ");
-            ConsoleKeyInfo addMember = Console.ReadKey();
-            if (addMember.KeyChar == keyToYes)
+            int keyValue = int.Parse(Console.ReadLine());
+        
+            switch (keyValue)
             {
-                Console.Write("type member name         :");
-                string name = Console.ReadLine();
-                Console.Write("type member personal identification         :");
-                string pid = Console.ReadLine();
-
-                var member = new Member(name, pid);
-                member.add();
-
-                Console.WriteLine("You added member");
-                Console.ReadLine();
+                case 1:
+                    addMember();
+                    break;
+                case 2:
+                    addBoat();
+                    break;
+                default:
+                    Console.WriteLine("Please choose a value from the list");
+                    break;
             }
+            Console.ReadLine();
+        }
 
+        public void addMember()
+        {
+            Console.WriteLine("Add New member section");
 
+            Console.Write("type member name : ");
+            string name = Console.ReadLine();
+            Console.Write("type member personal identification : ");
+            string pid = Console.ReadLine();
 
-            Console.WriteLine("Do you want to add boat? press y if yes: ");
-            ConsoleKeyInfo addBoat = Console.ReadKey();
-            if (addBoat.KeyChar == keyToYes)
-            {
-                Console.Write("type member id         :");
-                string memberId = Console.ReadLine();
-                Console.Write("type boat type         :");
-                string type = Console.ReadLine();
-                Console.Write("type boat length         :");
-                string length = Console.ReadLine();
+            var member = new Member(name, pid);
+            member.add();
 
-                var boat = new Boat(memberId, type, length);
-                boat.add();
+            Console.WriteLine("You added member");
+            Console.ReadLine();
+        }
 
-                Console.WriteLine("You added boat");
-                Console.ReadLine();
-            }
+        public void addBoat()
+        {
+            Console.WriteLine("Add New boat section");
+            Console.Write("type member id :");
+            string memberId = Console.ReadLine();
+            Console.Write("type boat type :");
+            string type = Console.ReadLine();
+            Console.Write("type boat length         :");
+            string length = Console.ReadLine();
+
+            var boat = new Boat(memberId, type, length);
+            boat.add();
+
+            Console.WriteLine("You added boat");
+            Console.ReadLine();
         }
     }
 }

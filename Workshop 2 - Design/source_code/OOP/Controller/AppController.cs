@@ -13,7 +13,7 @@ namespace Workshop_2.Controller
         public void doControll(App a)
         {
             a.welcomMessage();
-            a.render();
+            a.listMenu();
         }
 
     }
