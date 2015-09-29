@@ -3,29 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Workshop_2.Model;
 using Workshop_2.View;
 
 namespace Workshop_2.Controller
 {
     class AppController
     {
-        public void doControll(App appView)
+        private AppView appView;
+        private MemberDAL memberDAL;
+        private BoatDAL boatDAL;
+        public AppController(AppView appView)
         {
-            Model.MenuEnum.ListOptions menuChoice;
+            this.appView = appView;
+        }
+        public void doControll()
+        {
+            MenuEnum.ListOptions menuChoice;
             appView.welcomMessage();
             menuChoice = appView.listMenu();
 
             switch (menuChoice)
             {
-                case Model.MenuEnum.ListOptions.addMember:
+                case MenuEnum.ListOptions.addMember:
                     var newMember = appView.addMember();
-                    newMember.add();
+                    memberDAL.add(newMember);
                     break;
-                case Model.MenuEnum.ListOptions.addBoat:
+                case MenuEnum.ListOptions.addBoat:
                     var newBoat = appView.addBoat();
-                    newBoat.add();
+                    boatDAL.add(newBoat);
                     break;
-                case Model.MenuEnum.ListOptions.quit:
+                case MenuEnum.ListOptions.quit:
                     break;
                 default:
                     break;

@@ -7,7 +7,7 @@ using Workshop_2.Model;
 
 namespace Workshop_2.View
 {
-    class App
+    class AppView
     {
         public void welcomMessage()
         {

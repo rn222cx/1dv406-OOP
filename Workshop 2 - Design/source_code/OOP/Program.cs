@@ -2,7 +2,8 @@
 using System;
 using System.Linq;
 using System.Xml.Linq;
-//using Workshop_2.Controller;
+using Workshop_2.Controller;
+using Workshop_2.View;
 
 namespace Workshop_2
 {
@@ -10,12 +11,13 @@ namespace Workshop_2
     {
         static void Main(string[] args)
         {
-            // Creating new instances of view and controller. 
-            Controller.AppController ac = new Controller.AppController();
-            View.App a = new View.App();
+            // Creating new instances of view, controller and model
+            var memberDAL = new MemberDAL();
+            var appView = new AppView();
+            var appController = new AppController(appView);
 
             // Launching controller method. 
-            ac.doControll(a);
+            appController.doControll();
             
         }
     }
