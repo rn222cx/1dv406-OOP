@@ -28,23 +28,33 @@ namespace Workshop_2.Controller
             switch (menuChoice)
             {
                 case MenuEnum.ListOptions.addMember:
-                    var newMember = appView.addMember();
-                    if (memberDAL.add(newMember))
-                    {
-                        appView.addMemberSuccess();
-                    }
+                    doAddMember();
                     break;
                 case MenuEnum.ListOptions.addBoat:
-                    var newBoat = appView.addBoat();
-                    if (boatDAL.add(newBoat))
-                    {
-                        appView.addBoatSuccess();
-                    }
+                    doAddBoat();
                     break;
                 case MenuEnum.ListOptions.quit:
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void doAddMember()
+        {
+            var newMember = appView.addMember();
+            if (memberDAL.add(newMember))
+            {
+                appView.addMemberSuccess();
+            }
+        }
+
+        private void doAddBoat()
+        {
+            var newBoat = appView.addBoat();
+            if (boatDAL.add(newBoat))
+            {
+                appView.addBoatSuccess();
             }
         }
 
