@@ -20,7 +20,7 @@ namespace Workshop_2.View
             // TODO: TEAM -> Choose which string interpolation to stick with
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
             // Denna fungerar inte för mig i VS 2013. 
-            Console.WriteLine($"2. { AppStrings.menuAddNewBoat }");
+            //Console.WriteLine($"2. { AppStrings.menuAddNewBoat }");
             Console.Write(AppStrings.menuMakeChoice);
 
             while (true)
@@ -41,23 +41,22 @@ namespace Workshop_2.View
             }
         }
 
-        //public Member addMember()
-        //{
-        //    Console.Clear();
-        //    Console.WriteLine(AppStrings.menuAddNewMember);
+        public void addMember()
+        {
+            Console.Clear();
+            Console.WriteLine(AppStrings.menuAddNewMember);
 
-        //    Console.Write(AppStrings.addMemberName);
-        //    string name = Console.ReadLine();
+            //Console.Write(AppStrings.addMemberName);
+            //string name = Console.ReadLine();
 
-        //    Console.Write(AppStrings.addMemberSCN);
-        //    string id = Console.ReadLine();
+            //Console.Write(AppStrings.addMemberSCN);
+            //string id = Console.ReadLine();
 
-        //    return new Member(name, id);
-        //}
+            //return new Member(name, id);
+        }
 
         public string getMemberName()
         {
-            Console.WriteLine("\n---------------------------");
             Console.Write(AppStrings.addMemberName);
             string name = Console.ReadLine();
 

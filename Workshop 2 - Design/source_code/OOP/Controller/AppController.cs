@@ -42,6 +42,7 @@ namespace Workshop_2.Controller
 
         private void doAddMember()
         {
+            appView.addMember();
             string name = appView.getMemberName();
             string ssc = appView.getMemberSSN();
             
