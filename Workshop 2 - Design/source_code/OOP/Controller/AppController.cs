@@ -29,11 +29,17 @@ namespace Workshop_2.Controller
             {
                 case MenuEnum.ListOptions.addMember:
                     var newMember = appView.addMember();
-                    memberDAL.add(newMember);
+                    if (memberDAL.add(newMember))
+                    {
+                        appView.addMemberSuccess();
+                    }
                     break;
                 case MenuEnum.ListOptions.addBoat:
                     var newBoat = appView.addBoat();
-                    boatDAL.add(newBoat);
+                    if (boatDAL.add(newBoat))
+                    {
+                        appView.addBoatSuccess();
+                    }
                     break;
                 case MenuEnum.ListOptions.quit:
                     break;
