@@ -9,6 +9,7 @@ namespace Workshop_2.View
 {
     class App
     {
+        private bool correctInput = false;
 
         public void welcomMessage()
         {
@@ -21,20 +22,26 @@ namespace Workshop_2.View
             Console.WriteLine("2. Add a boat to an existing user");
             Console.WriteLine("Enter any Key: ");
 
-            int keyValue = int.Parse(Console.ReadLine());
-        
-            switch (keyValue)
+            do
             {
-                case 1:
-                    addMember();
-                    break;
-                case 2:
-                    addBoat();
-                    break;
-                default:
-                    Console.WriteLine("Please choose a value from the list");
-                    break;
-            }
+                int keyValue = int.Parse(Console.ReadLine());
+
+                switch (keyValue)
+                {
+                    case 1:
+                        addMember();
+                        correctInput = true;
+                        break;
+                    case 2:
+                        addBoat();
+                        correctInput = true;
+                        break;
+                    default:
+                        Console.WriteLine("Please choose a value from the list");
+                        break;
+                } 
+            } while (correctInput == false);
+            correctInput = false;
             Console.ReadLine();
         }
 
