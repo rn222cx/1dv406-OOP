@@ -126,11 +126,11 @@
   <data name="addBoatType" xml:space="preserve">
     <value>Boat type: </value>
   </data>
-  <data name="addMemberID" xml:space="preserve">
-    <value>Members ID: </value>
-  </data>
   <data name="addMemberName" xml:space="preserve">
     <value>Members name: </value>
+  </data>
+  <data name="addMemberSCN" xml:space="preserve">
+    <value>Members social security number: </value>
   </data>
   <data name="addMemberSuccess" xml:space="preserve">
     <value>The new member where added!</value>

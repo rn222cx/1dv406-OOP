@@ -88,20 +88,20 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Members ID: .
-        /// </summary>
-        internal static string addMemberID {
-            get {
-                return ResourceManager.GetString("addMemberID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Members name: .
         /// </summary>
         internal static string addMemberName {
             get {
                 return ResourceManager.GetString("addMemberName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Members social security number: .
+        /// </summary>
+        internal static string addMemberSCN {
+            get {
+                return ResourceManager.GetString("addMemberSCN", resourceCulture);
             }
         }
         

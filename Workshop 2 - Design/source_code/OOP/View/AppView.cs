@@ -46,23 +46,27 @@ namespace Workshop_2.View
 
             Console.Write(AppStrings.addMemberName);
             string name = Console.ReadLine();
-            Console.Write(AppStrings.addMemberID);
+            Console.Write(AppStrings.addMemberSCN);
             string id = Console.ReadLine();
 
+            // TODO: Success message should only be displayed after success, maybe put in a new method and let MemberDAL.Add() return true if success?
             Console.WriteLine(AppStrings.addMemberSuccess);
+
             return new Member(name, id);
         }
 
         public Boat addBoat()
         {
+            Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewBoat);
-            Console.Write(AppStrings.addMemberID);
+            Console.Write(AppStrings.addMemberSCN);
             string memberId = Console.ReadLine();
             Console.Write(AppStrings.addBoatType);
             string type = Console.ReadLine();
             Console.Write(AppStrings.addBoatLength);
             string length = Console.ReadLine();
 
+            // TODO: Success message should only be displayed after success, maybe put in a new method and let BoatDAL.Add() return true if success?
             Console.WriteLine(AppStrings.addBoatSuccess);
 
             return new Boat(memberId, type, length);

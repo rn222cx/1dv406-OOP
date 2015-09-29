@@ -16,6 +16,8 @@ namespace Workshop_2.Controller
         public AppController(AppView appView)
         {
             this.appView = appView;
+            memberDAL = new MemberDAL();
+            boatDAL = new BoatDAL();
         }
         public void doControll()
         {
