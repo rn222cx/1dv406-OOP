@@ -9,73 +9,63 @@ namespace Workshop_2.View
 {
     class App
     {
-        private bool correctInput = false;
-
         public void welcomMessage()
         {
             Console.WriteLine(StringResource.Welcome);
         }
 
-        public void listMenu()
+        public MenuEnum.ListOptions listMenu()
         {
-            Console.WriteLine("1. Add a new member");
-            Console.WriteLine("2. Add a boat to an existing user");
-            Console.WriteLine("Enter any Key: ");
+            // Below is to different way to work with strings, the second one is C# 6.0
+            // TODO: Team: Choose which string interpolation to stick with
+            Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
+            Console.WriteLine($"2. { AppStrings.menuAddNewBoat }");
+            Console.Write(AppStrings.menuMakeChoice);
 
-            do
+            while (true)
             {
                 int keyValue = int.Parse(Console.ReadLine());
 
                 switch (keyValue)
                 {
                     case 1:
-                        addMember();
-                        correctInput = true;
-                        break;
+                        return MenuEnum.ListOptions.addMember;
                     case 2:
-                        addBoat();
-                        correctInput = true;
-                        break;
+                        return MenuEnum.ListOptions.addBoat;
                     default:
-                        Console.WriteLine("Please choose a value from the list!");
+                        Console.Write(AppStrings.menuWrongChoice);
                         break;
                 } 
-            } while (correctInput == false);
-            correctInput = false;
-            Console.ReadLine();
+            }
         }
 
-        public void addMember()
+        public Member addMember()
         {
-            Console.WriteLine("Add New member section");
+            Console.Clear();
+            Console.WriteLine(AppStrings.menuAddNewMember);
 
-            Console.Write("type member name : ");
+            Console.Write(AppStrings.addMemberName);
             string name = Console.ReadLine();
-            Console.Write("type member personal identification : ");
-            string pid = Console.ReadLine();
+            Console.Write(AppStrings.addMemberID);
+            string id = Console.ReadLine();
 
-            var member = new Member(name, pid);
-            member.add();
-
-            Console.WriteLine("You added member");
-            Console.ReadLine();
+            Console.WriteLine(AppStrings.addMemberSuccess);
+            return new Member(name, id);
         }
 
-        public void addBoat()
+        public Boat addBoat()
         {
-            Console.WriteLine("Add New boat section");
-            Console.Write("type member id :");
+            Console.WriteLine(AppStrings.menuAddNewBoat);
+            Console.Write(AppStrings.addMemberID);
             string memberId = Console.ReadLine();
-            Console.Write("type boat type :");
+            Console.Write(AppStrings.addBoatType);
             string type = Console.ReadLine();
-            Console.Write("type boat length         :");
+            Console.Write(AppStrings.addBoatLength);
             string length = Console.ReadLine();
 
-            var boat = new Boat(memberId, type, length);
-            boat.add();
+            Console.WriteLine(AppStrings.addBoatSuccess);
 
-            Console.WriteLine("You added boat");
-            Console.ReadLine();
+            return new Boat(memberId, type, length);
         }
     }
 }
