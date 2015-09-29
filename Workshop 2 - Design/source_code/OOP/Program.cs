@@ -12,7 +12,7 @@ namespace Workshop_2
         static void Main(string[] args)
         {
             // Creating new instances of view, controller and model
-            var memberDAL = new MemberDAL();
+            //var memberDAL = new MemberDAL();
             var appView = new AppView();
             var appController = new AppController(appView);
 

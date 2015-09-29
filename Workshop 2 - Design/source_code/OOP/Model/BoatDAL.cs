@@ -13,14 +13,6 @@ namespace Workshop_2.Model
         {
             try
             {
-                //Count the number of Employees living in the state CA
-
-                //XElement xelement = XElement.Load("..\\..\\Employees.xml");
-                //var stCnt = from address in xelement.Elements("Employee")
-                //            where (string)address.Element("Address").Element("State") == "CA"
-                //            select address;
-                //Console.WriteLine("No of Employees living in CA State are {0}", stCnt.Count());
-
                 XDocument doc = XDocument.Load("Members.xml");
 
                 XElement particularStudent = doc.Element("Members").Elements("Member")
