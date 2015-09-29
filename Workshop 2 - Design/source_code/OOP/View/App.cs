@@ -37,7 +37,7 @@ namespace Workshop_2.View
                         correctInput = true;
                         break;
                     default:
-                        Console.WriteLine("Please choose a value from the list");
+                        Console.WriteLine("Please choose a value from the list!");
                         break;
                 } 
             } while (correctInput == false);
