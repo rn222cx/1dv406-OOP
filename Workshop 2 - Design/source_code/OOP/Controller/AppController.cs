@@ -22,7 +22,7 @@ namespace Workshop_2.Controller
         public void doControll()
         {
             MenuEnum.ListOptions menuChoice;
-            appView.welcomMessage();
+            appView.welcomeMessage();
             menuChoice = appView.listMenu();
 
             switch (menuChoice)
@@ -42,7 +42,14 @@ namespace Workshop_2.Controller
 
         private void doAddMember()
         {
-            var newMember = appView.addMember();
+            string name = appView.getMemberName();
+            string ssc = appView.getMemberSSN();
+            
+            //var newMember = appView.addMember();
+
+            // Skapar ett nytt objekt här istället eftersom jag tror att det bryter mot MVC att göra det i vyn. 
+            var newMember = new Member(name, ssc);
+            
             if (memberDAL.add(newMember))
             {
                 appView.addMemberSuccess();

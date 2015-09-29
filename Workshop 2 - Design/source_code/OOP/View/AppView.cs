@@ -9,7 +9,7 @@ namespace Workshop_2.View
 {
     class AppView
     {
-        public void welcomMessage()
+        public void welcomeMessage()
         {
             Console.WriteLine(StringResource.Welcome);
         }
@@ -19,18 +19,20 @@ namespace Workshop_2.View
             // Below is to different way to work with strings, the second one is C# 6.0
             // TODO: TEAM -> Choose which string interpolation to stick with
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
+            // Denna fungerar inte för mig i VS 2013. 
             Console.WriteLine($"2. { AppStrings.menuAddNewBoat }");
             Console.Write(AppStrings.menuMakeChoice);
 
             while (true)
             {
-                int keyValue = int.Parse(Console.ReadLine());
+                //int keyValue = int.Parse(Console.ReadLine());
+                char keyValue = Console.ReadKey().KeyChar;
 
                 switch (keyValue)
                 {
-                    case 1:
+                    case '1':
                         return MenuEnum.ListOptions.addMember;
-                    case 2:
+                    case '2':
                         return MenuEnum.ListOptions.addBoat;
                     default:
                         Console.Write(AppStrings.menuWrongChoice);
@@ -39,22 +41,40 @@ namespace Workshop_2.View
             }
         }
 
-        public Member addMember()
-        {
-            Console.Clear();
-            Console.WriteLine(AppStrings.menuAddNewMember);
+        //public Member addMember()
+        //{
+        //    Console.Clear();
+        //    Console.WriteLine(AppStrings.menuAddNewMember);
 
+        //    Console.Write(AppStrings.addMemberName);
+        //    string name = Console.ReadLine();
+
+        //    Console.Write(AppStrings.addMemberSCN);
+        //    string id = Console.ReadLine();
+
+        //    return new Member(name, id);
+        //}
+
+        public string getMemberName()
+        {
+            Console.WriteLine("\n---------------------------");
             Console.Write(AppStrings.addMemberName);
             string name = Console.ReadLine();
 
-            Console.Write(AppStrings.addMemberSCN);
-            string id = Console.ReadLine();
+            return name;          
+        }
 
-            return new Member(name, id);
+        public string getMemberSSN()
+        {
+            Console.Write(AppStrings.addMemberSCN);
+            string ssn = Console.ReadLine();
+
+            return ssn;
         }
 
         public void addMemberSuccess()
         {
+            
             Console.WriteLine(AppStrings.addMemberSuccess);
         }
 
@@ -74,6 +94,8 @@ namespace Workshop_2.View
             
             return new Boat(memberId, type, length);
         }
+
+
 
         public void addBoatSuccess()
         {
