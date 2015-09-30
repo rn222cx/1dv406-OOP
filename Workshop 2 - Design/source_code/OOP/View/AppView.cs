@@ -109,6 +109,7 @@ namespace Workshop_2.View
                 {
                     if (memberDAL.validateMemberID(ID))
                     {
+                        memberDAL.getMemberByID(ID);
                         return ID;
                     }
                     else
