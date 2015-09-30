@@ -124,7 +124,7 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to b.
+        ///   Looks up a localized string similar to B.
         /// </summary>
         internal static string backKey {
             get {

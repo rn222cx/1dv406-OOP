@@ -42,8 +42,6 @@ namespace Workshop_2.View
                     case '3':
                         return ListOption.showCompactListOfMembers;
                     case 'q':
-                        Console.Write("\n{0}",AppStrings.menuGoodBye);
-                        Console.ReadKey();
                         return ListOption.quit;
                     default:
                         Console.Write(AppStrings.menuWrongChoice);
@@ -168,10 +166,16 @@ namespace Workshop_2.View
             }
 
             Console.WriteLine(AppStrings.back, AppStrings.backKey);
-            if (char.ToLower(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey))
+            if (char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey))
             {
                 listMenu();
             }
+        }
+
+        public void exit()
+        {
+            Console.Write("\n{0}", AppStrings.menuGoodBye);
+            Console.ReadKey();
         }
     }
 }

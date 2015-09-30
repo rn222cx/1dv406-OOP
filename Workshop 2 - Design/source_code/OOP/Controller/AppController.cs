@@ -19,30 +19,39 @@ namespace Workshop_2.Controller
             memberDAL = new MemberDAL();
             boatDAL = new BoatDAL();
         }
+
         public void doControll()
         {
-            while (true)
+            Dictionary<ListOption, Action> Menu = new Dictionary<ListOption, Action>();
+            ListOption menuChoice = new ListOption();
+            Menu.Add(ListOption.addMember, doAddMember);
+            Menu.Add(ListOption.addBoat, doAddBoat);
+            Menu.Add(ListOption.showCompactListOfMembers, appView.displayCompactListOfMembers);
+            Menu.Add(ListOption.quit, appView.exit);
+
+            while (menuChoice != ListOption.quit)
             {
-                ListOption menuChoice;
                 appView.welcomeMessage();
                 menuChoice = appView.listMenu();
 
-                switch (menuChoice)
-                {
-                    case ListOption.addMember:
-                        doAddMember();
-                        break;
-                    case ListOption.addBoat:
-                        doAddBoat();
-                        break;
-                    case ListOption.showCompactListOfMembers:
-                        appView.displayCompactListOfMembers();
-                        break;
-                    case ListOption.quit:
-                        return;
-                    default:
-                        break;
-                } 
+                Menu[menuChoice]();
+
+                //switch (menuChoice)
+                //{
+                //    case ListOption.addMember:
+                //        doAddMember();
+                //        break;
+                //    case ListOption.addBoat:
+                //        doAddBoat();
+                //        break;
+                //    case ListOption.showCompactListOfMembers:
+                //        appView.displayCompactListOfMembers();
+                //        break;
+                //    case ListOption.quit:
+                //        return;
+                //    default:
+                //        break;
+                //} 
             }
         }
 

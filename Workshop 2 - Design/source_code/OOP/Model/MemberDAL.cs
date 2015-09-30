@@ -58,12 +58,19 @@ namespace Workshop_2.Model
 
         public bool validateMemberID(int IdToValidate)
         {
-            XElement xElement = XElement.Load(XMLFileInfo.Path);
-            IEnumerable<XElement> members = xElement.Elements();
-            foreach (var member in members)
+            try
             {
-                if (member.Element(XMLFileInfo.ID).Value == IdToValidate.ToString())
-                    return true;
+                XElement xElement = XElement.Load(XMLFileInfo.Path);
+                IEnumerable<XElement> members = xElement.Elements();
+                foreach (var member in members)
+                {
+                    if (member.Element(XMLFileInfo.ID).Value == IdToValidate.ToString())
+                        return true;
+                }
+            }
+            catch (Exception)
+            {
+                
             }
 
             return false;
@@ -95,14 +102,23 @@ namespace Workshop_2.Model
         {
             var memberList = new List<Member>();
 
-            XElement xElement = XElement.Load(XMLFileInfo.Path);
-
-            IEnumerable<XElement> members = xElement.Elements();
-
-            foreach (var member in members)
+            try
             {
-                memberList.Add(new Member((string)member.Element(XMLFileInfo.Name), (string)member.Element(XMLFileInfo.SocialSecurityNumber)));
+                XElement xElement = XElement.Load(XMLFileInfo.Path);
+
+                IEnumerable<XElement> members = xElement.Elements();
+
+                foreach (var member in members)
+                {
+                    memberList.Add(new Member((string)member.Element(XMLFileInfo.Name), (string)member.Element(XMLFileInfo.SocialSecurityNumber)));
+                }
             }
+            catch (Exception)
+            {
+                
+            }
+
+            memberList.TrimExcess();
 
             return memberList;
         }

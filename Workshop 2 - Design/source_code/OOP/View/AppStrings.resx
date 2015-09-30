@@ -196,7 +196,7 @@
     <value>Press {0} to return to menu.</value>
   </data>
   <data name="backKey" xml:space="preserve">
-    <value>b</value>
+    <value>B</value>
   </data>
   <data name="divider" xml:space="preserve">
     <value>--------------------------</value>
