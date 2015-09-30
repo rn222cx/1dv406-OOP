@@ -142,6 +142,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quit.
+        /// </summary>
+        internal static string menuQuit {
+            get {
+                return ResourceManager.GetString("menuQuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Try again: .
         /// </summary>
         internal static string menuWrongChoice {

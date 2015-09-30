@@ -21,22 +21,25 @@ namespace Workshop_2.Controller
         }
         public void doControll()
         {
-            MenuEnum.ListOptions menuChoice;
-            appView.welcomeMessage();
-            menuChoice = appView.listMenu();
-
-            switch (menuChoice)
+            while (true)
             {
-                case MenuEnum.ListOptions.addMember:
-                    doAddMember();
-                    break;
-                case MenuEnum.ListOptions.addBoat:
-                    doAddBoat();
-                    break;
-                case MenuEnum.ListOptions.quit:
-                    break;
-                default:
-                    break;
+                MenuEnum.ListOptions menuChoice;
+                appView.welcomeMessage();
+                menuChoice = appView.listMenu();
+
+                switch (menuChoice)
+                {
+                    case MenuEnum.ListOptions.addMember:
+                        doAddMember();
+                        break;
+                    case MenuEnum.ListOptions.addBoat:
+                        doAddBoat();
+                        break;
+                    case MenuEnum.ListOptions.quit:
+                        return;
+                    default:
+                        break;
+                } 
             }
         }
 

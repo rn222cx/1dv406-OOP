@@ -16,24 +16,23 @@ namespace Workshop_2.View
 
         public MenuEnum.ListOptions listMenu()
         {
-            // Below is to different way to work with strings, the second one is C# 6.0
-            // TODO: TEAM -> Choose which string interpolation to stick with
+            Console.Clear();
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
-            // Denna fungerar inte för mig i VS 2013. 
-            //Console.WriteLine($"2. { AppStrings.menuAddNewBoat }");
+            Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);
+            Console.WriteLine("q. {0}", AppStrings.menuQuit);
             Console.Write(AppStrings.menuMakeChoice);
 
             while (true)
             {
-                //int keyValue = int.Parse(Console.ReadLine());
                 char keyValue = Console.ReadKey().KeyChar;
-
                 switch (keyValue)
                 {
                     case '1':
                         return MenuEnum.ListOptions.addMember;
                     case '2':
                         return MenuEnum.ListOptions.addBoat;
+                    case 'q':
+                        return MenuEnum.ListOptions.quit;
                     default:
                         Console.Write(AppStrings.menuWrongChoice);
                         break;

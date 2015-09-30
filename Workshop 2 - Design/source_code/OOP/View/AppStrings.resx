@@ -144,6 +144,9 @@
   <data name="menuMakeChoice" xml:space="preserve">
     <value>Enter your choice: </value>
   </data>
+  <data name="menuQuit" xml:space="preserve">
+    <value>Quit</value>
+  </data>
   <data name="menuWrongChoice" xml:space="preserve">
     <value>Try again: </value>
   </data>
