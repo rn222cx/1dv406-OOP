@@ -13,7 +13,7 @@ namespace Workshop_2.Model
     {
         public bool saveMember(Member member)
         {
-            if (member.MemberID == 0)
+            if (member.MemberID != 0)
             {
                 return updateMember(member);
             }
