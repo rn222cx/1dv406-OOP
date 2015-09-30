@@ -4,11 +4,14 @@ using System.Linq;
 using System.Xml.Linq;
 using Workshop_2.Controller;
 using Workshop_2.View;
+using System.Xml;
 
 namespace Workshop_2
 {
     class Program
     {
+        private static object xDocument;
+
         static void Main(string[] args)
         {
             // Creating new instances of view, controller and model
@@ -18,7 +21,7 @@ namespace Workshop_2
 
             // Launching controller method. 
             appController.doControll();
-            
+
         }
     }
 }

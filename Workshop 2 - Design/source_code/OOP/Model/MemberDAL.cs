@@ -124,6 +124,18 @@ namespace Workshop_2.Model
             return member;
         }
 
+        public void removeMember()
+        {
+            XElement xElement = XElement.Load(XMLFileInfo.Path);
+
+            xElement.Descendants("Member")
+                .Where(aa => aa.Element("ID").Value == "1")
+                .Remove();
+
+            Console.WriteLine(xElement);
+            Console.ReadLine();
+        }
+
 
         /// <summary>
         /// Creates list of all members. 
