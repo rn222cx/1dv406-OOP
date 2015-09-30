@@ -156,4 +156,7 @@
   <data name="menuGoodBye" xml:space="preserve">
     <value>Press any key to quit...</value>
   </data>
+  <data name="getBoatId" xml:space="preserve">
+    <value>Enter members ID</value>
+  </data>
 </root>
