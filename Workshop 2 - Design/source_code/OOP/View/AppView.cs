@@ -159,16 +159,16 @@ namespace Workshop_2.View
         {
             Console.Clear();
             Console.WriteLine(AppStrings.compactListOfMembers);
-            Console.WriteLine("--------------------------");
+            Console.WriteLine(AppStrings.divider);
             var members = memberDAL.getMembers();
 
             foreach (var member in members)
             {
-                Console.WriteLine("{0} has Id {1} and has boat/boats", member.Name, member.SocialSecurityNumber);
+                Console.WriteLine(AppStrings.presentShortMember, member.Name, member.SocialSecurityNumber);
             }
 
-            Console.WriteLine("Press b to return to menu");
-            if (Console.ReadKey().KeyChar == 'b')
+            Console.WriteLine(AppStrings.back, AppStrings.backKey);
+            if (char.ToLower(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey))
             {
                 listMenu();
             }

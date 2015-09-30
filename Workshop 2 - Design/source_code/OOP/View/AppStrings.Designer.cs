@@ -115,6 +115,24 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press {0} to return to menu..
+        /// </summary>
+        internal static string back {
+            get {
+                return ResourceManager.GetString("back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to b.
+        /// </summary>
+        internal static string backKey {
+            get {
+                return ResourceManager.GetString("backKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Canoe.
         /// </summary>
         internal static string boatTypeCanoe {
@@ -156,6 +174,15 @@ namespace Workshop_2.View {
         internal static string compactListOfMembers {
             get {
                 return ResourceManager.GetString("compactListOfMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --------------------------.
+        /// </summary>
+        internal static string divider {
+            get {
+                return ResourceManager.GetString("divider", resourceCulture);
             }
         }
         
@@ -282,6 +309,15 @@ namespace Workshop_2.View {
         internal static string presentMembersSSN {
             get {
                 return ResourceManager.GetString("presentMembersSSN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} has Id {1} and has boat/boats..
+        /// </summary>
+        internal static string presentShortMember {
+            get {
+                return ResourceManager.GetString("presentShortMember", resourceCulture);
             }
         }
     }

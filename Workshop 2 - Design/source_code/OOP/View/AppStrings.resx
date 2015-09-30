@@ -192,4 +192,16 @@
   <data name="menuShowCompactListOfMembers" xml:space="preserve">
     <value>Show compact list of members</value>
   </data>
+  <data name="back" xml:space="preserve">
+    <value>Press {0} to return to menu.</value>
+  </data>
+  <data name="backKey" xml:space="preserve">
+    <value>b</value>
+  </data>
+  <data name="divider" xml:space="preserve">
+    <value>--------------------------</value>
+  </data>
+  <data name="presentShortMember" xml:space="preserve">
+    <value>{0} has Id {1} and has boat/boats.</value>
+  </data>
 </root>
