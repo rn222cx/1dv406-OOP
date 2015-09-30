@@ -38,6 +38,9 @@ namespace Workshop_2.Controller
                     case ListOption.showCompactListOfMembers:
                         appView.displayCompactListOfMembers();
                         break;
+                    case ListOption.removeBoat:
+                        // TODO push so i dont get conflikts 
+                        break;
                     case ListOption.quit:
                         return;
                     default:

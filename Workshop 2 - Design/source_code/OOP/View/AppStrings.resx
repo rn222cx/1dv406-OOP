@@ -192,4 +192,7 @@
   <data name="menuShowCompactListOfMembers" xml:space="preserve">
     <value>Show compact list of members</value>
   </data>
+  <data name="removeMember" xml:space="preserve">
+    <value>Remove a member</value>
+  </data>
 </root>
