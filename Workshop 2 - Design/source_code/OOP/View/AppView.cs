@@ -64,9 +64,7 @@ namespace Workshop_2.View
             Console.Write(AppStrings.addMemberSSN);
             string ssn = Console.ReadLine();
 
-            var member = new Member();
-            member.Name = name;
-            member.SocialSecurityNumber = ssn;
+            var member = new Member(name, ssn);
 
             return member;
 
