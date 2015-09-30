@@ -11,6 +11,9 @@ namespace Workshop_2.Model
         addMember = 1,
         addBoat,
         quit,
-        showCompactListOfMembers
+        showCompactListOfMembers,
+        showVerboseListOfMembers,
+        removeMember,
+        removeBoat
     }
 }

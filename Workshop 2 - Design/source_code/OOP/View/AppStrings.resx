@@ -204,4 +204,7 @@
   <data name="presentShortMember" xml:space="preserve">
     <value>{0} has Id {1} and has boat/boats.</value>
   </data>
+  <data name="removeMember" xml:space="preserve">
+    <value>Remove a member</value>
+  </data>
 </root>

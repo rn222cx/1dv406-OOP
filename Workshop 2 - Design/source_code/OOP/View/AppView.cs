@@ -27,6 +27,7 @@ namespace Workshop_2.View
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
             Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);
             Console.WriteLine("3. {0}", AppStrings.menuShowCompactListOfMembers);
+            Console.WriteLine("5. {0}", AppStrings.removeMember);
             Console.WriteLine("Q. {0}", AppStrings.menuQuit);
             Console.Write(AppStrings.menuMakeChoice);
 
@@ -41,6 +42,8 @@ namespace Workshop_2.View
                         return ListOption.addBoat;
                     case '3':
                         return ListOption.showCompactListOfMembers;
+                    case '5':
+                        return ListOption.removeMember;
                     case 'q':
                         return ListOption.quit;
                     default:
