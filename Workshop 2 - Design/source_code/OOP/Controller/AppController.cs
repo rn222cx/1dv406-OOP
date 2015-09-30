@@ -59,7 +59,7 @@ namespace Workshop_2.Controller
         {
             var newMember = appView.addMember();
             
-            if (memberDAL.add(newMember))
+            if (memberDAL.saveMember(newMember))
             {
                 appView.addMemberSuccess();
             }
