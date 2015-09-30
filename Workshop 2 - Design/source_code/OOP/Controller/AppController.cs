@@ -56,8 +56,10 @@ namespace Workshop_2.Controller
 
         private void doAddBoat()
         {
-            var newBoat = appView.addBoat();
-            if (boatDAL.add(newBoat))
+            appView.addBoat();
+            var memberID = appView.getNewBoatMemberID();
+            var newBoat = appView.getNewBoat();
+            if (boatDAL.add(memberID, newBoat))
             {
                 appView.addBoatSuccess();
             }

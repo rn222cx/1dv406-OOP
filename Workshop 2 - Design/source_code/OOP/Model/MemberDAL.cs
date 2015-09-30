@@ -53,14 +53,14 @@ namespace Workshop_2.Model
                     //   new XElement("PersonalNumber", PersonalNumber)));
                     //xDocument.Save("Members.xml");
 
-                    XElement xEle = XElement.Load("Members.xml");
-                    int id = int.Parse((string)xEle.Descendants("id").FirstOrDefault());
+                    XElement xElement = XElement.Load("Members.xml");
+                    int id = int.Parse((string)xElement.Descendants("id").FirstOrDefault());
                     id++;
-                    xEle.AddFirst(new XElement("Member",
+                    xElement.AddFirst(new XElement("Member",
                        new XElement("id", id),
                        new XElement("Name", member.Name),
                        new XElement("PersonalNumber", member.SocialSecurityNumber)));
-                    xEle.Save("Members.xml");
+                    xElement.Save("Members.xml");
                 }
                 return true;
             }
@@ -68,6 +68,19 @@ namespace Workshop_2.Model
             {
                 return false;
             }
+        }
+
+        public bool validateMemberID(int IdToValidate)
+        {
+            XElement xElement = XElement.Load("Members.xml");
+            IEnumerable<XElement> members = xElement.Elements();
+            foreach (var member in members)
+            {
+                if (member.Element("id").Value == IdToValidate.ToString())
+                    return true;
+            }
+
+            return false;
         }
     }
 }

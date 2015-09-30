@@ -115,11 +115,20 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter members ID.
+        ///   Looks up a localized string similar to Enter members ID: .
         /// </summary>
-        internal static string getBoatId {
+        internal static string getMemberId {
             get {
-                return ResourceManager.GetString("getBoatId", resourceCulture);
+                return ResourceManager.GetString("getMemberId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member do not exist, try again: .
+        /// </summary>
+        internal static string getMemberIDFail {
+            get {
+                return ResourceManager.GetString("getMemberIDFail", resourceCulture);
             }
         }
         
@@ -169,20 +178,20 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Welcome to this amazing application!.
+        /// </summary>
+        internal static string menuWelcome {
+            get {
+                return ResourceManager.GetString("menuWelcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Try again: .
         /// </summary>
         internal static string menuWrongChoice {
             get {
                 return ResourceManager.GetString("menuWrongChoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Welcome to this amazing application!.
-        /// </summary>
-        internal static string Welcome {
-            get {
-                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
     }

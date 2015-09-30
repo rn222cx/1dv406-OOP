@@ -9,9 +9,14 @@ namespace Workshop_2.View
 {
     class AppView
     {
+        private MemberDAL memberDAL;
+        public AppView ()
+        {
+            memberDAL = new MemberDAL();
+        }
         public void welcomeMessage()
         {
-            Console.WriteLine(AppStrings.Welcome);
+            Console.WriteLine(AppStrings.menuWelcome);
         }
 
         public MenuEnum.ListOptions listMenu()
@@ -77,21 +82,41 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.addMemberSuccess);
         }
 
-        public Boat addBoat()
+        public void addBoat()
         {
             Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewBoat);
+        }
 
-            Console.Write(AppStrings.getBoatId);
-            string memberId = Console.ReadLine();
-
+        public Boat getNewBoat()
+        {
             Console.Write(AppStrings.addBoatType);
             string type = Console.ReadLine();
 
             Console.Write(AppStrings.addBoatLength);
             string length = Console.ReadLine();
             
-            return new Boat(memberId, type, length);
+            return new Boat(type, length);
+        }
+
+        public int getNewBoatMemberID()
+        {
+            while (true)
+            {
+                int ID;
+                Console.Write(AppStrings.getMemberId);
+                if (int.TryParse(Console.ReadLine(), out ID))
+                {
+                    if (memberDAL.validateMemberID(ID))
+                    {
+                        return ID;
+                    }
+                    else
+                    {
+                        Console.Write(AppStrings.getMemberIDFail);
+                    }
+                } 
+            }
         }
 
         public void addBoatSuccess()
