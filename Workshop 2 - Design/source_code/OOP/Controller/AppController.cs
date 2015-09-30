@@ -43,13 +43,7 @@ namespace Workshop_2.Controller
         private void doAddMember()
         {
             appView.addMember();
-            string name = appView.getMemberName();
-            string ssc = appView.getMemberSSN();
-            
-            //var newMember = appView.addMember();
-
-            // Skapar ett nytt objekt här istället eftersom jag tror att det bryter mot MVC att göra det i vyn. 
-            var newMember = new Member(name, ssc);
+            var newMember = new Member(appView.getMemberName(), appView.getMemberSSN());
             
             if (memberDAL.add(newMember))
             {

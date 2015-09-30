@@ -99,9 +99,9 @@ namespace Workshop_2.View {
         /// <summary>
         ///   Looks up a localized string similar to Members social security number: .
         /// </summary>
-        internal static string addMemberSCN {
+        internal static string addMemberSSN {
             get {
-                return ResourceManager.GetString("addMemberSCN", resourceCulture);
+                return ResourceManager.GetString("addMemberSSN", resourceCulture);
             }
         }
         

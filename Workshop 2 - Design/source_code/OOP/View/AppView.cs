@@ -65,7 +65,7 @@ namespace Workshop_2.View
 
         public string getMemberSSN()
         {
-            Console.Write(AppStrings.addMemberSCN);
+            Console.Write(AppStrings.addMemberSSN);
             string ssn = Console.ReadLine();
 
             return ssn;
@@ -82,7 +82,7 @@ namespace Workshop_2.View
             Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewBoat);
 
-            Console.Write(AppStrings.addMemberSCN);
+            Console.Write(AppStrings.addMemberSSN);
             string memberId = Console.ReadLine();
 
             Console.Write(AppStrings.addBoatType);
