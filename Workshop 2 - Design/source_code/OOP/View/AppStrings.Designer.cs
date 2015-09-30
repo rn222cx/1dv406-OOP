@@ -115,6 +115,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter members ID.
+        /// </summary>
+        internal static string getBoatId {
+            get {
+                return ResourceManager.GetString("getBoatId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add a boat to an existing user.
         /// </summary>
         internal static string menuAddNewBoat {
