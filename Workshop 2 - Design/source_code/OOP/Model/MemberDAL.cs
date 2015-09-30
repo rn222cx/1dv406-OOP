@@ -12,7 +12,8 @@ namespace Workshop_2.Model
     class MemberDAL
     {
         public bool add(Member member)
-        {
+        {            
+            
             try
             {
                 if (File.Exists(XMLFileInfo.Path) == false)
@@ -82,8 +83,12 @@ namespace Workshop_2.Model
 
             var memberSSNs = memberInfo.Elements(XMLFileInfo.SocialSecurityNumber);
             XElement memberSSN = memberSSNs.First();
+            
+            var member = new Member();
+            member.Name = memberName.Value;
+            member.SocialSecurityNumber = memberSSN.Value;
 
-            return new Member(memberName.Value, memberSSN.Value);
+            return member;
         }
 
 
@@ -101,7 +106,14 @@ namespace Workshop_2.Model
 
             foreach (var member in members)
             {
-                memberList.Add(new Member((string)member.Element(XMLFileInfo.Name), (string)member.Element(XMLFileInfo.SocialSecurityNumber)));
+                //memberList.Add(new Member((string)member.Element(XMLFileInfo.Name), (string)member.Element(XMLFileInfo.SocialSecurityNumber)));
+
+                memberList.Add(new Member
+                {
+                    memberID = (int)member.Element(XMLFileInfo.ID),
+                    Name = (string)member.Element(XMLFileInfo.Name),
+                    SocialSecurityNumber = (string)member.Element(XMLFileInfo.SocialSecurityNumber)
+                });
             }
 
             return memberList;

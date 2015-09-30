@@ -9,13 +9,9 @@ namespace Workshop_2.Model
 {
     class Member
     {
+        public int memberID { get; set; }
         public string Name { get; set; }
         public string SocialSecurityNumber { get; set; }
-
-        public Member(string Name, string SocialSecurityNumber)
-        {
-            this.Name = Name;
-            this.SocialSecurityNumber = SocialSecurityNumber;
-        }
+  
     }
 }
