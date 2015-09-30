@@ -74,7 +74,6 @@ namespace Workshop_2.View
 
         public void addMemberSuccess()
         {
-            
             Console.WriteLine(AppStrings.addMemberSuccess);
         }
 
@@ -83,7 +82,7 @@ namespace Workshop_2.View
             Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewBoat);
 
-            Console.Write(AppStrings.addMemberSSN);
+            Console.Write(AppStrings.getBoatId);
             string memberId = Console.ReadLine();
 
             Console.Write(AppStrings.addBoatType);
@@ -94,8 +93,6 @@ namespace Workshop_2.View
             
             return new Boat(memberId, type, length);
         }
-
-
 
         public void addBoatSuccess()
         {

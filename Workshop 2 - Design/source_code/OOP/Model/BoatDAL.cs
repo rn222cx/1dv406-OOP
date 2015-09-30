@@ -9,14 +9,14 @@ namespace Workshop_2.Model
 {
     class BoatDAL
     {
-        public bool add(Boat boat)
+        public bool add(int id, Boat boat)
         {
             try
             {
                 XDocument doc = XDocument.Load("Members.xml");
 
                 XElement particularStudent = doc.Element("Members").Elements("Member")
-                                    .Where(member => member.Element("id").Value == boat.Id)
+                                    .Where(member => member.Element("id").Value == id.ToString())
                                     .Last();
                 if (particularStudent != null)
                     particularStudent.Add(new XElement("Boat", boat.Length, new XAttribute("Type", boat.Type)));

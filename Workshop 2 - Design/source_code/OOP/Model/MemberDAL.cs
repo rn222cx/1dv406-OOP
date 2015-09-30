@@ -28,7 +28,7 @@ namespace Workshop_2.Model
                         xmlWriter.WriteStartElement("Member");
                         xmlWriter.WriteElementString("id", "1");
                         xmlWriter.WriteElementString("Name", member.Name);
-                        xmlWriter.WriteElementString("PersonalNumber", member.PersonalNumber);
+                        xmlWriter.WriteElementString("PersonalNumber", member.SocialSecurityNumber);
                         xmlWriter.WriteEndElement();
 
                         xmlWriter.WriteEndElement();
@@ -59,7 +59,7 @@ namespace Workshop_2.Model
                     xEle.AddFirst(new XElement("Member",
                        new XElement("id", id),
                        new XElement("Name", member.Name),
-                       new XElement("PersonalNumber", member.PersonalNumber)));
+                       new XElement("PersonalNumber", member.SocialSecurityNumber)));
                     xEle.Save("Members.xml");
                 }
                 return true;
