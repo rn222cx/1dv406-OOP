@@ -79,7 +79,7 @@ namespace Workshop_2.Controller
 
         public void doRemoveMember()
         {
-            memberDAL.removeMember();
+            memberDAL.removeMember(appView.getMemberID());
         }
 
     }

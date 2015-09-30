@@ -124,14 +124,15 @@ namespace Workshop_2.Model
             return member;
         }
 
-        public void removeMember()
+        public void removeMember(string memberID)
         {
             XElement xElement = XElement.Load(XMLFileInfo.Path);
 
-            xElement.Descendants("Member")
-                .Where(aa => aa.Element("ID").Value == "1")
+            xElement.Descendants(XMLFileInfo.Member)
+                .Where(aa => aa.Element(XMLFileInfo.ID).Value == memberID)
                 .Remove();
 
+            xElement.Save(XMLFileInfo.Path);
             Console.WriteLine(xElement);
             Console.ReadLine();
         }
