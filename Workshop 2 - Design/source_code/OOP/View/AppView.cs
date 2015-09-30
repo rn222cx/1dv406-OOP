@@ -76,13 +76,46 @@ namespace Workshop_2.View
 
         public Boat getNewBoat()
         {
+            var boatType = new BoatType();
+
+            Console.WriteLine("1. {0}", AppStrings.boatTypeSailbot);
+            Console.WriteLine("2. {0}", AppStrings.boatTypeMotorsailer);
+            Console.WriteLine("3. {0}", AppStrings.boatTypeCanoe);
+            Console.WriteLine("4. {0}", AppStrings.boatTypeOther);
             Console.Write(AppStrings.addBoatType);
-            string type = Console.ReadLine();
+
+            var correctInput = false;
+            while (!correctInput)
+            {
+                char type = Console.ReadKey().KeyChar;
+                switch (char.ToLower(type))
+                {
+                    case '1':
+                        correctInput = true;
+                        boatType = BoatType.Sailboat;
+                        break;
+                    case '2':
+                        correctInput = true;
+                        boatType = BoatType.Motorsailer;
+                        break;
+                    case '3':
+                        correctInput = true;
+                        boatType = BoatType.Canoe;
+                        break;
+                    case '4':
+                        correctInput = true;
+                        boatType = BoatType.Other;
+                        break;
+                    default:
+                        Console.Write(AppStrings.menuWrongChoice);
+                        break;
+                }
+            }
 
             Console.Write(AppStrings.addBoatLength);
             string length = Console.ReadLine();
             
-            return new Boat(type, length);
+            return new Boat(boatType, length);
         }
 
         public int getNewBoatMemberID()

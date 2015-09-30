@@ -174,4 +174,16 @@
   <data name="presentMembersSSN" xml:space="preserve">
     <value>Members social security number: {0}</value>
   </data>
+  <data name="boatTypeCanoe" xml:space="preserve">
+    <value>Canoe</value>
+  </data>
+  <data name="boatTypeMotorsailer" xml:space="preserve">
+    <value>Motorsailer</value>
+  </data>
+  <data name="boatTypeOther" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="boatTypeSailbot" xml:space="preserve">
+    <value>Sailboat</value>
+  </data>
 </root>

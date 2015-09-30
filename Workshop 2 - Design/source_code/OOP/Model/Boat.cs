@@ -9,12 +9,12 @@ namespace Workshop_2.Model
 {
     class Boat
     {
-        public string Type { get; set; }
+        public BoatType Type { get; set; }
         public string Length { get; set; }
-        public Boat(string type, string length)
+        public Boat(BoatType Type, string Length)
         {
-            Type = type;
-            Length = length;
+            this.Type = Type;
+            this.Length = Length;
         }
     }
 }

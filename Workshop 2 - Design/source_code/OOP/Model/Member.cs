@@ -12,10 +12,10 @@ namespace Workshop_2.Model
         public string Name { get; set; }
         public string SocialSecurityNumber { get; set; }
 
-        public Member(string name, string socialSecurityNumber)
+        public Member(string Name, string SocialSecurityNumber)
         {
-            Name = name;
-            SocialSecurityNumber = socialSecurityNumber;
+            this.Name = Name;
+            this.SocialSecurityNumber = SocialSecurityNumber;
         }
     }
 }

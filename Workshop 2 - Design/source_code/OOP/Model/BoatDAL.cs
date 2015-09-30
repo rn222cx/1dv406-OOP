@@ -19,7 +19,7 @@ namespace Workshop_2.Model
                                     .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
                                     .Last();
                 if (particularStudent != null)
-                    particularStudent.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type)));
+                    particularStudent.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, (int)boat.Type))); // TODO: TEAM -> Should we save type as enum (string) or int?
                 doc.Save(XMLFileInfo.Path);
                 Console.WriteLine(doc);
 
@@ -46,7 +46,8 @@ namespace Workshop_2.Model
             
             foreach (XElement boat in member.Elements(XMLFileInfo.Boat))
             {
-                var boatToBeAdded = new Boat(boat.Attribute(XMLFileInfo.Type).Value, boat.Value);
+                BoatType type = (BoatType)Enum.Parse(typeof(BoatType), boat.Attribute(XMLFileInfo.Type).Value);
+                var boatToBeAdded = new Boat(type, boat.Value);
                 boats.Add(boatToBeAdded);
             }
 

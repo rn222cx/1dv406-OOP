@@ -115,6 +115,42 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Canoe.
+        /// </summary>
+        internal static string boatTypeCanoe {
+            get {
+                return ResourceManager.GetString("boatTypeCanoe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motorsailer.
+        /// </summary>
+        internal static string boatTypeMotorsailer {
+            get {
+                return ResourceManager.GetString("boatTypeMotorsailer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        internal static string boatTypeOther {
+            get {
+                return ResourceManager.GetString("boatTypeOther", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sailboat.
+        /// </summary>
+        internal static string boatTypeSailbot {
+            get {
+                return ResourceManager.GetString("boatTypeSailbot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter members ID: .
         /// </summary>
         internal static string getMemberId {
