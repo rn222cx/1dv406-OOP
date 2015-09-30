@@ -82,5 +82,33 @@ namespace Workshop_2.Model
 
             return false;
         }
+
+        public void getMemberByID(int memberID)
+        {
+            XElement xElement = XElement.Load("Members.xml");
+            //IEnumerable<XElement> members = xElement.Elements();
+            //foreach (var member in members)
+            //{
+                //if (member.Element("id").Value == memberID.ToString())
+                //{
+                    //string memberName = from address in xElement.Elements("Employee")
+                    //                    where (string)address.Element("Address").Element("State") == "CA"
+                    //                    select address;
+
+            var memberInfo = from Member in xElement.Elements("Member")
+                                where (string)Member.Element("id") == memberID.ToString()
+                                select Member;
+            //var memberName = from Name in memberInfo.Elements("Name") select Name;
+            //Console.WriteLine(memberName);
+
+            foreach (XElement xEle in memberInfo)
+            {
+                Console.WriteLine(xEle);
+            }
+
+            //return new Member(member.Element("member").Value, ' ');
+            //}
+            //}
+        }
     }
 }
