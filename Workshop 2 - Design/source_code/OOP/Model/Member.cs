@@ -9,7 +9,7 @@ namespace Workshop_2.Model
 {
     class Member
     {
-        public int memberID { get; set; }
+        public int MemberID { get; set; }
         public string Name { get; set; }
         public string SocialSecurityNumber { get; set; }
   

@@ -45,8 +45,6 @@ namespace Workshop_2.View
                     case '5':
                         return ListOption.removeMember;
                     case 'q':
-                        Console.Write("\n{0}",AppStrings.menuGoodBye);
-                        Console.ReadKey();
                         return ListOption.quit;
                     default:
                         Console.Write(AppStrings.menuWrongChoice);
@@ -167,20 +165,28 @@ namespace Workshop_2.View
         {
             Console.Clear();
             Console.WriteLine(AppStrings.compactListOfMembers);
-            Console.WriteLine("--------------------------");
+            Console.WriteLine(AppStrings.divider);
             var members = memberDAL.getMembers();
 
             foreach (var member in members)
             {
-                var numerOfBoats = boatDAL.getBoatsByMemberID(member.memberID).Count;
-                Console.WriteLine("{0} has Id {1} and has {2} boat/boats", member.Name, member.memberID, numerOfBoats);
+                var numerOfBoats = boatDAL.getBoatsByMemberID(member.MemberID).Count;
+                Console.WriteLine("{0} has Id {1} and has {2} boat/boats", member.Name, member.MemberID, numerOfBoats);
+                //Console.WriteLine(AppStrings.presentShortMember, member.Name, member.SocialSecurityNumber);
+
             }
 
-            Console.WriteLine("Press b to return to menu");
-            if (Console.ReadKey().KeyChar == 'b')
+            Console.WriteLine(AppStrings.back, AppStrings.backKey);
+            if (char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey))
             {
-                listMenu();
+                return;
             }
+        }
+
+        public void exit()
+        {
+            Console.Write("\n{0}", AppStrings.menuGoodBye);
+            Console.ReadKey();
         }
     }
 }
