@@ -49,34 +49,18 @@ namespace Workshop_2.View
             }
         }
 
-        public void addMember()
+        public Member addMember()
         {
             Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewMember);
 
-            //Console.Write(AppStrings.addMemberName);
-            //string name = Console.ReadLine();
-
-            //Console.Write(AppStrings.addMemberSCN);
-            //string id = Console.ReadLine();
-
-            //return new Member(name, id);
-        }
-
-        public string getMemberName()
-        {
             Console.Write(AppStrings.addMemberName);
             string name = Console.ReadLine();
 
-            return name;          
-        }
-
-        public string getMemberSSN()
-        {
             Console.Write(AppStrings.addMemberSSN);
-            string ssn = Console.ReadLine();
+            string id = Console.ReadLine();
 
-            return ssn;
+            return new Member(name, id);
         }
 
         public void addMemberSuccess()

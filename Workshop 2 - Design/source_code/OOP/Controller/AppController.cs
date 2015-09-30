@@ -45,8 +45,7 @@ namespace Workshop_2.Controller
 
         private void doAddMember()
         {
-            appView.addMember();
-            var newMember = new Member(appView.getMemberName(), appView.getMemberSSN());
+            var newMember = appView.addMember();
             
             if (memberDAL.add(newMember))
             {
