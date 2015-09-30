@@ -10,8 +10,6 @@ namespace Workshop_2
 {
     class Program
     {
-        private static object xDocument;
-
         static void Main(string[] args)
         {
             // Creating new instances of view, controller and model
