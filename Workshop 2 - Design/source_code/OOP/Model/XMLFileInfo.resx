@@ -120,6 +120,9 @@
   <data name="Boat" xml:space="preserve">
     <value>Boat</value>
   </data>
+  <data name="Boats" xml:space="preserve">
+    <value>Boats</value>
+  </data>
   <data name="FirstID" xml:space="preserve">
     <value>1</value>
   </data>

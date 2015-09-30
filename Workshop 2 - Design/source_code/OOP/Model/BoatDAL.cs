@@ -31,5 +31,28 @@ namespace Workshop_2.Model
             }
 
         }
+
+        public List<Boat> getBoatsByMemberID(int memberID)
+        {
+            List<Boat> boats = new List<Boat>();
+
+            XElement xElement = XElement.Load(XMLFileInfo.Path);
+
+            var memberInfo = from Member in xElement.Elements(XMLFileInfo.Member)
+                             where (string)Member.Element(XMLFileInfo.ID) == memberID.ToString()
+                             select Member;
+
+            XElement member = memberInfo.First();
+            
+            foreach (XElement boat in member.Elements(XMLFileInfo.Boat))
+            {
+                var boatToBeAdded = new Boat(boat.Attribute(XMLFileInfo.Type).Value, boat.Value);
+                boats.Add(boatToBeAdded);
+            }
+
+            boats.TrimExcess();
+
+            return boats;
+        }
     }
 }

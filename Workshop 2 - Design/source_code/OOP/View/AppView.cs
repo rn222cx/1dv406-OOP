@@ -10,9 +10,11 @@ namespace Workshop_2.View
     class AppView
     {
         private MemberDAL memberDAL;
+        private BoatDAL boatDAL;
         public AppView ()
         {
             memberDAL = new MemberDAL();
+            boatDAL = new BoatDAL();
         }
         public void welcomeMessage()
         {
@@ -112,6 +114,12 @@ namespace Workshop_2.View
                         var member = memberDAL.getMemberByID(ID);
                         Console.WriteLine("Members name: {0}", member.Name);
                         Console.WriteLine("Members social security number: {0}", member.SocialSecurityNumber);
+                        var boats = boatDAL.getBoatsByMemberID(ID);
+                        Console.WriteLine("The member have {0} boat(s)", boats.Count);
+                        foreach (Boat boat in boats)
+                        {
+                            Console.WriteLine("{0}: {1}m", boat.Type, boat.Length);
+                        }
                         return ID;
                     }
                     else

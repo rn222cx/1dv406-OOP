@@ -70,6 +70,15 @@ namespace Workshop_2.Model {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Boats.
+        /// </summary>
+        internal static string Boats {
+            get {
+                return ResourceManager.GetString("Boats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         internal static string FirstID {
