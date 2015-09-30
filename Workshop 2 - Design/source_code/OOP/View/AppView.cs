@@ -26,6 +26,7 @@ namespace Workshop_2.View
             Console.Clear();
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
             Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);
+            Console.WriteLine("3. {0}", AppStrings.menuShowCompactListOfMembers);
             Console.WriteLine("Q. {0}", AppStrings.menuQuit);
             Console.Write(AppStrings.menuMakeChoice);
 
@@ -38,6 +39,8 @@ namespace Workshop_2.View
                         return ListOption.addMember;
                     case '2':
                         return ListOption.addBoat;
+                    case '3':
+                        return ListOption.showCompactListOfMembers;
                     case 'q':
                         Console.Write("\n{0}",AppStrings.menuGoodBye);
                         Console.ReadKey();
@@ -150,6 +153,25 @@ namespace Workshop_2.View
         public void addBoatSuccess()
         {
             Console.WriteLine(AppStrings.addBoatSuccess);
+        }
+
+        public void displayCompactListOfMembers()
+        {
+            Console.Clear();
+            Console.WriteLine(AppStrings.compactListOfMembers);
+            Console.WriteLine("--------------------------");
+            var members = memberDAL.getMembers();
+
+            foreach (var member in members)
+            {
+                Console.WriteLine("{0} has Id {1} and has boat/boats", member.Name, member.SocialSecurityNumber);
+            }
+
+            Console.WriteLine("Press b to return to menu");
+            if (Console.ReadKey().KeyChar == 'b')
+            {
+                listMenu();
+            }
         }
     }
 }

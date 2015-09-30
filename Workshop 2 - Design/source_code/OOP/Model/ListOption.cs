@@ -10,6 +10,7 @@ namespace Workshop_2.Model
     {
         addMember = 1,
         addBoat,
-        quit
+        quit,
+        showCompactListOfMembers
     }
 }

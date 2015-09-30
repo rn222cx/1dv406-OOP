@@ -186,4 +186,10 @@
   <data name="boatTypeSailbot" xml:space="preserve">
     <value>Sailboat</value>
   </data>
+  <data name="compactListOfMembers" xml:space="preserve">
+    <value>List of all members with name, member id and number of boat/boats</value>
+  </data>
+  <data name="menuShowCompactListOfMembers" xml:space="preserve">
+    <value>Show compact list of members</value>
+  </data>
 </root>

@@ -85,5 +85,26 @@ namespace Workshop_2.Model
 
             return new Member(memberName.Value, memberSSN.Value);
         }
+
+
+        /// <summary>
+        /// Creates list of all members. 
+        /// </summary>
+        /// <returns>List of members.</returns>
+        public List<Member> getMembers()
+        {
+            var memberList = new List<Member>();
+
+            XElement xElement = XElement.Load(XMLFileInfo.Path);
+
+            IEnumerable<XElement> members = xElement.Elements();
+
+            foreach (var member in members)
+            {
+                memberList.Add(new Member((string)member.Element(XMLFileInfo.Name), (string)member.Element(XMLFileInfo.SocialSecurityNumber)));
+            }
+
+            return memberList;
+        }
     }
 }

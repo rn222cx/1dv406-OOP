@@ -151,6 +151,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to List of all members with name, member id and number of boat/boats.
+        /// </summary>
+        internal static string compactListOfMembers {
+            get {
+                return ResourceManager.GetString("compactListOfMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter members ID: .
         /// </summary>
         internal static string getMemberId {
@@ -210,6 +219,15 @@ namespace Workshop_2.View {
         internal static string menuQuit {
             get {
                 return ResourceManager.GetString("menuQuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show compact list of members.
+        /// </summary>
+        internal static string menuShowCompactListOfMembers {
+            get {
+                return ResourceManager.GetString("menuShowCompactListOfMembers", resourceCulture);
             }
         }
         

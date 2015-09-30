@@ -35,6 +35,9 @@ namespace Workshop_2.Controller
                     case ListOption.addBoat:
                         doAddBoat();
                         break;
+                    case ListOption.showCompactListOfMembers:
+                        appView.displayCompactListOfMembers();
+                        break;
                     case ListOption.quit:
                         return;
                     default:
