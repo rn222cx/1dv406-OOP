@@ -39,20 +39,6 @@ namespace Workshop_2.Model
                 }
                 else
                 {
-                    //XDocument xDocument = XDocument.Load("Members.xml");
-                    //XElement Members = xDocument.Element("Members");
-                    //IEnumerable<XElement> rows = Members.Descendants("Member");
-                    //// get the last id value
-                    //int id = int.Parse((string)Members.Descendants("id").FirstOrDefault());
-                    //id++;
-                    //XElement firstRow = rows.First();
-                    //firstRow.AddBeforeSelf(
-                    //   new XElement("Member",
-                    //   new XElement("id", id),
-                    //   new XElement("Name", Name),
-                    //   new XElement("PersonalNumber", PersonalNumber)));
-                    //xDocument.Save("Members.xml");
-
                     XElement xElement = XElement.Load(XMLFileInfo.Path);
                     int id = int.Parse((string)xElement.Descendants(XMLFileInfo.ID).FirstOrDefault());
                     id++;
