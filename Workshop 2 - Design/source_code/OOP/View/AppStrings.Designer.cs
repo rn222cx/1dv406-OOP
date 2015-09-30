@@ -329,5 +329,14 @@ namespace Workshop_2.View {
                 return ResourceManager.GetString("removeMember", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The user were removed successfully.
+        /// </summary>
+        internal static string removeMemberSuccess {
+            get {
+                return ResourceManager.GetString("removeMemberSuccess", resourceCulture);
+            }
+        }
     }
 }

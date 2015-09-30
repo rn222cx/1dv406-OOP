@@ -207,4 +207,7 @@
   <data name="removeMember" xml:space="preserve">
     <value>Remove a member</value>
   </data>
+  <data name="removeMemberSuccess" xml:space="preserve">
+    <value>The user were removed successfully</value>
+  </data>
 </root>

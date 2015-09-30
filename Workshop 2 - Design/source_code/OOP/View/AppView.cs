@@ -70,14 +70,6 @@ namespace Workshop_2.View
 
         }
 
-        public string getMemberID()
-        {
-            Console.Write(AppStrings.getMemberId);
-            string memberID = Console.ReadLine();
-
-            return memberID;
-        }
-
         public void addMemberSuccess()
         {
             Console.WriteLine(AppStrings.addMemberSuccess);
@@ -132,7 +124,25 @@ namespace Workshop_2.View
             
             return new Boat(boatType, length);
         }
-
+        public int getMemberID() // TODO: DRY with getNewBoatMemberID()
+        {
+            while (true)
+            {
+                int ID;
+                Console.Write(AppStrings.getMemberId);
+                if (int.TryParse(Console.ReadLine(), out ID))
+                {
+                    if (memberDAL.validateMemberID(ID))
+                    {
+                        return ID;
+                    }
+                    else
+                    {
+                        Console.Write(AppStrings.getMemberIDFail);
+                    }
+                }
+            }
+        }
         public int getNewBoatMemberID()
         {
             while (true)
@@ -165,6 +175,10 @@ namespace Workshop_2.View
         public void addBoatSuccess()
         {
             Console.WriteLine(AppStrings.addBoatSuccess);
+        }
+        public void removeMemberSuccess()
+        {
+            Console.WriteLine(AppStrings.removeMemberSuccess);
         }
 
         public void displayCompactListOfMembers()
