@@ -162,4 +162,16 @@
   <data name="getMemberIDFail" xml:space="preserve">
     <value>Member do not exist, try again: </value>
   </data>
+  <data name="presentBoat" xml:space="preserve">
+    <value>{0}: {1}m</value>
+  </data>
+  <data name="presentMembersName" xml:space="preserve">
+    <value>Members name: {0}</value>
+  </data>
+  <data name="presentMembersNumberOfBoats" xml:space="preserve">
+    <value>The member have {0} boat(s)</value>
+  </data>
+  <data name="presentMembersSSN" xml:space="preserve">
+    <value>Members social security number: {0}</value>
+  </data>
 </root>

@@ -112,13 +112,13 @@ namespace Workshop_2.View
                     if (memberDAL.validateMemberID(ID))
                     {
                         var member = memberDAL.getMemberByID(ID);
-                        Console.WriteLine("Members name: {0}", member.Name);
-                        Console.WriteLine("Members social security number: {0}", member.SocialSecurityNumber);
+                        Console.WriteLine(AppStrings.presentMembersName, member.Name);
+                        Console.WriteLine(AppStrings.presentMembersSSN, member.SocialSecurityNumber);
                         var boats = boatDAL.getBoatsByMemberID(ID);
-                        Console.WriteLine("The member have {0} boat(s)", boats.Count);
+                        Console.WriteLine(AppStrings.presentMembersNumberOfBoats, boats.Count);
                         foreach (Boat boat in boats)
                         {
-                            Console.WriteLine("{0}: {1}m", boat.Type, boat.Length);
+                            Console.WriteLine(AppStrings.presentBoat, boat.Type, boat.Length);
                         }
                         return ID;
                     }

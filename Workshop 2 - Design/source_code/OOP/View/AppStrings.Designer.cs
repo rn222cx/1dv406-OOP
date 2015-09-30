@@ -194,5 +194,41 @@ namespace Workshop_2.View {
                 return ResourceManager.GetString("menuWrongChoice", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}: {1}m.
+        /// </summary>
+        internal static string presentBoat {
+            get {
+                return ResourceManager.GetString("presentBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Members name: {0}.
+        /// </summary>
+        internal static string presentMembersName {
+            get {
+                return ResourceManager.GetString("presentMembersName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The member have {0} boat(s).
+        /// </summary>
+        internal static string presentMembersNumberOfBoats {
+            get {
+                return ResourceManager.GetString("presentMembersNumberOfBoats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Members social security number: {0}.
+        /// </summary>
+        internal static string presentMembersSSN {
+            get {
+                return ResourceManager.GetString("presentMembersSSN", resourceCulture);
+            }
+        }
     }
 }
