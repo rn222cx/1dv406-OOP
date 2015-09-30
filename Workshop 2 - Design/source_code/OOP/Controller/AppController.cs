@@ -23,19 +23,19 @@ namespace Workshop_2.Controller
         {
             while (true)
             {
-                MenuEnum.ListOptions menuChoice;
+                ListOption menuChoice;
                 appView.welcomeMessage();
                 menuChoice = appView.listMenu();
 
                 switch (menuChoice)
                 {
-                    case MenuEnum.ListOptions.addMember:
+                    case ListOption.addMember:
                         doAddMember();
                         break;
-                    case MenuEnum.ListOptions.addBoat:
+                    case ListOption.addBoat:
                         doAddBoat();
                         break;
-                    case MenuEnum.ListOptions.quit:
+                    case ListOption.quit:
                         return;
                     default:
                         break;

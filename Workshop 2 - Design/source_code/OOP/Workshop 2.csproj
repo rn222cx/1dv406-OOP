@@ -46,8 +46,9 @@
     <Compile Include="Controller\AppController.cs" />
     <Compile Include="Model\Boat.cs" />
     <Compile Include="Model\BoatDAL.cs" />
+    <Compile Include="Model\BoatType.cs" />
     <Compile Include="Model\MemberDAL.cs" />
-    <Compile Include="Model\MenuEnum.cs" />
+    <Compile Include="Model\ListOption.cs" />
     <Compile Include="Model\Member.cs" />
     <Compile Include="Model\XMLFileInfo.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Workshop_2.Model
 {
-    class MenuEnum
+    public enum ListOption
     {
-        public enum ListOptions
-        {
-            addMember = 1,
-            addBoat,
-            quit
-        }
+        addMember = 1,
+        addBoat,
+        quit
     }
 }

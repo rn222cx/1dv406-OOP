@@ -21,7 +21,7 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.menuWelcome);
         }
 
-        public MenuEnum.ListOptions listMenu()
+        public ListOption listMenu()
         {
             Console.Clear();
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
@@ -35,13 +35,13 @@ namespace Workshop_2.View
                 switch (char.ToLower(keyValue))
                 {
                     case '1':
-                        return MenuEnum.ListOptions.addMember;
+                        return ListOption.addMember;
                     case '2':
-                        return MenuEnum.ListOptions.addBoat;
+                        return ListOption.addBoat;
                     case 'q':
                         Console.Write("\n{0}",AppStrings.menuGoodBye);
                         Console.ReadKey();
-                        return MenuEnum.ListOptions.quit;
+                        return ListOption.quit;
                     default:
                         Console.Write(AppStrings.menuWrongChoice);
                         break;
