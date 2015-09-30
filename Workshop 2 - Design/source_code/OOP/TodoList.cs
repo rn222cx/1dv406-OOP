@@ -12,10 +12,9 @@ namespace Workshop_2
 
         //        The following requirements are to be met:
 
-        // Create a new member with a name, personal number, a unique member id should be created and assigned to the new member.
         // List all members in two different ways:
-        // “Compact List”; name, member id and number of boats
-        // “Verbose List”; name, personal number, member id and boats with boat information
+        //      “Compact List”; name, member id and number of boats
+        //      “Verbose List”; name, personal number, member id and boats with boat information
         // Delete a member
         // Change a member’s information
         // Look at a specific member’s information
