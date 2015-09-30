@@ -62,9 +62,14 @@ namespace Workshop_2.View
             string name = Console.ReadLine();
 
             Console.Write(AppStrings.addMemberSSN);
-            string id = Console.ReadLine();
+            string ssn = Console.ReadLine();
 
-            return new Member(name, id);
+            var member = new Member();
+            member.Name = name;
+            member.SocialSecurityNumber = ssn;
+
+            return member;
+
         }
 
         public void addMemberSuccess()
@@ -165,7 +170,10 @@ namespace Workshop_2.View
 
             foreach (var member in members)
             {
-                Console.WriteLine(AppStrings.presentShortMember, member.Name, member.SocialSecurityNumber);
+                var numerOfBoats = boatDAL.getBoatsByMemberID(member.MemberID).Count;
+                Console.WriteLine("{0} has Id {1} and has {2} boat/boats", member.Name, member.MemberID, numerOfBoats);
+                //Console.WriteLine(AppStrings.presentShortMember, member.Name, member.SocialSecurityNumber);
+
             }
 
             Console.WriteLine(AppStrings.back, AppStrings.backKey);
