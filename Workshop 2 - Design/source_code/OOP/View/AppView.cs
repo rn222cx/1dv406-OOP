@@ -171,7 +171,7 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.back, AppStrings.backKey);
             if (char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey))
             {
-                listMenu();
+                return;
             }
         }
 
