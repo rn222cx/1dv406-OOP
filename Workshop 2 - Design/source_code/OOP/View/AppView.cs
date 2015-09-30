@@ -109,7 +109,9 @@ namespace Workshop_2.View
                 {
                     if (memberDAL.validateMemberID(ID))
                     {
-                        memberDAL.getMemberByID(ID);
+                        var member = memberDAL.getMemberByID(ID);
+                        Console.WriteLine("Members name: {0}", member.Name);
+                        Console.WriteLine("Members social security number: {0}", member.SocialSecurityNumber);
                         return ID;
                     }
                     else

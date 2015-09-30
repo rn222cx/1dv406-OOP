@@ -13,14 +13,14 @@ namespace Workshop_2.Model
         {
             try
             {
-                XDocument doc = XDocument.Load("Members.xml");
+                XDocument doc = XDocument.Load(XMLFileInfo.Path);
 
-                XElement particularStudent = doc.Element("Members").Elements("Member")
-                                    .Where(member => member.Element("id").Value == id.ToString())
+                XElement particularStudent = doc.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
+                                    .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
                                     .Last();
                 if (particularStudent != null)
-                    particularStudent.Add(new XElement("Boat", boat.Length, new XAttribute("Type", boat.Type)));
-                doc.Save("Members.xml");
+                    particularStudent.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type)));
+                doc.Save(XMLFileInfo.Path);
                 Console.WriteLine(doc);
 
                 return true;

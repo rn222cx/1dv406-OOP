@@ -15,20 +15,20 @@ namespace Workshop_2.Model
         {
             try
             {
-                if (File.Exists("Members.xml") == false)
+                if (File.Exists(XMLFileInfo.Path) == false)
                 {
                     XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
                     xmlWriterSettings.Indent = true;
                     xmlWriterSettings.NewLineOnAttributes = true;
-                    using (XmlWriter xmlWriter = XmlWriter.Create("Members.xml", xmlWriterSettings))
+                    using (XmlWriter xmlWriter = XmlWriter.Create(XMLFileInfo.Path, xmlWriterSettings))
                     {
                         xmlWriter.WriteStartDocument();
-                        xmlWriter.WriteStartElement("Members");
+                        xmlWriter.WriteStartElement(XMLFileInfo.Members);
 
-                        xmlWriter.WriteStartElement("Member");
-                        xmlWriter.WriteElementString("id", "1");
-                        xmlWriter.WriteElementString("Name", member.Name);
-                        xmlWriter.WriteElementString("PersonalNumber", member.SocialSecurityNumber);
+                        xmlWriter.WriteStartElement(XMLFileInfo.Member);
+                        xmlWriter.WriteElementString(XMLFileInfo.ID, XMLFileInfo.FirstID);
+                        xmlWriter.WriteElementString(XMLFileInfo.Name, member.Name);
+                        xmlWriter.WriteElementString(XMLFileInfo.SocialSecurityNumber, member.SocialSecurityNumber);
                         xmlWriter.WriteEndElement();
 
                         xmlWriter.WriteEndElement();
@@ -53,14 +53,14 @@ namespace Workshop_2.Model
                     //   new XElement("PersonalNumber", PersonalNumber)));
                     //xDocument.Save("Members.xml");
 
-                    XElement xElement = XElement.Load("Members.xml");
-                    int id = int.Parse((string)xElement.Descendants("id").FirstOrDefault());
+                    XElement xElement = XElement.Load(XMLFileInfo.Path);
+                    int id = int.Parse((string)xElement.Descendants(XMLFileInfo.ID).FirstOrDefault());
                     id++;
-                    xElement.AddFirst(new XElement("Member",
-                       new XElement("id", id),
-                       new XElement("Name", member.Name),
-                       new XElement("PersonalNumber", member.SocialSecurityNumber)));
-                    xElement.Save("Members.xml");
+                    xElement.AddFirst(new XElement(XMLFileInfo.Member,
+                       new XElement(XMLFileInfo.ID, id),
+                       new XElement(XMLFileInfo.Name, member.Name),
+                       new XElement(XMLFileInfo.SocialSecurityNumber, member.SocialSecurityNumber)));
+                    xElement.Save(XMLFileInfo.Path);
                 }
                 return true;
             }
@@ -72,43 +72,32 @@ namespace Workshop_2.Model
 
         public bool validateMemberID(int IdToValidate)
         {
-            XElement xElement = XElement.Load("Members.xml");
+            XElement xElement = XElement.Load(XMLFileInfo.Path);
             IEnumerable<XElement> members = xElement.Elements();
             foreach (var member in members)
             {
-                if (member.Element("id").Value == IdToValidate.ToString())
+                if (member.Element(XMLFileInfo.ID).Value == IdToValidate.ToString())
                     return true;
             }
 
             return false;
         }
 
-        public void getMemberByID(int memberID)
+        public Member getMemberByID(int memberID)
         {
-            XElement xElement = XElement.Load("Members.xml");
-            //IEnumerable<XElement> members = xElement.Elements();
-            //foreach (var member in members)
-            //{
-                //if (member.Element("id").Value == memberID.ToString())
-                //{
-                    //string memberName = from address in xElement.Elements("Employee")
-                    //                    where (string)address.Element("Address").Element("State") == "CA"
-                    //                    select address;
+            XElement xElement = XElement.Load(XMLFileInfo.Path);
 
-            var memberInfo = from Member in xElement.Elements("Member")
-                                where (string)Member.Element("id") == memberID.ToString()
+            var memberInfo = from Member in xElement.Elements(XMLFileInfo.Member)
+                                where (string)Member.Element(XMLFileInfo.ID) == memberID.ToString()
                                 select Member;
-            //var memberName = from Name in memberInfo.Elements("Name") select Name;
-            //Console.WriteLine(memberName);
 
-            foreach (XElement xEle in memberInfo)
-            {
-                Console.WriteLine(xEle);
-            }
+            var memberNames = memberInfo.Elements(XMLFileInfo.Name);
+            XElement memberName = memberNames.First();
 
-            //return new Member(member.Element("member").Value, ' ');
-            //}
-            //}
+            var memberSSNs = memberInfo.Elements(XMLFileInfo.SocialSecurityNumber);
+            XElement memberSSN = memberSSNs.First();
+
+            return new Member(memberName.Value, memberSSN.Value);
         }
     }
 }
