@@ -11,7 +11,7 @@ namespace Workshop_2.View
     {
         public void welcomeMessage()
         {
-            Console.WriteLine(StringResource.Welcome);
+            Console.WriteLine(AppStrings.Welcome);
         }
 
         public MenuEnum.ListOptions listMenu()
@@ -19,19 +19,21 @@ namespace Workshop_2.View
             Console.Clear();
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
             Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);
-            Console.WriteLine("q. {0}", AppStrings.menuQuit);
+            Console.WriteLine("Q. {0}", AppStrings.menuQuit);
             Console.Write(AppStrings.menuMakeChoice);
 
             while (true)
             {
                 char keyValue = Console.ReadKey().KeyChar;
-                switch (keyValue)
+                switch (char.ToLower(keyValue))
                 {
                     case '1':
                         return MenuEnum.ListOptions.addMember;
                     case '2':
                         return MenuEnum.ListOptions.addBoat;
                     case 'q':
+                        Console.Write("\n{0}",AppStrings.menuGoodBye);
+                        Console.ReadKey();
                         return MenuEnum.ListOptions.quit;
                     default:
                         Console.Write(AppStrings.menuWrongChoice);

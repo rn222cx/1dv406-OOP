@@ -133,6 +133,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press any key to quit....
+        /// </summary>
+        internal static string menuGoodBye {
+            get {
+                return ResourceManager.GetString("menuGoodBye", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter your choice: .
         /// </summary>
         internal static string menuMakeChoice {
@@ -156,6 +165,15 @@ namespace Workshop_2.View {
         internal static string menuWrongChoice {
             get {
                 return ResourceManager.GetString("menuWrongChoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to this amazing application!.
+        /// </summary>
+        internal static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
     }
