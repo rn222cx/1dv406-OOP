@@ -29,6 +29,7 @@ namespace Workshop_2.View
             Console.WriteLine("3. {0}", AppStrings.menuShowCompactListOfMembers);
             Console.WriteLine("4. {0}", AppStrings.menuShowVerboseListOfMembers);
             Console.WriteLine("5. {0}", AppStrings.removeMember);
+            Console.WriteLine("6. {0}", AppStrings.removeBoat);
             Console.WriteLine("Q. {0}", AppStrings.menuQuit);
             Console.Write(AppStrings.menuMakeChoice);
 
@@ -47,6 +48,8 @@ namespace Workshop_2.View
                         return ListOption.showVerboseListOfMembers;
                     case '5':
                         return ListOption.removeMember;
+                    case '6':
+                        return ListOption.removeBoat;
                     case 'q':
                         return ListOption.quit;
                     default:
@@ -253,6 +256,28 @@ namespace Workshop_2.View
             {
                 return;
             }
+        }
+
+        public void getBoatsByID(int ID) // stolen from displayVerboseListOfMembers() so DRY
+        {
+            var boats = boatDAL.getBoatsByMemberID(ID);
+            if (boats.Count == 0)
+            {
+                Console.WriteLine(AppStrings.memberHasNoBoat);
+            }
+            else
+            {
+
+                int boatNumber = 1;
+
+                foreach (var boat in boats)
+                {
+                    Console.WriteLine("Boat {0}, Type: {1}, Lenght: {2} m", boatNumber, boat.Type, boat.Length);
+                    boatNumber++;
+                }
+            }
+
+            
         }
     }
 }

@@ -340,6 +340,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove a boat from member.
+        /// </summary>
+        internal static string removeBoat {
+            get {
+                return ResourceManager.GetString("removeBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove a member.
         /// </summary>
         internal static string removeMember {

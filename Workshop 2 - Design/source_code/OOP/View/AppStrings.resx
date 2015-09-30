@@ -219,4 +219,7 @@
   <data name="verboseListOfMembers" xml:space="preserve">
     <value>LIST OF MEMBERS AND BOATS</value>
   </data>
+  <data name="removeBoat" xml:space="preserve">
+    <value>Remove a boat from member</value>
+  </data>
 </root>

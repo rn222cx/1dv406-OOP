@@ -29,6 +29,7 @@ namespace Workshop_2.Controller
             Menu.Add(ListOption.showCompactListOfMembers, appView.displayCompactListOfMembers);
             Menu.Add(ListOption.showVerboseListOfMembers, appView.displayVerboseListOfMembers);
             Menu.Add(ListOption.removeMember, doRemoveMember);
+            Menu.Add(ListOption.removeBoat, doRemoveBoat);
             Menu.Add(ListOption.quit, appView.exit);
 
             while (menuChoice != ListOption.quit)
@@ -87,6 +88,14 @@ namespace Workshop_2.Controller
                 appView.removeMemberSuccess();
                 Console.ReadLine();
             }
+        }
+
+        public void doRemoveBoat()
+        {
+            int memberID = appView.getMemberID();
+            
+            appView.getBoatsByID(memberID);
+            Console.ReadLine();
         }
 
     }
