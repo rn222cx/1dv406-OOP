@@ -205,6 +205,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Member has no boats registered.
+        /// </summary>
+        internal static string memberHasNoBoat {
+            get {
+                return ResourceManager.GetString("memberHasNoBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add a boat to an existing user.
         /// </summary>
         internal static string menuAddNewBoat {
@@ -255,6 +264,15 @@ namespace Workshop_2.View {
         internal static string menuShowCompactListOfMembers {
             get {
                 return ResourceManager.GetString("menuShowCompactListOfMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show verbose list of members.
+        /// </summary>
+        internal static string menuShowVerboseListOfMembers {
+            get {
+                return ResourceManager.GetString("menuShowVerboseListOfMembers", resourceCulture);
             }
         }
         
@@ -336,6 +354,15 @@ namespace Workshop_2.View {
         internal static string removeMemberSuccess {
             get {
                 return ResourceManager.GetString("removeMemberSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LIST OF MEMBERS AND BOATS.
+        /// </summary>
+        internal static string verboseListOfMembers {
+            get {
+                return ResourceManager.GetString("verboseListOfMembers", resourceCulture);
             }
         }
     }

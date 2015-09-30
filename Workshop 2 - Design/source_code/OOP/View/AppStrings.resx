@@ -210,4 +210,13 @@
   <data name="removeMemberSuccess" xml:space="preserve">
     <value>The user were removed successfully</value>
   </data>
+  <data name="memberHasNoBoat" xml:space="preserve">
+    <value>Member has no boats registered</value>
+  </data>
+  <data name="menuShowVerboseListOfMembers" xml:space="preserve">
+    <value>Show verbose list of members</value>
+  </data>
+  <data name="verboseListOfMembers" xml:space="preserve">
+    <value>LIST OF MEMBERS AND BOATS</value>
+  </data>
 </root>

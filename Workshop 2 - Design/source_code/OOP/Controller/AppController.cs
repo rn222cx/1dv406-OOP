@@ -27,6 +27,7 @@ namespace Workshop_2.Controller
             Menu.Add(ListOption.addMember, doAddMember);
             Menu.Add(ListOption.addBoat, doAddBoat);
             Menu.Add(ListOption.showCompactListOfMembers, appView.displayCompactListOfMembers);
+            Menu.Add(ListOption.showVerboseListOfMembers, appView.displayVerboseListOfMembers);
             Menu.Add(ListOption.removeMember, doRemoveMember);
             Menu.Add(ListOption.quit, appView.exit);
 

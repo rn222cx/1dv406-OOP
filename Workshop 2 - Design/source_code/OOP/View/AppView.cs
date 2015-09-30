@@ -27,6 +27,7 @@ namespace Workshop_2.View
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
             Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);
             Console.WriteLine("3. {0}", AppStrings.menuShowCompactListOfMembers);
+            Console.WriteLine("4. {0}", AppStrings.menuShowVerboseListOfMembers);
             Console.WriteLine("5. {0}", AppStrings.removeMember);
             Console.WriteLine("Q. {0}", AppStrings.menuQuit);
             Console.Write(AppStrings.menuMakeChoice);
@@ -42,6 +43,8 @@ namespace Workshop_2.View
                         return ListOption.addBoat;
                     case '3':
                         return ListOption.showCompactListOfMembers;
+                    case '4':
+                        return ListOption.showVerboseListOfMembers;
                     case '5':
                         return ListOption.removeMember;
                     case 'q':
@@ -181,6 +184,9 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.removeMemberSuccess);
         }
 
+        /// <summary>
+        /// Renders list of all members with name and member id.
+        /// </summary>
         public void displayCompactListOfMembers()
         {
             Console.Clear();
@@ -192,8 +198,6 @@ namespace Workshop_2.View
             {
                 var numerOfBoats = boatDAL.getBoatsByMemberID(member.MemberID).Count;
                 Console.WriteLine("{0} has Id {1} and has {2} boat/boats", member.Name, member.MemberID, numerOfBoats);
-                //Console.WriteLine(AppStrings.presentShortMember, member.Name, member.SocialSecurityNumber);
-
             }
 
             Console.WriteLine(AppStrings.back, AppStrings.backKey);
@@ -207,6 +211,48 @@ namespace Workshop_2.View
         {
             Console.Write("\n{0}", AppStrings.menuGoodBye);
             Console.ReadKey();
+        }
+
+        /// <summary>
+        /// Displays list with member name, social security number, member id and boats with boat information.
+        /// </summary>
+        public void displayVerboseListOfMembers()
+        {
+            // TODO: DRY displayCompactListOfMembers?
+            Console.Clear();
+            Console.WriteLine(AppStrings.verboseListOfMembers);
+            Console.WriteLine(AppStrings.divider);
+
+            var members = memberDAL.getMembers();
+
+            foreach (var member in members)
+            {
+                var boats = boatDAL.getBoatsByMemberID(member.MemberID);
+                Console.WriteLine("Name: {0}, Social Security Number: {1}, Member ID: {2}", member.Name, member.SocialSecurityNumber, member.MemberID);
+                
+                if(boats.Count == 0)
+                {
+                    Console.WriteLine(AppStrings.memberHasNoBoat);
+                } 
+                else
+                {
+                    int boatNumber = 1;
+                    
+                    foreach (var boat in boats)
+                    {
+                        Console.WriteLine("Boat {0}, Type: {1}, Lenght: {2} m", boatNumber, boat.Type, boat.Length);
+                        boatNumber++;
+                    } 
+                }
+                                             
+                Console.WriteLine(AppStrings.divider);
+            }
+
+            Console.WriteLine(AppStrings.back, AppStrings.backKey);
+            if (char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey))
+            {
+                return;
+            }
         }
     }
 }
