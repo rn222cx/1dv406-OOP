@@ -320,5 +320,14 @@ namespace Workshop_2.View {
                 return ResourceManager.GetString("presentShortMember", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove a member.
+        /// </summary>
+        internal static string removeMember {
+            get {
+                return ResourceManager.GetString("removeMember", resourceCulture);
+            }
+        }
     }
 }
