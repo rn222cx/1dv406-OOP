@@ -70,6 +70,14 @@ namespace Workshop_2.View
 
         }
 
+        public string getMemberID()
+        {
+            Console.Write(AppStrings.getMemberId);
+            string memberID = Console.ReadLine();
+
+            return memberID;
+        }
+
         public void addMemberSuccess()
         {
             Console.WriteLine(AppStrings.addMemberSuccess);
