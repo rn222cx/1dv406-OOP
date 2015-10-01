@@ -107,7 +107,7 @@ namespace Workshop_2.Model
         {
             try
             {
-                boat--; // Skip() starts with 0
+                //boat--; // Skip() starts with 0
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
                 xElement.Descendants(XMLFileInfo.Member)
