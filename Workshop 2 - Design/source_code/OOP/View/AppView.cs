@@ -29,6 +29,7 @@ namespace Workshop_2.View
             Console.WriteLine("3. {0}", AppStrings.menuShowCompactListOfMembers);
             Console.WriteLine("4. {0}", AppStrings.menuShowVerboseListOfMembers);
             Console.WriteLine("5. {0}", AppStrings.editMember);
+            Console.WriteLine("6. {0}", AppStrings.editBoat);
             Console.WriteLine("7. {0}", AppStrings.removeMember);
             Console.WriteLine("8. {0}", AppStrings.removeBoat);
             Console.WriteLine("Q. {0}", AppStrings.menuQuit);
@@ -49,6 +50,8 @@ namespace Workshop_2.View
                         return ListOption.showVerboseListOfMembers;
                     case '5':
                         return ListOption.editMember;
+                    case '6':
+                        return ListOption.editBoat;
                     case '7':
                         return ListOption.removeMember;
                     case '8':
@@ -103,6 +106,11 @@ namespace Workshop_2.View
         internal void editMemberSuccess()
         {
             Console.WriteLine(AppStrings.editMemberSuccess);
+        }
+
+        internal void editBoatSuccess()
+        {
+            Console.WriteLine(AppStrings.editBoatSuccess);
         }
 
         public Boat getNewBoat()

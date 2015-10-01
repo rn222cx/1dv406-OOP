@@ -231,4 +231,10 @@
   <data name="fail" xml:space="preserve">
     <value>Something went wrong, please try again.</value>
   </data>
+  <data name="editBoat" xml:space="preserve">
+    <value>Edit boat</value>
+  </data>
+  <data name="editBoatSuccess" xml:space="preserve">
+    <value>The boat where updated!</value>
+  </data>
 </root>

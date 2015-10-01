@@ -29,6 +29,7 @@ namespace Workshop_2.Controller
             Menu.Add(ListOption.showCompactListOfMembers, appView.displayCompactListOfMembers);
             Menu.Add(ListOption.showVerboseListOfMembers, appView.displayVerboseListOfMembers);
             Menu.Add(ListOption.editMember, doEditMember);
+            Menu.Add(ListOption.editBoat, doEditBoat);
             Menu.Add(ListOption.removeMember, doRemoveMember);
             Menu.Add(ListOption.removeBoat, doRemoveBoat);
             Menu.Add(ListOption.quit, appView.exit);
@@ -96,6 +97,11 @@ namespace Workshop_2.Controller
             }
             else
                 appView.fail();
+        }
+
+        private void doEditBoat()
+        {
+            throw new NotImplementedException();
         }
 
         public void doRemoveMember()

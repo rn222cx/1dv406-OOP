@@ -32,6 +32,52 @@ namespace Workshop_2.Model
 
         }
 
+        private bool updateBoat(int ID, Boat originalBoat, Boat updatedBoat)
+        {
+            try
+            {
+                //if (String.IsNullOrWhiteSpace(updatedBoat.Type))
+                //    updatedBoat.Name = currentMember.Name;
+                //if (String.IsNullOrWhiteSpace(updatedBoat.SocialSecurityNumber))
+                //    updatedBoat.SocialSecurityNumber = currentMember.SocialSecurityNumber;
+
+                XElement xElement = XElement.Load(XMLFileInfo.Path);
+
+                XElement memberToBeReplaced = (from Member in xElement.Elements(XMLFileInfo.Member)
+                                               where (string)Member.Element(XMLFileInfo.ID) == ID.ToString()
+                                               select Member).First();
+
+                XElement updatedMember = new XElement(XMLFileInfo.Member,
+                           new XElement(XMLFileInfo.ID, ID),
+                           new XElement(XMLFileInfo.Name, memberToBeReplaced.Element(XMLFileInfo.Name)),
+                           new XElement(XMLFileInfo.SocialSecurityNumber, memberToBeReplaced.Element(XMLFileInfo.SocialSecurityNumber)));
+
+                foreach (XElement element in memberToBeReplaced.Elements(XMLFileInfo.Boat))
+                {
+                    updatedMember.Add(element);
+                    
+                }
+
+                //foreach (XElement element in updatedMember.Elements(XMLFileInfo.Boat))
+                //{
+                //    if (element.Attribute(XMLFileInfo.Type).ToString() == originalBoat.Type.ToString() && element.Value == originalBoat.Length)
+                //    {
+
+                //    }
+                //}
+
+                memberToBeReplaced.ReplaceWith(updatedMember);
+
+                xElement.Save(XMLFileInfo.Path);
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public List<Boat> getBoatsByMemberID(int memberID)
         {
             List<Boat> boats = new List<Boat>();

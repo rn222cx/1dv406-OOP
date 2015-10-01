@@ -15,7 +15,6 @@ namespace Workshop_2
 
         // List all members in two different ways:
         //      “Verbose List”; name, personal number, member id and boats with boat information
-        // Change a member’s information
         // Look at a specific member’s information
         // Deleta a boat
         // Change a boat’s information

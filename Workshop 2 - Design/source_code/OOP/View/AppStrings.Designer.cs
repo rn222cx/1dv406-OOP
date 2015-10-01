@@ -187,6 +187,24 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit boat.
+        /// </summary>
+        internal static string editBoat {
+            get {
+                return ResourceManager.GetString("editBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The boat where updated!.
+        /// </summary>
+        internal static string editBoatSuccess {
+            get {
+                return ResourceManager.GetString("editBoatSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit member.
         /// </summary>
         internal static string editMember {
