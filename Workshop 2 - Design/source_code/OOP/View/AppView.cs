@@ -29,10 +29,10 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.renderCompactList, member.Name, member.MemberID, numberOfBoats);
         }
 
-        public void renderCompactListTitle()
+        public void renderListTitle(string title)
         {
             Console.Clear();
-            Console.WriteLine(AppStrings.compactListOfMembers);
+            Console.WriteLine(title);
             Console.WriteLine(AppStrings.divider);
         }
 
@@ -44,6 +44,16 @@ namespace Workshop_2.View
         public bool getGoBack()
         {
             return char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey);
+        }
+
+        public void renderDivider()
+        {
+            Console.WriteLine(AppStrings.divider);
+        }
+
+        public void renderVerboseListElement(Member member)
+        {
+            Console.WriteLine(AppStrings.renderVerboseList, member.Name, member.SocialSecurityNumber, member.MemberID);
         }
     }
 }

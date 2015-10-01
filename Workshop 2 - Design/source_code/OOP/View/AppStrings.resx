@@ -244,7 +244,7 @@
     <value>Choose boat to edit: </value>
   </data>
   <data name="renderBoatInformation" xml:space="preserve">
-    <value>Boat {0}, {1}, {2}m</value>
+    <value>Boat {0}: {1}, {2}m</value>
   </data>
   <data name="renderCompactList" xml:space="preserve">
     <value>{0} has ID {1} and has {2} boat(s)</value>

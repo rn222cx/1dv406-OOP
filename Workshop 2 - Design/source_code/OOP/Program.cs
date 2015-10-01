@@ -16,10 +16,9 @@ namespace Workshop_2
             //var memberDAL = new MemberDAL();
             var AppView = new AppView();
             var BoatView = new BoatView();
-            var ListView = new ListView();
             var MemberView = new MemberView();
             var MenuView = new MenuView();
-            var appController = new AppController(AppView, BoatView, MemberView, MenuView, ListView);
+            var appController = new AppController(AppView, BoatView, MemberView, MenuView);
 
             // Launching controller method. 
             appController.doControll();

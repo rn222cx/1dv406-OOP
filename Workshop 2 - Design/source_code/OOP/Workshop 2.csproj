@@ -65,7 +65,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppStrings.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\ListView.cs" />
     <Compile Include="View\MemberView.cs" />
     <Compile Include="View\MenuView.cs" />
   </ItemGroup>

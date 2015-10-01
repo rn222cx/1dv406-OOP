@@ -439,7 +439,7 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Boat {0}, {1}, {2}m.
+        ///   Looks up a localized string similar to Boat {0}: {1}, {2}m.
         /// </summary>
         internal static string renderBoatInformation {
             get {

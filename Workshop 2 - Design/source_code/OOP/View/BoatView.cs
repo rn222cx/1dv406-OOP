@@ -102,7 +102,23 @@ namespace Workshop_2.View
                 return boatNumber - 1;
             }
         }
-        public void getBoatsByID(int ID)
+        public int getBoatToEdit()
+        {
+            Console.WriteLine(AppStrings.getBoatToEdit);
+            return Convert.ToInt32(Console.ReadLine()) - 1;
+        }
+        #endregion
+        #region Render
+        public void renderShortInformationAboutBoatsByID(int ID)
+        {
+            var boats = boatDAL.getBoatsByMemberID(ID);
+            Console.WriteLine(AppStrings.renderMembersNumberOfBoats, boats.Count);
+            foreach (Boat boat in boats)
+            {
+                Console.WriteLine(AppStrings.renderBoat, boat.Type, boat.Length);
+            }
+        }
+        public void renderLongInformationAboutBoatsByID(int ID)
         {
             var boats = boatDAL.getBoatsByMemberID(ID);
             if (boats.Count == 0)
@@ -118,22 +134,6 @@ namespace Workshop_2.View
                     Console.WriteLine(AppStrings.renderBoatInformation, boatNumber, boat.Type, boat.Length);
                     boatNumber++;
                 }
-            }
-        }
-        public int getBoatToEdit()
-        {
-            Console.WriteLine(AppStrings.getBoatToEdit);
-            return Convert.ToInt32(Console.ReadLine()) - 1;
-        }
-        #endregion
-        #region Render
-        public void renderBoatsByID(int ID)
-        {
-            var boats = boatDAL.getBoatsByMemberID(ID);
-            Console.WriteLine(AppStrings.renderMembersNumberOfBoats, boats.Count);
-            foreach (Boat boat in boats)
-            {
-                Console.WriteLine(AppStrings.renderBoat, boat.Type, boat.Length);
             }
         }
         public void renderRemoveBoatSuccess()

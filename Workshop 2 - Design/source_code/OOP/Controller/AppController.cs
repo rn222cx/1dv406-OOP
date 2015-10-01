@@ -15,23 +15,20 @@ namespace Workshop_2.Controller
         private BoatView BoatView;
         private MemberView MemberView;
         private MenuView MenuView;
-        private ListView ListView;
         #endregion
         #region Model
         private MemberDAL MemberDAL;
         private BoatDAL BoatDAL;
         #endregion
-        public AppController(AppView AppView, BoatView BoatView, MemberView MemberView, MenuView MenuView, ListView ListView)
+        public AppController(AppView AppView, BoatView BoatView, MemberView MemberView, MenuView MenuView)
         {
             this.AppView = AppView;
             this.BoatView = BoatView;
             this.MemberView = MemberView;
             this.MenuView = MenuView;
-            this.ListView = ListView;
             MemberDAL = new MemberDAL();
             BoatDAL = new BoatDAL();
         }
-
         public void doControll()
         {
             Dictionary<ListOption, Action> Menu = new Dictionary<ListOption, Action>();
@@ -40,7 +37,7 @@ namespace Workshop_2.Controller
             Menu.Add(ListOption.addMember, doAddMember);
             Menu.Add(ListOption.addBoat, doAddBoat);
             Menu.Add(ListOption.showCompactListOfMembers, doRenderCompactListOfMembers);
-            Menu.Add(ListOption.showVerboseListOfMembers, ListView.renderVerboseListOfMembers);
+            Menu.Add(ListOption.showVerboseListOfMembers, doRenderVerboseListOfMembers);
             Menu.Add(ListOption.editMember, doEditMember);
             Menu.Add(ListOption.editBoat, doEditBoat);
             Menu.Add(ListOption.removeMember, doRemoveMember);
@@ -54,15 +51,13 @@ namespace Workshop_2.Controller
                 Menu[menuChoice]();
             }
         }
-
         private void doViewMember()
         {
             int ID = MemberView.getMemberID();
             MemberView.renderMemberByID(ID);
-            BoatView.renderBoatsByID(ID);
+            BoatView.renderShortInformationAboutBoatsByID(ID);
             AppView.waitForUserToRead();
         }
-
         private void doAddMember()
         {
             var newMember = MemberView.addMember();
@@ -76,13 +71,12 @@ namespace Workshop_2.Controller
 
             AppView.waitForUserToRead();
         }
-
         private void doAddBoat()
         {
             BoatView.addBoat();
             var memberID = MemberView.getMemberID();
             MemberView.renderMemberByID(memberID);
-            BoatView.renderBoatsByID(memberID);
+            BoatView.renderShortInformationAboutBoatsByID(memberID);
             var newBoat = BoatView.getNewBoat();
             if (BoatDAL.add(memberID, newBoat))
             {
@@ -93,8 +87,7 @@ namespace Workshop_2.Controller
 
             AppView.waitForUserToRead();
         }
-
-        public void doEditMember()
+        private void doEditMember()
         {
             int memberID = MemberView.getMemberID();
             MemberView.renderMemberByID(memberID);
@@ -108,13 +101,12 @@ namespace Workshop_2.Controller
 
             AppView.waitForUserToRead();
         }
-
         private void doEditBoat()
         {
             int memberID = MemberView.getMemberID();
 
             MemberView.renderMemberByID(memberID);
-            BoatView.renderBoatsByID(memberID);
+            BoatView.renderShortInformationAboutBoatsByID(memberID);
 
             int chooseBoat = BoatView.getBoatToEdit();
 
@@ -127,8 +119,7 @@ namespace Workshop_2.Controller
 
             AppView.waitForUserToRead();
         }
-
-        public void doRemoveMember()
+        private void doRemoveMember()
         {
             int memberID = MemberView.getMemberID();
             MemberView.renderMemberByID(memberID);
@@ -141,13 +132,12 @@ namespace Workshop_2.Controller
 
             AppView.waitForUserToRead();
         }
-
-        public void doRemoveBoat()
+        private void doRemoveBoat()
         {
             int memberID = MemberView.getMemberID();
 
             MemberView.renderMemberByID(memberID);
-            BoatView.renderBoatsByID(memberID);
+            BoatView.renderShortInformationAboutBoatsByID(memberID);
 
             int chooseBoat = BoatView.getBoatToRemove(memberID);
 
@@ -164,9 +154,9 @@ namespace Workshop_2.Controller
 
             AppView.waitForUserToRead();
         }
-        public void doRenderCompactListOfMembers()
+        private void doRenderCompactListOfMembers()
         {
-            AppView.renderCompactListTitle();
+            AppView.renderListTitle(AppStrings.compactListOfMembers);
             var members = MemberDAL.getMembers();
 
             foreach (var member in members)
@@ -181,9 +171,23 @@ namespace Workshop_2.Controller
                 return;
             }
         }
-        public void doRenderVerboseListOfMembers()
+        private void doRenderVerboseListOfMembers()
         {
-            // TODO: Implement
+            AppView.renderListTitle(AppStrings.renderVerboseListOfMembersTitle);
+            var members = MemberDAL.getMembers();
+
+            foreach (var member in members)
+            {
+                AppView.renderVerboseListElement(member);
+                BoatView.renderLongInformationAboutBoatsByID(member.MemberID);
+                AppView.renderDivider();
+            }
+
+            AppView.renderGoBackQuestion();
+            if (AppView.getGoBack())
+            {
+                return;
+            }
         }
 
     }
