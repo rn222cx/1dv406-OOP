@@ -268,7 +268,7 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a boat number to remove or press 0 to exit.
+        ///   Looks up a localized string similar to Choose a boat number to remove.
         /// </summary>
         internal static string getBoatToRemove {
             get {
