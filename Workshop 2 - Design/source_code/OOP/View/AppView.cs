@@ -31,7 +31,6 @@ namespace Workshop_2.View
 
         public void renderListTitle(string title)
         {
-            Console.Clear();
             Console.WriteLine(title);
             Console.WriteLine(AppStrings.divider);
         }
@@ -54,6 +53,11 @@ namespace Workshop_2.View
         public void renderVerboseListElement(Member member)
         {
             Console.WriteLine(AppStrings.renderVerboseList, member.Name, member.SocialSecurityNumber, member.MemberID);
+        }
+
+        public void consoleClear()
+        {
+            Console.Clear();
         }
     }
 }

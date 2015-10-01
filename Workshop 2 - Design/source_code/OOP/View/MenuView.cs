@@ -15,7 +15,6 @@ namespace Workshop_2.View
         }
         public ListOption listMenu()
         {
-            Console.Clear();
             Console.WriteLine("0. {0}", AppStrings.menuMember);
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
             Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);

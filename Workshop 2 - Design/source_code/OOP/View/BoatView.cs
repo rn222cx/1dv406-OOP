@@ -17,7 +17,6 @@ namespace Workshop_2.View
         #region Add
         public void addBoat()
         {
-            Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewBoat);
         }
         #endregion

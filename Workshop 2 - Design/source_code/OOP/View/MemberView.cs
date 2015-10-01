@@ -17,9 +17,7 @@ namespace Workshop_2.View
         #region Add
         public Member addMember()
         {
-            Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewMember);
-
             return getMemberInfo();
         }
         #endregion

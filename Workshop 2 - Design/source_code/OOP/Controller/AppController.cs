@@ -46,8 +46,10 @@ namespace Workshop_2.Controller
 
             while (menuChoice != ListOption.quit)
             {
+                AppView.consoleClear();
                 MenuView.welcomeMessage();
                 menuChoice = MenuView.listMenu();
+                AppView.consoleClear();
                 Menu[menuChoice]();
             }
         }
