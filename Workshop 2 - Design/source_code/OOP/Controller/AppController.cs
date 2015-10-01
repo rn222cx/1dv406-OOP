@@ -38,25 +38,7 @@ namespace Workshop_2.Controller
             {
                 appView.welcomeMessage();
                 menuChoice = appView.listMenu();
-
                 Menu[menuChoice]();
-
-                //switch (menuChoice)
-                //{
-                //    case ListOption.addMember:
-                //        doAddMember();
-                //        break;
-                //    case ListOption.addBoat:
-                //        doAddBoat();
-                //        break;
-                //    case ListOption.showCompactListOfMembers:
-                //        appView.displayCompactListOfMembers();
-                //        break;
-                //    case ListOption.quit:
-                //        return;
-                //    default:
-                //        break;
-                //} 
             }
         }
 
@@ -109,7 +91,13 @@ namespace Workshop_2.Controller
             Console.WriteLine("Choose boat to edit");
             int chooseBoat = Convert.ToInt32(Console.ReadLine()) - 1;
 
-            boatDAL.updateBoat(memberID, chooseBoat, appView.getNewBoat());
+            if (boatDAL.updateBoat(memberID, chooseBoat, appView.getNewBoat()))
+            {
+                //TODO: Add success message
+            }
+            else
+                appView.fail();
+
             appView.waitForUserTheRead();
         }
 
@@ -135,7 +123,12 @@ namespace Workshop_2.Controller
 
             int chooseBoat = appView.chooseBoatToRemove() -1;
 
-            boatDAL.removeBoat(memberID, chooseBoat);
+            if (boatDAL.removeBoat(memberID, chooseBoat))
+            {
+                //TODO: Add success message
+            }
+            else
+                appView.fail();
             appView.waitForUserTheRead();
         }
 

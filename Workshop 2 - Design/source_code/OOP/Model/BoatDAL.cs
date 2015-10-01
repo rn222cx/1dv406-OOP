@@ -84,29 +84,31 @@ namespace Workshop_2.Model
             return boats;
         }
 
-        public void removeBoat(int memberID, int boat)
+        public bool removeBoat(int memberID, int boat)
         {
             try
             {
-            XElement xElement = XElement.Load(XMLFileInfo.Path);
-           
-            xElement.Descendants(XMLFileInfo.Member)
-                .Where(a => a.Element(XMLFileInfo.ID).Value == memberID.ToString())
-                .SelectMany(a => a.Elements(XMLFileInfo.Boat))
-                .Skip(boat).Take(1)
-                .Remove();
+                XElement xElement = XElement.Load(XMLFileInfo.Path);
 
-            xElement.Save(XMLFileInfo.Path);
+                xElement.Descendants(XMLFileInfo.Member)
+                    .Where(a => a.Element(XMLFileInfo.ID).Value == memberID.ToString())
+                    .SelectMany(a => a.Elements(XMLFileInfo.Boat))
+                    .Skip(boat).Take(1)
+                    .Remove();
+
+                xElement.Save(XMLFileInfo.Path);
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         private XElement createBoat(Boat boat)
         {
             return new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type));
-        }
-            catch (Exception)
-            {
-                throw;
-            }
         }
     }
 }
