@@ -24,6 +24,7 @@ namespace Workshop_2.View
         public ListOption listMenu()
         {
             Console.Clear();
+            Console.WriteLine("0. {0}", AppStrings.viewMember);
             Console.WriteLine("1. {0}", AppStrings.menuAddNewMember);
             Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);
             Console.WriteLine("3. {0}", AppStrings.menuShowCompactListOfMembers);
@@ -40,6 +41,8 @@ namespace Workshop_2.View
                 string keyValue = Console.ReadLine();
                 switch (keyValue.ToLower())
                 {
+                    case "0":
+                        return ListOption.viewMember;
                     case "1":
                         return ListOption.addMember;
                     case "2":
@@ -315,8 +318,9 @@ namespace Workshop_2.View
             
         }
 
-        public void waitForUserTheRead()
+        public void waitForUserToRead()
         {
+            Console.WriteLine(AppStrings.pressAnyKey);
             Console.ReadLine();
         }
 

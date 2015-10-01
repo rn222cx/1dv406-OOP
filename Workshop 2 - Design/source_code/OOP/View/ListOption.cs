@@ -8,7 +8,8 @@ namespace Workshop_2.Model
 {
     public enum ListOption
     {
-        addMember = 1,
+        viewMember,
+        addMember,
         addBoat,
         quit,
         showCompactListOfMembers,

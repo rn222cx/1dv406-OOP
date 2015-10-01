@@ -24,6 +24,7 @@ namespace Workshop_2.Controller
         {
             Dictionary<ListOption, Action> Menu = new Dictionary<ListOption, Action>();
             ListOption menuChoice = new ListOption();
+            Menu.Add(ListOption.viewMember, doViewMember);
             Menu.Add(ListOption.addMember, doAddMember);
             Menu.Add(ListOption.addBoat, doAddBoat);
             Menu.Add(ListOption.showCompactListOfMembers, appView.displayCompactListOfMembers);
@@ -42,6 +43,14 @@ namespace Workshop_2.Controller
             }
         }
 
+        private void doViewMember()
+        {
+            int ID = appView.getMemberID();
+            appView.presentMemberByID(ID);
+            appView.presentBoatsByID(ID);
+            appView.waitForUserToRead();
+        }
+
         private void doAddMember()
         {
             var newMember = appView.addMember();
@@ -53,7 +62,7 @@ namespace Workshop_2.Controller
             else
                 appView.fail();
 
-            appView.waitForUserTheRead();
+            appView.waitForUserToRead();
         }
 
         private void doAddBoat()
@@ -68,7 +77,7 @@ namespace Workshop_2.Controller
             else
                 appView.fail();
 
-            appView.waitForUserTheRead();
+            appView.waitForUserToRead();
         }
 
         public void doEditMember()
@@ -83,7 +92,7 @@ namespace Workshop_2.Controller
             else
                 appView.fail();
 
-            appView.waitForUserTheRead();
+            appView.waitForUserToRead();
         }
 
         private void doEditBoat()
@@ -102,7 +111,7 @@ namespace Workshop_2.Controller
             else
                 appView.fail();
 
-            appView.waitForUserTheRead();
+            appView.waitForUserToRead();
         }
 
         public void doRemoveMember()
@@ -116,7 +125,7 @@ namespace Workshop_2.Controller
             else
                 appView.fail();
 
-            appView.waitForUserTheRead();
+            appView.waitForUserToRead();
         }
 
         public void doRemoveBoat()
@@ -135,7 +144,7 @@ namespace Workshop_2.Controller
             else
                 appView.fail();
 
-            appView.waitForUserTheRead();
+            appView.waitForUserToRead();
         }
 
     }

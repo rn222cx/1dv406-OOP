@@ -430,6 +430,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press any key to continue....
+        /// </summary>
+        internal static string pressAnyKey {
+            get {
+                return ResourceManager.GetString("pressAnyKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove a boat from member.
         /// </summary>
         internal static string removeBoat {
@@ -471,6 +480,15 @@ namespace Workshop_2.View {
         internal static string verboseListOfMembers {
             get {
                 return ResourceManager.GetString("verboseListOfMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View a member.
+        /// </summary>
+        internal static string viewMember {
+            get {
+                return ResourceManager.GetString("viewMember", resourceCulture);
             }
         }
         

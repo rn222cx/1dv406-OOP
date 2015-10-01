@@ -258,4 +258,10 @@
   <data name="wrongLength" xml:space="preserve">
     <value>Length must be a whole number, try again: </value>
   </data>
+  <data name="viewMember" xml:space="preserve">
+    <value>View a member</value>
+  </data>
+  <data name="pressAnyKey" xml:space="preserve">
+    <value>Press any key to continue...</value>
+  </data>
 </root>
