@@ -316,5 +316,11 @@ namespace Workshop_2.View
         {
             Console.ReadLine();
         }
+
+        public int chooseBoatToRemove()
+        {
+            Console.WriteLine(AppStrings.chooseBoatToRemove);
+            return Convert.ToInt32(Console.ReadLine());
+        }
     }
 }

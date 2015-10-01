@@ -133,8 +133,7 @@ namespace Workshop_2.Controller
             appView.presentMemberByID(memberID);
             appView.showBoatsByID(memberID);
 
-            Console.WriteLine("Choose boat to remove");
-            int chooseBoat = Convert.ToInt32(Console.ReadLine()) - 1;
+            int chooseBoat = appView.chooseBoatToRemove() -1;
 
             boatDAL.removeBoat(memberID, chooseBoat);
             appView.waitForUserTheRead();

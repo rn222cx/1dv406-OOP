@@ -16,11 +16,11 @@ namespace Workshop_2.Model
             {
                 XDocument doc = XDocument.Load(XMLFileInfo.Path);
 
-                XElement particularStudent = doc.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
+                XElement particularMember = doc.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
                                     .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
                                     .Last();
-                if (particularStudent != null)
-                    particularStudent.Add(createBoat(boat));
+                if (particularMember != null)
+                    particularMember.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type)));
                 doc.Save(XMLFileInfo.Path);
                 Console.WriteLine(doc);
 
@@ -49,34 +49,7 @@ namespace Workshop_2.Model
                     .First();
 
                 boat.ReplaceWith(createBoat(boatToAdd));
-
-                //memberToUpdate.Elements(XMLFileInfo.Boat)
-                //    .Skip(boatsToBeSkipped).Take(1)
-                //    .Remove();
-
-                //memberToUpdate.Add(createBoat(boatToAdd));
-
-                //XElement updatedMember = new XElement(XMLFileInfo.Member,
-                //           new XElement(XMLFileInfo.ID, ID),
-                //           new XElement(XMLFileInfo.Name, memberToBeReplaced.Element(XMLFileInfo.Name)),
-                //           new XElement(XMLFileInfo.SocialSecurityNumber, memberToBeReplaced.Element(XMLFileInfo.SocialSecurityNumber)));
-
-                //foreach (XElement element in memberToBeReplaced.Elements(XMLFileInfo.Boat))
-                //{
-                //    updatedMember.Add(element);
-
-                //}
-
-                //foreach (XElement element in updatedMember.Elements(XMLFileInfo.Boat))
-                //{
-                //    if (element.Attribute(XMLFileInfo.Type).ToString() == originalBoat.Type.ToString() && element.Value == originalBoat.Length)
-                //    {
-
-                //    }
-                //}
-
-                //memberToBeReplaced.ReplaceWith(updatedMember);
-
+                
                 xElement.Save(XMLFileInfo.Path);
 
                 return true;
@@ -113,7 +86,8 @@ namespace Workshop_2.Model
 
         public void removeBoat(int memberID, int boat)
         {
-
+            try
+            {
             XElement xElement = XElement.Load(XMLFileInfo.Path);
            
             xElement.Descendants(XMLFileInfo.Member)
@@ -128,6 +102,11 @@ namespace Workshop_2.Model
         private XElement createBoat(Boat boat)
         {
             return new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type));
+        }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
