@@ -8,16 +8,10 @@ namespace Workshop_2
 {
     class TodoList
     {
-        // getMemberID() and getNewBoatMemberID() are DRY
-
-
         //        The following requirements are to be met:
 
-        // List all members in two different ways:
-        //      “Verbose List”; name, personal number, member id and boats with boat information
         // Look at a specific member’s information
-        // Deleta a boat
-        // Change a boat’s information
+
         // An object oriented design and implementation.This includes but is not limited to:
         // Objects are connected using associations and not with keys/ids.
         // Classes have high cohesion and are not too large or have too much responsibility.

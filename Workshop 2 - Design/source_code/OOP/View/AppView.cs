@@ -180,12 +180,12 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.fail);
         }
 
-        public int getMemberID() // TODO: DRY with getNewBoatMemberID()
+        public int getMemberID()
         {
+            Console.Write(AppStrings.getMemberId);
             while (true)
             {
                 int ID;
-                Console.Write(AppStrings.getMemberId);
                 if (int.TryParse(Console.ReadLine(), out ID))
                 {
                     if (memberDAL.validateMemberID(ID))
@@ -201,24 +201,10 @@ namespace Workshop_2.View
         }
         public int getNewBoatMemberID()
         {
-            while (true)
-            {
-                int ID;
-                Console.Write(AppStrings.getMemberId);
-                if (int.TryParse(Console.ReadLine(), out ID))
-                {
-                    if (memberDAL.validateMemberID(ID))
-                    {
-                        presentMemberByID(ID);
-                        presentBoatsByID(ID);
-                        return ID;
-                    }
-                    else
-                    {
-                        Console.Write(AppStrings.getMemberIDFail);
-                    }
-                } 
-            }
+                int ID = getMemberID();
+                presentMemberByID(ID);
+                presentBoatsByID(ID);
+                return ID;
         }
 
         public void presentMemberByID(int ID)
