@@ -53,9 +53,9 @@ namespace Workshop_2.Controller
         }
         private void doViewMember()
         {
-            int ID = MemberView.getMemberID();
-            MemberView.renderMemberByID(ID);
-            BoatView.renderShortInformationAboutBoatsByID(ID);
+            int memberID = MemberView.getMemberID();
+            MemberView.renderMemberByID(memberID);
+            BoatView.renderShortInformationAboutBoatsByID(memberID);
             AppView.waitForUserToRead();
         }
         private void doAddMember()
@@ -189,6 +189,5 @@ namespace Workshop_2.Controller
                 return;
             }
         }
-
     }
 }
