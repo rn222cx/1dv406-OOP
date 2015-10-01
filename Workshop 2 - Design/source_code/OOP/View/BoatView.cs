@@ -100,7 +100,7 @@ namespace Workshop_2.View
                     Console.WriteLine(AppStrings.failNotValidNumber);
                     Result = Console.ReadLine();
                 }
-                return boatNumber;
+                return boatNumber - 1;
             }
         }
         public void getBoatsByID(int ID)
