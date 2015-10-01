@@ -327,7 +327,17 @@ namespace Workshop_2.View
         public int chooseBoatToRemove()
         {
             Console.WriteLine(AppStrings.chooseBoatToRemove);
-            return Convert.ToInt32(Console.ReadLine()) - 1;
+
+            int boatNumber;
+            String Result = Console.ReadLine();
+
+            while (!Int32.TryParse(Result, out boatNumber))
+            {
+                Console.WriteLine("Not a valid number, try again.");
+                Result = Console.ReadLine();
+            }
+            return boatNumber;
+
         }
     }
 }
