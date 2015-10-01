@@ -253,7 +253,7 @@
     <value>Name: {0}, Social Security Number: {1}, Member ID: {2}</value>
   </data>
   <data name="removeBoatSuccess" xml:space="preserve">
-    <value />
+    <value>The boat where successfully removed!</value>
   </data>
   <data name="wrongLength" xml:space="preserve">
     <value>Length must be a whole number, try again: </value>

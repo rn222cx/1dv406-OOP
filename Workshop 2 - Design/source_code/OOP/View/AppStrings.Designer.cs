@@ -439,7 +439,7 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to The boat where successfully removed!.
         /// </summary>
         internal static string removeBoatSuccess {
             get {
