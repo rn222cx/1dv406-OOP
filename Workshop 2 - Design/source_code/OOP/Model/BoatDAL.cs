@@ -20,7 +20,7 @@ namespace Workshop_2.Model
                                     .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
                                     .Last();
                 if (particularStudent != null)
-                    particularStudent.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type)));
+                    particularStudent.Add(createBoat(boat));
                 doc.Save(XMLFileInfo.Path);
                 Console.WriteLine(doc);
 
@@ -33,31 +33,39 @@ namespace Workshop_2.Model
 
         }
 
-        private bool updateBoat(int ID, Boat originalBoat, Boat updatedBoat)
+        public bool updateBoat(int memberID, int boatsToBeSkipped, Boat boatToAdd)
         {
             try
             {
-                //if (String.IsNullOrWhiteSpace(updatedBoat.Type))
-                //    updatedBoat.Name = currentMember.Name;
-                //if (String.IsNullOrWhiteSpace(updatedBoat.SocialSecurityNumber))
-                //    updatedBoat.SocialSecurityNumber = currentMember.SocialSecurityNumber;
-
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
-                XElement memberToBeReplaced = (from Member in xElement.Elements(XMLFileInfo.Member)
-                                               where (string)Member.Element(XMLFileInfo.ID) == ID.ToString()
+                XElement memberToUpdate = (from Member in xElement.Elements(XMLFileInfo.Member)
+                                               where (string)Member.Element(XMLFileInfo.ID) == memberID.ToString()
                                                select Member).First();
 
-                XElement updatedMember = new XElement(XMLFileInfo.Member,
-                           new XElement(XMLFileInfo.ID, ID),
-                           new XElement(XMLFileInfo.Name, memberToBeReplaced.Element(XMLFileInfo.Name)),
-                           new XElement(XMLFileInfo.SocialSecurityNumber, memberToBeReplaced.Element(XMLFileInfo.SocialSecurityNumber)));
+                XElement boat = memberToUpdate.Elements(XMLFileInfo.Boat)
+                    .Skip(boatsToBeSkipped)
+                    .Take(1)
+                    .First();
 
-                foreach (XElement element in memberToBeReplaced.Elements(XMLFileInfo.Boat))
-                {
-                    updatedMember.Add(element);
-                    
-                }
+                boat.ReplaceWith(createBoat(boatToAdd));
+
+                //memberToUpdate.Elements(XMLFileInfo.Boat)
+                //    .Skip(boatsToBeSkipped).Take(1)
+                //    .Remove();
+
+                //memberToUpdate.Add(createBoat(boatToAdd));
+
+                //XElement updatedMember = new XElement(XMLFileInfo.Member,
+                //           new XElement(XMLFileInfo.ID, ID),
+                //           new XElement(XMLFileInfo.Name, memberToBeReplaced.Element(XMLFileInfo.Name)),
+                //           new XElement(XMLFileInfo.SocialSecurityNumber, memberToBeReplaced.Element(XMLFileInfo.SocialSecurityNumber)));
+
+                //foreach (XElement element in memberToBeReplaced.Elements(XMLFileInfo.Boat))
+                //{
+                //    updatedMember.Add(element);
+
+                //}
 
                 //foreach (XElement element in updatedMember.Elements(XMLFileInfo.Boat))
                 //{
@@ -67,7 +75,7 @@ namespace Workshop_2.Model
                 //    }
                 //}
 
-                memberToBeReplaced.ReplaceWith(updatedMember);
+                //memberToBeReplaced.ReplaceWith(updatedMember);
 
                 xElement.Save(XMLFileInfo.Path);
 
@@ -114,7 +122,12 @@ namespace Workshop_2.Model
                 .Skip(boat).Take(1)
                 .Remove();
 
-            Console.WriteLine(xElement);
+            xElement.Save(XMLFileInfo.Path);
+        }
+
+        private XElement createBoat(Boat boat)
+        {
+            return new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type));
         }
     }
 }

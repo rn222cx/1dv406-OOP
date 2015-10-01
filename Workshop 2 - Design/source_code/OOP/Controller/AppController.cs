@@ -101,12 +101,22 @@ namespace Workshop_2.Controller
 
         private void doEditBoat()
         {
-            throw new NotImplementedException();
+            int memberID = appView.getMemberID();
+
+            appView.presentMemberByID(memberID);
+            appView.showBoatsByID(memberID);
+
+            Console.WriteLine("Choose boat to edit");
+            int chooseBoat = Convert.ToInt32(Console.ReadLine()) - 1;
+
+            boatDAL.updateBoat(memberID, chooseBoat, appView.getNewBoat());
+            appView.waitForUserTheRead();
         }
 
         public void doRemoveMember()
         {
             int memberID = appView.getMemberID();
+            appView.presentMemberByID(memberID);
             if (memberDAL.removeMember(memberID))
             {
                 appView.removeMemberSuccess();
@@ -120,15 +130,14 @@ namespace Workshop_2.Controller
         {
             int memberID = appView.getMemberID();
 
+            appView.presentMemberByID(memberID);
             appView.showBoatsByID(memberID);
-            //appView.waitForUserTheRead();
 
             Console.WriteLine("Choose boat to remove");
             int chooseBoat = Convert.ToInt32(Console.ReadLine()) - 1;
 
             boatDAL.removeBoat(memberID, chooseBoat);
-            Console.ReadLine();
-
+            appView.waitForUserTheRead();
         }
 
     }
