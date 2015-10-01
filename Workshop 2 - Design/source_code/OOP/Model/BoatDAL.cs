@@ -20,7 +20,7 @@ namespace Workshop_2.Model
                                     .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
                                     .Last();
                 if (particularMember != null)
-                    particularMember.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type)));
+                    particularMember.Add(createBoat(boat));
                 doc.Save(XMLFileInfo.Path);
                 Console.WriteLine(doc);
 
