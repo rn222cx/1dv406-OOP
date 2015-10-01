@@ -147,7 +147,7 @@
   <data name="menuQuit" xml:space="preserve">
     <value>Quit</value>
   </data>
-  <data name="menuWrongChoice" xml:space="preserve">
+  <data name="failMenuWrongChoice" xml:space="preserve">
     <value>Try again: </value>
   </data>
   <data name="menuWelcome" xml:space="preserve">
@@ -162,16 +162,16 @@
   <data name="getMemberIDFail" xml:space="preserve">
     <value>Member do not exist, try again: </value>
   </data>
-  <data name="presentBoat" xml:space="preserve">
+  <data name="renderBoat" xml:space="preserve">
     <value>{0}: {1}m</value>
   </data>
-  <data name="presentMembersName" xml:space="preserve">
+  <data name="renderMembersName" xml:space="preserve">
     <value>Members name: {0}</value>
   </data>
-  <data name="presentMembersNumberOfBoats" xml:space="preserve">
+  <data name="renderMembersNumberOfBoats" xml:space="preserve">
     <value>The member have {0} boat(s)</value>
   </data>
-  <data name="presentMembersSSN" xml:space="preserve">
+  <data name="renderMembersSSN" xml:space="preserve">
     <value>Members social security number: {0}</value>
   </data>
   <data name="boatTypeCanoe" xml:space="preserve">
@@ -189,7 +189,7 @@
   <data name="compactListOfMembers" xml:space="preserve">
     <value>List of all members with name, member id and number of boat/boats</value>
   </data>
-  <data name="menuShowCompactListOfMembers" xml:space="preserve">
+  <data name="menuRenderCompactListOfMembers" xml:space="preserve">
     <value>Show compact list of members</value>
   </data>
   <data name="back" xml:space="preserve">
@@ -201,22 +201,22 @@
   <data name="divider" xml:space="preserve">
     <value>--------------------------</value>
   </data>
-  <data name="presentShortMember" xml:space="preserve">
+  <data name="renderShortMember" xml:space="preserve">
     <value>{0} has Id {1} and has boat/boats.</value>
   </data>
   <data name="removeMember" xml:space="preserve">
     <value>Remove a member</value>
   </data>
   <data name="removeMemberSuccess" xml:space="preserve">
-    <value>The user were removed successfully</value>
+    <value>The user were removed successfully!</value>
   </data>
   <data name="memberHasNoBoat" xml:space="preserve">
     <value>Member has no boats registered</value>
   </data>
-  <data name="menuShowVerboseListOfMembers" xml:space="preserve">
+  <data name="menuRenderVerboseListOfMembers" xml:space="preserve">
     <value>Show verbose list of members</value>
   </data>
-  <data name="verboseListOfMembers" xml:space="preserve">
+  <data name="renderVerboseListOfMembersTitle" xml:space="preserve">
     <value>LIST OF MEMBERS AND BOATS</value>
   </data>
   <data name="removeBoat" xml:space="preserve">
@@ -228,7 +228,7 @@
   <data name="editMemberSuccess" xml:space="preserve">
     <value>The member where updated with the new information!</value>
   </data>
-  <data name="fail" xml:space="preserve">
+  <data name="failGeneral" xml:space="preserve">
     <value>Something went wrong, please try again.</value>
   </data>
   <data name="editBoat" xml:space="preserve">
@@ -237,31 +237,37 @@
   <data name="editBoatSuccess" xml:space="preserve">
     <value>The boat where updated!</value>
   </data>
-  <data name="chooseBoatToRemove" xml:space="preserve">
+  <data name="getBoatToRemove" xml:space="preserve">
     <value>Choose a boat number to remove</value>
   </data>
-  <data name="chooseBoatToEdit" xml:space="preserve">
+  <data name="getBoatToEdit" xml:space="preserve">
     <value>Choose boat to edit: </value>
   </data>
-  <data name="presentBoatInformation" xml:space="preserve">
+  <data name="renderBoatInformation" xml:space="preserve">
     <value>Boat {0}, {1}, {2}m</value>
   </data>
-  <data name="presentCompactList" xml:space="preserve">
+  <data name="renderCompactList" xml:space="preserve">
     <value>{0} has ID {1} and has {2} boat(s)</value>
   </data>
-  <data name="presentVerboseList" xml:space="preserve">
+  <data name="renderVerboseList" xml:space="preserve">
     <value>Name: {0}, Social Security Number: {1}, Member ID: {2}</value>
   </data>
   <data name="removeBoatSuccess" xml:space="preserve">
-    <value>The boat where successfully removed!</value>
+    <value>The boat were successfully removed!</value>
   </data>
-  <data name="wrongLength" xml:space="preserve">
+  <data name="failWrongLength" xml:space="preserve">
     <value>Length must be a whole number, try again: </value>
   </data>
-  <data name="viewMember" xml:space="preserve">
+  <data name="menuMember" xml:space="preserve">
     <value>View a member</value>
   </data>
   <data name="pressAnyKey" xml:space="preserve">
     <value>Press any key to continue...</value>
+  </data>
+  <data name="failNotValidNumber" xml:space="preserve">
+    <value>Not a valid number, try again: </value>
+  </data>
+  <data name="renderKeyToCancelRemoveBoat" xml:space="preserve">
+    <value>or press 0 to exit</value>
   </data>
 </root>

@@ -48,6 +48,7 @@
     <Compile Include="Model\BoatDAL.cs" />
     <Compile Include="Model\BoatType.cs" />
     <Compile Include="Model\MemberDAL.cs" />
+    <Compile Include="View\BoatView.cs" />
     <Compile Include="View\ListOption.cs" />
     <Compile Include="Model\Member.cs" />
     <Compile Include="Model\XMLFileInfo.Designer.cs">
@@ -64,6 +65,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\ListView.cs" />
+    <Compile Include="View\MemberView.cs" />
+    <Compile Include="View\MenuView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -169,24 +169,6 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose boat to edit: .
-        /// </summary>
-        internal static string chooseBoatToEdit {
-            get {
-                return ResourceManager.GetString("chooseBoatToEdit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Choose a boat number to remove.
-        /// </summary>
-        internal static string chooseBoatToRemove {
-            get {
-                return ResourceManager.GetString("chooseBoatToRemove", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to List of all members with name, member id and number of boat/boats.
         /// </summary>
         internal static string compactListOfMembers {
@@ -243,9 +225,54 @@ namespace Workshop_2.View {
         /// <summary>
         ///   Looks up a localized string similar to Something went wrong, please try again..
         /// </summary>
-        internal static string fail {
+        internal static string failGeneral {
             get {
-                return ResourceManager.GetString("fail", resourceCulture);
+                return ResourceManager.GetString("failGeneral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Try again: .
+        /// </summary>
+        internal static string failMenuWrongChoice {
+            get {
+                return ResourceManager.GetString("failMenuWrongChoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a valid number, try again: .
+        /// </summary>
+        internal static string failNotValidNumber {
+            get {
+                return ResourceManager.GetString("failNotValidNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Length must be a whole number, try again: .
+        /// </summary>
+        internal static string failWrongLength {
+            get {
+                return ResourceManager.GetString("failWrongLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose boat to edit: .
+        /// </summary>
+        internal static string getBoatToEdit {
+            get {
+                return ResourceManager.GetString("getBoatToEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a boat number to remove.
+        /// </summary>
+        internal static string getBoatToRemove {
+            get {
+                return ResourceManager.GetString("getBoatToRemove", resourceCulture);
             }
         }
         
@@ -313,6 +340,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to View a member.
+        /// </summary>
+        internal static string menuMember {
+            get {
+                return ResourceManager.GetString("menuMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quit.
         /// </summary>
         internal static string menuQuit {
@@ -324,18 +360,18 @@ namespace Workshop_2.View {
         /// <summary>
         ///   Looks up a localized string similar to Show compact list of members.
         /// </summary>
-        internal static string menuShowCompactListOfMembers {
+        internal static string menuRenderCompactListOfMembers {
             get {
-                return ResourceManager.GetString("menuShowCompactListOfMembers", resourceCulture);
+                return ResourceManager.GetString("menuRenderCompactListOfMembers", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Show verbose list of members.
         /// </summary>
-        internal static string menuShowVerboseListOfMembers {
+        internal static string menuRenderVerboseListOfMembers {
             get {
-                return ResourceManager.GetString("menuShowVerboseListOfMembers", resourceCulture);
+                return ResourceManager.GetString("menuRenderVerboseListOfMembers", resourceCulture);
             }
         }
         
@@ -345,87 +381,6 @@ namespace Workshop_2.View {
         internal static string menuWelcome {
             get {
                 return ResourceManager.GetString("menuWelcome", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Try again: .
-        /// </summary>
-        internal static string menuWrongChoice {
-            get {
-                return ResourceManager.GetString("menuWrongChoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0}: {1}m.
-        /// </summary>
-        internal static string presentBoat {
-            get {
-                return ResourceManager.GetString("presentBoat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Boat {0}, {1}, {2}m.
-        /// </summary>
-        internal static string presentBoatInformation {
-            get {
-                return ResourceManager.GetString("presentBoatInformation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} has ID {1} and has {2} boat(s).
-        /// </summary>
-        internal static string presentCompactList {
-            get {
-                return ResourceManager.GetString("presentCompactList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Members name: {0}.
-        /// </summary>
-        internal static string presentMembersName {
-            get {
-                return ResourceManager.GetString("presentMembersName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The member have {0} boat(s).
-        /// </summary>
-        internal static string presentMembersNumberOfBoats {
-            get {
-                return ResourceManager.GetString("presentMembersNumberOfBoats", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Members social security number: {0}.
-        /// </summary>
-        internal static string presentMembersSSN {
-            get {
-                return ResourceManager.GetString("presentMembersSSN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} has Id {1} and has boat/boats..
-        /// </summary>
-        internal static string presentShortMember {
-            get {
-                return ResourceManager.GetString("presentShortMember", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Name: {0}, Social Security Number: {1}, Member ID: {2}.
-        /// </summary>
-        internal static string presentVerboseList {
-            get {
-                return ResourceManager.GetString("presentVerboseList", resourceCulture);
             }
         }
         
@@ -448,7 +403,7 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The boat where successfully removed!.
+        ///   Looks up a localized string similar to The boat were successfully removed!.
         /// </summary>
         internal static string removeBoatSuccess {
             get {
@@ -466,7 +421,7 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The user were removed successfully.
+        ///   Looks up a localized string similar to The user were removed successfully!.
         /// </summary>
         internal static string removeMemberSuccess {
             get {
@@ -475,29 +430,92 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}: {1}m.
+        /// </summary>
+        internal static string renderBoat {
+            get {
+                return ResourceManager.GetString("renderBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Boat {0}, {1}, {2}m.
+        /// </summary>
+        internal static string renderBoatInformation {
+            get {
+                return ResourceManager.GetString("renderBoatInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} has ID {1} and has {2} boat(s).
+        /// </summary>
+        internal static string renderCompactList {
+            get {
+                return ResourceManager.GetString("renderCompactList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to or press 0 to exit.
+        /// </summary>
+        internal static string renderKeyToCancelRemoveBoat {
+            get {
+                return ResourceManager.GetString("renderKeyToCancelRemoveBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Members name: {0}.
+        /// </summary>
+        internal static string renderMembersName {
+            get {
+                return ResourceManager.GetString("renderMembersName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The member have {0} boat(s).
+        /// </summary>
+        internal static string renderMembersNumberOfBoats {
+            get {
+                return ResourceManager.GetString("renderMembersNumberOfBoats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Members social security number: {0}.
+        /// </summary>
+        internal static string renderMembersSSN {
+            get {
+                return ResourceManager.GetString("renderMembersSSN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} has Id {1} and has boat/boats..
+        /// </summary>
+        internal static string renderShortMember {
+            get {
+                return ResourceManager.GetString("renderShortMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name: {0}, Social Security Number: {1}, Member ID: {2}.
+        /// </summary>
+        internal static string renderVerboseList {
+            get {
+                return ResourceManager.GetString("renderVerboseList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LIST OF MEMBERS AND BOATS.
         /// </summary>
-        internal static string verboseListOfMembers {
+        internal static string renderVerboseListOfMembersTitle {
             get {
-                return ResourceManager.GetString("verboseListOfMembers", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to View a member.
-        /// </summary>
-        internal static string viewMember {
-            get {
-                return ResourceManager.GetString("viewMember", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Length must be a whole number, try again: .
-        /// </summary>
-        internal static string wrongLength {
-            get {
-                return ResourceManager.GetString("wrongLength", resourceCulture);
+                return ResourceManager.GetString("renderVerboseListOfMembersTitle", resourceCulture);
             }
         }
     }

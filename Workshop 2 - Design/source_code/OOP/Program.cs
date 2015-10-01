@@ -14,8 +14,12 @@ namespace Workshop_2
         {
             // Creating new instances of view, controller and model
             //var memberDAL = new MemberDAL();
-            var appView = new AppView();
-            var appController = new AppController(appView);
+            var AppView = new AppView();
+            var BoatView = new BoatView();
+            var ListView = new ListView();
+            var MemberView = new MemberView();
+            var MenuView = new MenuView();
+            var appController = new AppController(AppView, BoatView, MemberView, MenuView, ListView);
 
             // Launching controller method. 
             appController.doControll();

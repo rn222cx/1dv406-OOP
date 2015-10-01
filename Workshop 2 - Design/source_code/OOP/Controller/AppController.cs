@@ -10,12 +10,24 @@ namespace Workshop_2.Controller
 {
     class AppController
     {
-        private AppView appView;
+        #region View
+        private AppView AppView;
+        private BoatView BoatView;
+        private MemberView MemberView;
+        private MenuView MenuView;
+        private ListView ListView;
+        #endregion
+        #region Model
         private MemberDAL memberDAL;
         private BoatDAL boatDAL;
-        public AppController(AppView appView)
+        #endregion
+        public AppController(AppView AppView, BoatView BoatView, MemberView MemberView, MenuView MenuView, ListView ListView)
         {
-            this.appView = appView;
+            this.AppView = AppView;
+            this.BoatView = BoatView;
+            this.MemberView = MemberView;
+            this.MenuView = MenuView;
+            this.ListView = ListView;
             memberDAL = new MemberDAL();
             boatDAL = new BoatDAL();
         }
@@ -27,124 +39,130 @@ namespace Workshop_2.Controller
             Menu.Add(ListOption.viewMember, doViewMember);
             Menu.Add(ListOption.addMember, doAddMember);
             Menu.Add(ListOption.addBoat, doAddBoat);
-            Menu.Add(ListOption.showCompactListOfMembers, appView.displayCompactListOfMembers);
-            Menu.Add(ListOption.showVerboseListOfMembers, appView.displayVerboseListOfMembers);
+            Menu.Add(ListOption.showCompactListOfMembers, ListView.renderCompactListOfMembers);
+            Menu.Add(ListOption.showVerboseListOfMembers, ListView.renderVerboseListOfMembers);
             Menu.Add(ListOption.editMember, doEditMember);
             Menu.Add(ListOption.editBoat, doEditBoat);
             Menu.Add(ListOption.removeMember, doRemoveMember);
             Menu.Add(ListOption.removeBoat, doRemoveBoat);
-            Menu.Add(ListOption.quit, appView.exit);
+            Menu.Add(ListOption.quit, AppView.exit);
 
             while (menuChoice != ListOption.quit)
             {
-                appView.welcomeMessage();
-                menuChoice = appView.listMenu();
+                MenuView.welcomeMessage();
+                menuChoice = MenuView.listMenu();
                 Menu[menuChoice]();
             }
         }
 
         private void doViewMember()
         {
-            int ID = appView.getMemberID();
-            appView.presentMemberByID(ID);
-            appView.presentBoatsByID(ID);
-            appView.waitForUserToRead();
+            int ID = MemberView.getMemberID();
+            MemberView.renderMemberByID(ID);
+            BoatView.renderBoatsByID(ID);
+            AppView.waitForUserToRead();
         }
 
         private void doAddMember()
         {
-            var newMember = appView.addMember();
+            var newMember = MemberView.addMember();
             
             if (memberDAL.saveMember(newMember))
             {
-                appView.addMemberSuccess();
+                MemberView.renderAddMemberSuccess();
             }
             else
-                appView.fail();
+                AppView.fail();
 
-            appView.waitForUserToRead();
+            AppView.waitForUserToRead();
         }
 
         private void doAddBoat()
         {
-            appView.addBoat();
-            var memberID = appView.getNewBoatMemberID();
-            var newBoat = appView.getNewBoat();
+            BoatView.addBoat();
+            var memberID = MemberView.getMemberID();
+            MemberView.renderMemberByID(memberID);
+            BoatView.renderBoatsByID(memberID);
+            var newBoat = BoatView.getNewBoat();
             if (boatDAL.add(memberID, newBoat))
             {
-                appView.addBoatSuccess();
+                BoatView.renderAddBoatSuccess();
             }
             else
-                appView.fail();
+                AppView.fail();
 
-            appView.waitForUserToRead();
+            AppView.waitForUserToRead();
         }
 
         public void doEditMember()
         {
-            int memberID = appView.getMemberID();
-            appView.presentMemberByID(memberID);
-            var member = appView.getMemberInfo(memberID);
+            int memberID = MemberView.getMemberID();
+            MemberView.renderMemberByID(memberID);
+            var member = MemberView.getMemberInfo(memberID);
             if (memberDAL.saveMember(member))
             {
-                appView.editMemberSuccess();
+                MemberView.renderEditMemberSuccess();
             }
             else
-                appView.fail();
+                AppView.fail();
 
-            appView.waitForUserToRead();
+            AppView.waitForUserToRead();
         }
 
         private void doEditBoat()
         {
-            int memberID = appView.getMemberID();
+            int memberID = MemberView.getMemberID();
 
-            appView.presentMemberByID(memberID);
-            appView.showBoatsByID(memberID);
+            MemberView.renderMemberByID(memberID);
+            BoatView.renderBoatsByID(memberID);
 
-            int chooseBoat = appView.chooseBoatToEdit();
+            int chooseBoat = BoatView.getBoatToEdit();
 
-            if (boatDAL.updateBoat(memberID, chooseBoat, appView.getNewBoat()))
+            if (boatDAL.updateBoat(memberID, chooseBoat, BoatView.getNewBoat()))
             {
-                appView.editBoatSuccess();
+                BoatView.renderEditBoatSuccess();
             }
             else
-                appView.fail();
+                AppView.fail();
 
-            appView.waitForUserToRead();
+            AppView.waitForUserToRead();
         }
 
         public void doRemoveMember()
         {
-            int memberID = appView.getMemberID();
-            appView.presentMemberByID(memberID);
+            int memberID = MemberView.getMemberID();
+            MemberView.renderMemberByID(memberID);
             if (memberDAL.removeMember(memberID))
             {
-                appView.removeMemberSuccess();
+                MemberView.renderRemoveMemberSuccess();
             }
             else
-                appView.fail();
+                AppView.fail();
 
-            appView.waitForUserToRead();
+            AppView.waitForUserToRead();
         }
 
         public void doRemoveBoat()
         {
-            int memberID = appView.getMemberID();
+            int memberID = MemberView.getMemberID();
 
-            appView.presentMemberByID(memberID);
-            appView.showBoatsByID(memberID);
+            MemberView.renderMemberByID(memberID);
+            BoatView.renderBoatsByID(memberID);
 
-            int chooseBoat = appView.chooseBoatToRemove();
+            int chooseBoat = BoatView.getBoatToRemove(memberID);
 
-            if (boatDAL.removeBoat(memberID, chooseBoat))
+            if (chooseBoat == 0)
             {
-                appView.removeBoatSuccess();
+                // Do nothing
+            }
+            else if (boatDAL.removeBoat(memberID, chooseBoat))
+            {
+                BoatView.renderRemoveBoatSuccess();
             }
             else
-                appView.fail();
+                AppView.fail();
 
-            appView.waitForUserToRead();
+            AppView.waitForUserToRead();
         }
 
     }
