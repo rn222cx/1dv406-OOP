@@ -37,26 +37,26 @@ namespace Workshop_2.View
 
             while (true)
             {
-                char keyValue = Console.ReadKey().KeyChar;
-                switch (char.ToLower(keyValue))
+                string keyValue = Console.ReadLine();
+                switch (keyValue.ToLower())
                 {
-                    case '1':
+                    case "1":
                         return ListOption.addMember;
-                    case '2':
+                    case "2":
                         return ListOption.addBoat;
-                    case '3':
+                    case "3":
                         return ListOption.showCompactListOfMembers;
-                    case '4':
+                    case "4":
                         return ListOption.showVerboseListOfMembers;
-                    case '5':
+                    case "5":
                         return ListOption.editMember;
-                    case '6':
+                    case "6":
                         return ListOption.editBoat;
-                    case '7':
+                    case "7":
                         return ListOption.removeMember;
-                    case '8':
+                    case "8":
                         return ListOption.removeBoat;
-                    case 'q':
+                    case "q":
                         return ListOption.quit;
                     default:
                         Console.Write(AppStrings.menuWrongChoice);
@@ -132,22 +132,22 @@ namespace Workshop_2.View
             var correctInput = false;
             while (!correctInput)
             {
-                char type = Console.ReadKey().KeyChar;
-                switch (char.ToLower(type))
+                string type = Console.ReadLine();
+                switch (type)
                 {
-                    case '1':
+                    case "1":
                         correctInput = true;
                         boatType = BoatType.Sailboat;
                         break;
-                    case '2':
+                    case "2":
                         correctInput = true;
                         boatType = BoatType.Motorsailer;
                         break;
-                    case '3':
+                    case "3":
                         correctInput = true;
                         boatType = BoatType.Canoe;
                         break;
-                    case '4':
+                    case "4":
                         correctInput = true;
                         boatType = BoatType.Other;
                         break;
