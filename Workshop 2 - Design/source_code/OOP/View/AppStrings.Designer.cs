@@ -187,6 +187,33 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit member.
+        /// </summary>
+        internal static string editMember {
+            get {
+                return ResourceManager.GetString("editMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The member where updated with the new information!.
+        /// </summary>
+        internal static string editMemberSuccess {
+            get {
+                return ResourceManager.GetString("editMemberSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something went wrong, please try again..
+        /// </summary>
+        internal static string fail {
+            get {
+                return ResourceManager.GetString("fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter members ID: .
         /// </summary>
         internal static string getMemberId {

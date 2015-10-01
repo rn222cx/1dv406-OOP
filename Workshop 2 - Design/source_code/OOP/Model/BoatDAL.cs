@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Workshop_2.Model
 {
-    class BoatDAL
+    class BoatDAL : BaseDAL
     {
         public bool add(int id, Boat boat)
         {

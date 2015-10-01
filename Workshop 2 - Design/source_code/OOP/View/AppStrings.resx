@@ -222,4 +222,13 @@
   <data name="removeBoat" xml:space="preserve">
     <value>Remove a boat from member</value>
   </data>
+  <data name="editMember" xml:space="preserve">
+    <value>Edit member</value>
+  </data>
+  <data name="editMemberSuccess" xml:space="preserve">
+    <value>The member where updated with the new information!</value>
+  </data>
+  <data name="fail" xml:space="preserve">
+    <value>Something went wrong, please try again.</value>
+  </data>
 </root>

@@ -28,8 +28,9 @@ namespace Workshop_2.View
             Console.WriteLine("2. {0}", AppStrings.menuAddNewBoat);
             Console.WriteLine("3. {0}", AppStrings.menuShowCompactListOfMembers);
             Console.WriteLine("4. {0}", AppStrings.menuShowVerboseListOfMembers);
-            Console.WriteLine("5. {0}", AppStrings.removeMember);
-            Console.WriteLine("6. {0}", AppStrings.removeBoat);
+            Console.WriteLine("5. {0}", AppStrings.editMember);
+            Console.WriteLine("7. {0}", AppStrings.removeMember);
+            Console.WriteLine("8. {0}", AppStrings.removeBoat);
             Console.WriteLine("Q. {0}", AppStrings.menuQuit);
             Console.Write(AppStrings.menuMakeChoice);
 
@@ -47,8 +48,10 @@ namespace Workshop_2.View
                     case '4':
                         return ListOption.showVerboseListOfMembers;
                     case '5':
+                        return ListOption.editMember;
+                    case '7':
                         return ListOption.removeMember;
-                    case '6':
+                    case '8':
                         return ListOption.removeBoat;
                     case 'q':
                         return ListOption.quit;
@@ -64,16 +67,26 @@ namespace Workshop_2.View
             Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewMember);
 
+            return getMemberInfo();
+
+        }
+
+        public Member getMemberInfo()
+        {
+            return getMemberInfo(0);
+        }
+
+        public Member getMemberInfo(int ID)
+        {
             Console.Write(AppStrings.addMemberName);
             string name = Console.ReadLine();
 
             Console.Write(AppStrings.addMemberSSN);
             string ssn = Console.ReadLine();
 
-            var member = new Member(name, ssn);
+            var member = new Member(name, ssn, ID);
 
             return member;
-
         }
 
         public void addMemberSuccess()
@@ -85,6 +98,11 @@ namespace Workshop_2.View
         {
             Console.Clear();
             Console.WriteLine(AppStrings.menuAddNewBoat);
+        }
+
+        internal void editMemberSuccess()
+        {
+            Console.WriteLine(AppStrings.editMemberSuccess);
         }
 
         public Boat getNewBoat()
@@ -130,6 +148,13 @@ namespace Workshop_2.View
             
             return new Boat(boatType, length);
         }
+
+        public void fail()
+        {
+            Console.WriteLine(AppStrings.fail);
+            waitForUserTheRead();
+        }
+
         public int getMemberID() // TODO: DRY with getNewBoatMemberID()
         {
             while (true)
@@ -160,6 +185,7 @@ namespace Workshop_2.View
                     if (memberDAL.validateMemberID(ID))
                     {
                         presentMemberByID(ID);
+                        presentBoatsByID(ID);
                         return ID;
                     }
                     else
@@ -170,11 +196,15 @@ namespace Workshop_2.View
             }
         }
 
-        private void presentMemberByID(int ID)
+        public void presentMemberByID(int ID)
         {
             var member = memberDAL.getMemberByID(ID);
             Console.WriteLine(AppStrings.presentMembersName, member.Name);
             Console.WriteLine(AppStrings.presentMembersSSN, member.SocialSecurityNumber);
+        }
+
+        public void presentBoatsByID(int ID)
+        {
             var boats = boatDAL.getBoatsByMemberID(ID);
             Console.WriteLine(AppStrings.presentMembersNumberOfBoats, boats.Count);
             foreach (Boat boat in boats)
@@ -283,6 +313,11 @@ namespace Workshop_2.View
             }
 
             
+        }
+
+        public void waitForUserTheRead()
+        {
+            Console.ReadLine();
         }
     }
 }

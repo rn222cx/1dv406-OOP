@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AppController.cs" />
+    <Compile Include="Model\BaseDAL.cs" />
     <Compile Include="Model\Boat.cs" />
     <Compile Include="Model\BoatDAL.cs" />
     <Compile Include="Model\BoatType.cs" />

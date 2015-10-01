@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace Workshop_2.Model
 {
-    class MemberDAL
+    class MemberDAL : BaseDAL
     {
         public bool saveMember(Member member)
         {
@@ -19,47 +19,49 @@ namespace Workshop_2.Model
             }
             else
             {
-                try
-                {
-                    if (File.Exists(XMLFileInfo.Path) == false)
-                    {
-                        XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
-                        xmlWriterSettings.Indent = true;
-                        xmlWriterSettings.NewLineOnAttributes = true;
-                        using (XmlWriter xmlWriter = XmlWriter.Create(XMLFileInfo.Path, xmlWriterSettings))
-                        {
-                            xmlWriter.WriteStartDocument();
-                            xmlWriter.WriteStartElement(XMLFileInfo.Members);
+                return addMember(member);
+            }
+        }
 
-                            xmlWriter.WriteStartElement(XMLFileInfo.Member);
-                            xmlWriter.WriteElementString(XMLFileInfo.ID, XMLFileInfo.FirstID);
-                            xmlWriter.WriteElementString(XMLFileInfo.Name, member.Name);
-                            xmlWriter.WriteElementString(XMLFileInfo.SocialSecurityNumber, member.SocialSecurityNumber);
-                            xmlWriter.WriteEndElement();
-
-                            xmlWriter.WriteEndElement();
-                            xmlWriter.WriteEndDocument();
-                            xmlWriter.Flush();
-                            xmlWriter.Close();
-                        }
-                    }
-                    else
-                    {
-                        XElement xElement = XElement.Load(XMLFileInfo.Path);
-                        int id = int.Parse((string)xElement.Descendants(XMLFileInfo.ID).FirstOrDefault());
-                        id++;
-                        xElement.AddFirst(new XElement(XMLFileInfo.Member,
-                           new XElement(XMLFileInfo.ID, id),
-                           new XElement(XMLFileInfo.Name, member.Name),
-                           new XElement(XMLFileInfo.SocialSecurityNumber, member.SocialSecurityNumber)));
-                        xElement.Save(XMLFileInfo.Path);
-                    }
-                    return true;
-                }
-                catch (Exception)
+        private bool addMember(Member member)
+        {
+            try
+            {
+                if (File.Exists(XMLFileInfo.Path) == false)
                 {
-                    return false;
+                    XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
+                    xmlWriterSettings.Indent = true;
+                    xmlWriterSettings.NewLineOnAttributes = true;
+                    using (XmlWriter xmlWriter = XmlWriter.Create(XMLFileInfo.Path, xmlWriterSettings))
+                    {
+                        xmlWriter.WriteStartDocument();
+                        xmlWriter.WriteStartElement(XMLFileInfo.Members);
+
+                        xmlWriter.WriteStartElement(XMLFileInfo.Member);
+                        xmlWriter.WriteElementString(XMLFileInfo.ID, XMLFileInfo.FirstID);
+                        xmlWriter.WriteElementString(XMLFileInfo.Name, member.Name);
+                        xmlWriter.WriteElementString(XMLFileInfo.SocialSecurityNumber, member.SocialSecurityNumber);
+                        xmlWriter.WriteEndElement();
+
+                        xmlWriter.WriteEndElement();
+                        xmlWriter.WriteEndDocument();
+                        xmlWriter.Flush();
+                        xmlWriter.Close();
+                    }
                 }
+                else
+                {
+                    XElement xElement = XElement.Load(XMLFileInfo.Path);
+                    int ID = int.Parse((string)xElement.Descendants(XMLFileInfo.ID).FirstOrDefault());
+                    ID++;
+                    xElement.AddFirst(createMember(ID, member));
+                    xElement.Save(XMLFileInfo.Path);
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
 
@@ -67,15 +69,19 @@ namespace Workshop_2.Model
         {
             try
             {
-                var oldMember = getMemberByID(memberToBeUpdated.MemberID);
+                var currentMember = getMemberByID(memberToBeUpdated.MemberID);
                 if (String.IsNullOrWhiteSpace(memberToBeUpdated.Name))
-                    memberToBeUpdated.Name = oldMember.Name;
+                    memberToBeUpdated.Name = currentMember.Name;
                 if (String.IsNullOrWhiteSpace(memberToBeUpdated.SocialSecurityNumber))
-                    memberToBeUpdated.SocialSecurityNumber = oldMember.SocialSecurityNumber;
+                    memberToBeUpdated.SocialSecurityNumber = currentMember.SocialSecurityNumber;
+
+                var updatedMember = createMember(memberToBeUpdated);
 
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
                 // TODO: OSKAR -> Implement function for updating the xml-file
+
+                xElement.Save(XMLFileInfo.Path);
 
                 return true;
             }
@@ -128,6 +134,9 @@ namespace Workshop_2.Model
         {
             try
             {
+                if (!validateMemberID(memberID))
+                    throw new KeyNotFoundException();
+
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
                 xElement.Descendants(XMLFileInfo.Member)
@@ -176,6 +185,18 @@ namespace Workshop_2.Model
             }
 
             return memberList;
+        }
+
+        private XElement createMember(Member member)
+        {
+            return createMember(member.MemberID, member);
+        }
+        private XElement createMember(int ID, Member member)
+        {
+            return new XElement(XMLFileInfo.Member,
+                           new XElement(XMLFileInfo.ID, ID),
+                           new XElement(XMLFileInfo.Name, member.Name),
+                           new XElement(XMLFileInfo.SocialSecurityNumber, member.SocialSecurityNumber));
         }
     }
 }

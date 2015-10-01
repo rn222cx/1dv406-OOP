@@ -28,6 +28,7 @@ namespace Workshop_2.Controller
             Menu.Add(ListOption.addBoat, doAddBoat);
             Menu.Add(ListOption.showCompactListOfMembers, appView.displayCompactListOfMembers);
             Menu.Add(ListOption.showVerboseListOfMembers, appView.displayVerboseListOfMembers);
+            Menu.Add(ListOption.editMember, doEditMember);
             Menu.Add(ListOption.removeMember, doRemoveMember);
             Menu.Add(ListOption.removeBoat, doRemoveBoat);
             Menu.Add(ListOption.quit, appView.exit);
@@ -66,6 +67,8 @@ namespace Workshop_2.Controller
             {
                 appView.addMemberSuccess();
             }
+            else
+                appView.fail();
         }
 
         private void doAddBoat()
@@ -77,17 +80,34 @@ namespace Workshop_2.Controller
             {
                 appView.addBoatSuccess();
             }
+            else
+                appView.fail();
+        }
+
+        public void doEditMember()
+        {
+            int memberID = appView.getMemberID();
+            appView.presentMemberByID(memberID);
+            var member = appView.getMemberInfo(memberID);
+            if (memberDAL.saveMember(member))
+            {
+                appView.editMemberSuccess();
+                appView.waitForUserTheRead();
+            }
+            else
+                appView.fail();
         }
 
         public void doRemoveMember()
         {
             int memberID = appView.getMemberID();
-            memberDAL.removeMember(memberID);
             if (memberDAL.removeMember(memberID))
             {
                 appView.removeMemberSuccess();
-                Console.ReadLine();
+                appView.waitForUserTheRead();
             }
+            else
+                appView.fail();
         }
 
         public void doRemoveBoat()
@@ -95,7 +115,7 @@ namespace Workshop_2.Controller
             int memberID = appView.getMemberID();
             
             appView.getBoatsByID(memberID);
-            Console.ReadLine();
+            appView.waitForUserTheRead();
         }
 
     }

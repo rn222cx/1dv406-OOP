@@ -14,6 +14,7 @@ namespace Workshop_2.Model
         showCompactListOfMembers,
         showVerboseListOfMembers,
         removeMember,
-        removeBoat
+        removeBoat,
+        editMember
     }
 }
