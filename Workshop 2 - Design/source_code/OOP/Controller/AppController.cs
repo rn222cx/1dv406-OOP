@@ -123,8 +123,8 @@ namespace Workshop_2.Controller
             appView.showBoatsByID(memberID);
             //appView.waitForUserTheRead();
 
-            Console.WriteLine("Chose boat to remove, OBS börja på 0 och inte 1");
-            int chooseBoat = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Choose boat to remove");
+            int chooseBoat = Convert.ToInt32(Console.ReadLine()) - 1;
 
             boatDAL.removeBoat(memberID, chooseBoat);
             Console.ReadLine();
