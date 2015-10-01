@@ -8,6 +8,7 @@ namespace Workshop_2.View
         public void welcomeMessage()
         {
             Console.WriteLine(AppStrings.menuWelcome);
+            Console.WriteLine();
         }
         public ListOption listMenu()
         {
