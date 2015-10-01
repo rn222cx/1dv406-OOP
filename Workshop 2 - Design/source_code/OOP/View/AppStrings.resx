@@ -237,4 +237,7 @@
   <data name="editBoatSuccess" xml:space="preserve">
     <value>The boat where updated!</value>
   </data>
+  <data name="chooseBoatToRemove" xml:space="preserve">
+    <value>Choose a boat number to remove</value>
+  </data>
 </root>

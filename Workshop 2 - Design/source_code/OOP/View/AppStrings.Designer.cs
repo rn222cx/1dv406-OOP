@@ -169,6 +169,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose a boat number to remove.
+        /// </summary>
+        internal static string chooseBoatToRemove {
+            get {
+                return ResourceManager.GetString("chooseBoatToRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to List of all members with name, member id and number of boat/boats.
         /// </summary>
         internal static string compactListOfMembers {

@@ -105,16 +105,23 @@ namespace Workshop_2.Model
 
         public void removeBoat(int memberID, int boat)
         {
+            try
+            {
+                boat--; // Skip() starts with 0
+                XElement xElement = XElement.Load(XMLFileInfo.Path);
 
-            XElement xElement = XElement.Load(XMLFileInfo.Path);
-           
-            xElement.Descendants(XMLFileInfo.Member)
-                .Where(a => a.Element(XMLFileInfo.ID).Value == memberID.ToString())
-                .SelectMany(a => a.Elements(XMLFileInfo.Boat))
-                .Skip(boat).Take(1)
-                .Remove();
+                xElement.Descendants(XMLFileInfo.Member)
+                    .Where(a => a.Element(XMLFileInfo.ID).Value == memberID.ToString())
+                    .SelectMany(a => a.Elements(XMLFileInfo.Boat))
+                    .Skip(boat).Take(1)
+                    .Remove();
 
-            Console.WriteLine(xElement);
+                Console.WriteLine(xElement);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
