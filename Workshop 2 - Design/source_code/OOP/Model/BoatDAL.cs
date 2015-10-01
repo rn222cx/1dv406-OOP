@@ -16,11 +16,11 @@ namespace Workshop_2.Model
             {
                 XDocument doc = XDocument.Load(XMLFileInfo.Path);
 
-                XElement particularStudent = doc.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
+                XElement particularMember = doc.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
                                     .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
                                     .Last();
-                if (particularStudent != null)
-                    particularStudent.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type)));
+                if (particularMember != null)
+                    particularMember.Add(new XElement(XMLFileInfo.Boat, boat.Length, new XAttribute(XMLFileInfo.Type, boat.Type)));
                 doc.Save(XMLFileInfo.Path);
                 Console.WriteLine(doc);
 
@@ -107,7 +107,6 @@ namespace Workshop_2.Model
         {
             try
             {
-                //boat--; // Skip() starts with 0
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
                 xElement.Descendants(XMLFileInfo.Member)
