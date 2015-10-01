@@ -10,8 +10,6 @@ namespace Workshop_2
     {
         //        The following requirements are to be met:
 
-        // Look at a specific member’s information
-
         // An object oriented design and implementation.This includes but is not limited to:
         // Objects are connected using associations and not with keys/ids.
         // Classes have high cohesion and are not too large or have too much responsibility.
