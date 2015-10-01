@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,20 @@ namespace Workshop_2.Model
             boats.TrimExcess();
 
             return boats;
+        }
+
+        public void removeBoat(int memberID, int boat)
+        {
+
+            XElement xElement = XElement.Load(XMLFileInfo.Path);
+           
+            xElement.Descendants(XMLFileInfo.Member)
+                .Where(a => a.Element(XMLFileInfo.ID).Value == memberID.ToString())
+                .SelectMany(a => a.Elements(XMLFileInfo.Boat))
+                .Skip(boat).Take(1)
+                .Remove();
+
+            Console.WriteLine(xElement);
         }
     }
 }
