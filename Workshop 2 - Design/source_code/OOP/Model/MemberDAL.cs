@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace Workshop_2.Model
 {
-    class MemberDAL : BaseDAL
+    class MemberDAL
     {
         public bool saveMember(Member member)
         {
