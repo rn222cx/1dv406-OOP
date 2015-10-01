@@ -120,8 +120,15 @@ namespace Workshop_2.Controller
         {
             int memberID = appView.getMemberID();
             appView.showBoatsByID(memberID);
+
                        
             int chooseBoat = appView.chooseBoatToRemove();
+
+            //appView.waitForUserTheRead();
+
+            //Console.WriteLine("Choose boat to remove");
+            //int chooseBoat = Convert.ToInt32(Console.ReadLine()) - 1;
+
 
             boatDAL.removeBoat(memberID, chooseBoat);
             Console.ReadLine();
