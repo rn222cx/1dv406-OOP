@@ -117,7 +117,7 @@ namespace Workshop_2.Controller
             appView.showBoatsByID(memberID);
             //appView.waitForUserTheRead();
 
-            Console.ReadLine("Chose boat to remove, OBS börja på 0 och inte 1");
+            Console.WriteLine("Chose boat to remove, OBS börja på 0 och inte 1");
             int chooseBoat = Convert.ToInt32(Console.ReadLine());
 
             boatDAL.removeBoat(memberID, chooseBoat);
