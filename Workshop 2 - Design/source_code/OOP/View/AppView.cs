@@ -235,24 +235,10 @@ namespace Workshop_2.View
 
             foreach (var member in members)
             {
-                var boats = boatDAL.getBoatsByMemberID(member.MemberID);
                 Console.WriteLine("Name: {0}, Social Security Number: {1}, Member ID: {2}", member.Name, member.SocialSecurityNumber, member.MemberID);
-                
-                if(boats.Count == 0)
-                {
-                    Console.WriteLine(AppStrings.memberHasNoBoat);
-                } 
-                else
-                {
-                    int boatNumber = 1;
-                    
-                    foreach (var boat in boats)
-                    {
-                        Console.WriteLine("Boat {0}, Type: {1}, Lenght: {2} m", boatNumber, boat.Type, boat.Length);
-                        boatNumber++;
-                    } 
-                }
-                                             
+
+                getBoatsByID(member.MemberID);
+
                 Console.WriteLine(AppStrings.divider);
             }
 
@@ -263,7 +249,13 @@ namespace Workshop_2.View
             }
         }
 
-        public void getBoatsByID(int ID) // stolen from displayVerboseListOfMembers() so DRY
+        public void showBoatsByID(int ID)
+        {
+            getBoatsByID(ID);
+
+            
+        }
+        public void getBoatsByID(int ID)
         {
             var boats = boatDAL.getBoatsByMemberID(ID);
             if (boats.Count == 0)
@@ -281,8 +273,7 @@ namespace Workshop_2.View
                     boatNumber++;
                 }
             }
-
-            
         }
+
     }
 }
