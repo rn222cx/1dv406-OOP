@@ -240,4 +240,7 @@
   <data name="chooseBoatToRemove" xml:space="preserve">
     <value>Choose a boat number to remove</value>
   </data>
+  <data name="wrongLength" xml:space="preserve">
+    <value>Length must be a whole number, try again: </value>
+  </data>
 </root>

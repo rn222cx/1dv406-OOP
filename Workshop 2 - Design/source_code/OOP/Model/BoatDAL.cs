@@ -75,7 +75,7 @@ namespace Workshop_2.Model
             foreach (XElement boat in member.Elements(XMLFileInfo.Boat))
             {
                 BoatType type = (BoatType)Enum.Parse(typeof(BoatType), boat.Attribute(XMLFileInfo.Type).Value);
-                var boatToBeAdded = new Boat(type, boat.Value);
+                var boatToBeAdded = new Boat(type, int.Parse(boat.Value));
                 boats.Add(boatToBeAdded);
             }
 

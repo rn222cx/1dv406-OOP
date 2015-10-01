@@ -428,5 +428,14 @@ namespace Workshop_2.View {
                 return ResourceManager.GetString("verboseListOfMembers", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Length must be a whole number, try again: .
+        /// </summary>
+        internal static string wrongLength {
+            get {
+                return ResourceManager.GetString("wrongLength", resourceCulture);
+            }
+        }
     }
 }

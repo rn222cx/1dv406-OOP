@@ -152,9 +152,16 @@ namespace Workshop_2.View
             }
 
             Console.Write(AppStrings.addBoatLength);
-            string length = Console.ReadLine();
-            
-            return new Boat(boatType, length);
+            int length;
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out length))
+                {
+                    return new Boat(boatType, length);
+                }
+                else
+                    Console.Write(AppStrings.wrongLength);
+            }
         }
 
         public void fail()
