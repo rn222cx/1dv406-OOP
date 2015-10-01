@@ -16,12 +16,12 @@ namespace Workshop_2.View
         }
         #region Add
         public Member addMember()
-                {
-                    Console.Clear();
-                    Console.WriteLine(AppStrings.menuAddNewMember);
+        {
+            Console.Clear();
+            Console.WriteLine(AppStrings.menuAddNewMember);
 
-                    return getMemberInfo();
-                }
+            return getMemberInfo();
+        }
         #endregion
         #region Get
         public int getMemberID()
@@ -72,9 +72,9 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.addMemberSuccess);
         }
         public void renderEditMemberSuccess()
-                {
-                    Console.WriteLine(AppStrings.editMemberSuccess);
-                }
+        {
+            Console.WriteLine(AppStrings.editMemberSuccess);
+        }
         public void renderRemoveMemberSuccess()
         {
             Console.WriteLine(AppStrings.removeMemberSuccess);
