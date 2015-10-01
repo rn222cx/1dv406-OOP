@@ -11,12 +11,12 @@ namespace Workshop_2.Model
         viewMember,
         addMember,
         addBoat,
-        quit,
         showCompactListOfMembers,
         showVerboseListOfMembers,
         editMember,
         editBoat,
         removeMember,
-        removeBoat
+        removeBoat,
+        quit
     }
 }
