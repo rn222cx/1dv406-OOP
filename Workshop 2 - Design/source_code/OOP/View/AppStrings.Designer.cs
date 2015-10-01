@@ -268,7 +268,7 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a boat number to remove.
+        ///   Looks up a localized string similar to Choose a boat number to remove or press 0 to exit.
         /// </summary>
         internal static string getBoatToRemove {
             get {
@@ -453,15 +453,6 @@ namespace Workshop_2.View {
         internal static string renderCompactList {
             get {
                 return ResourceManager.GetString("renderCompactList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to or press 0 to exit.
-        /// </summary>
-        internal static string renderKeyToCancelRemoveBoat {
-            get {
-                return ResourceManager.GetString("renderKeyToCancelRemoveBoat", resourceCulture);
             }
         }
         

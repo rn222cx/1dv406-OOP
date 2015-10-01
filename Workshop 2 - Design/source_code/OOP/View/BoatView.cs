@@ -90,7 +90,6 @@ namespace Workshop_2.View
                 }
 
                 Console.WriteLine(AppStrings.getBoatToRemove);
-                Console.WriteLine(AppStrings.renderKeyToCancelRemoveBoat);
 
                 int boatNumber;
                 string Result = Console.ReadLine();
