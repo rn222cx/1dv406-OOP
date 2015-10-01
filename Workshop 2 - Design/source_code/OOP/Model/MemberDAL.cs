@@ -69,17 +69,27 @@ namespace Workshop_2.Model
         {
             try
             {
-                var currentMember = getMemberByID(memberToBeUpdated.MemberID);
+                var ID = memberToBeUpdated.MemberID;
+
+                var currentMember = getMemberByID(ID);
                 if (String.IsNullOrWhiteSpace(memberToBeUpdated.Name))
                     memberToBeUpdated.Name = currentMember.Name;
                 if (String.IsNullOrWhiteSpace(memberToBeUpdated.SocialSecurityNumber))
                     memberToBeUpdated.SocialSecurityNumber = currentMember.SocialSecurityNumber;
 
+                var oldMember = createMember(currentMember);
                 var updatedMember = createMember(memberToBeUpdated);
 
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
-                // TODO: OSKAR -> Implement function for updating the xml-file
+                XElement memberToBeReplaced = (from Member in xElement.Elements(XMLFileInfo.Member)
+                                              where (string)Member.Element(XMLFileInfo.ID) == ID.ToString()
+                                              select Member).First();
+
+                foreach (XElement element in memberToBeReplaced.Elements(XMLFileInfo.Boat))
+                    updatedMember.Add(element);
+
+                memberToBeReplaced.ReplaceWith(updatedMember);
 
                 xElement.Save(XMLFileInfo.Path);
 
@@ -111,12 +121,12 @@ namespace Workshop_2.Model
             return false;
         }
 
-        public Member getMemberByID(int memberID)
+        public Member getMemberByID(int ID)
         {
             XElement xElement = XElement.Load(XMLFileInfo.Path);
 
             var memberInfo = from Member in xElement.Elements(XMLFileInfo.Member)
-                                where (string)Member.Element(XMLFileInfo.ID) == memberID.ToString()
+                                where (string)Member.Element(XMLFileInfo.ID) == ID.ToString()
                                 select Member;
 
             var memberNames = memberInfo.Elements(XMLFileInfo.Name);
@@ -124,8 +134,11 @@ namespace Workshop_2.Model
 
             var memberSSNs = memberInfo.Elements(XMLFileInfo.SocialSecurityNumber);
             XElement memberSSN = memberSSNs.First();
-            
-            var member = new Member(memberName.Value, memberSSN.Value);
+
+            var memberIDs = memberInfo.Elements(XMLFileInfo.ID);
+            XElement memberID = memberIDs.First();
+
+            var member = new Member(memberName.Value, memberSSN.Value, int.Parse(memberID.Value));
 
             return member;
         }
