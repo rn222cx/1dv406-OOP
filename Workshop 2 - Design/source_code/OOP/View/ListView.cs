@@ -19,28 +19,6 @@ namespace Workshop_2.View
             BoatView = new BoatView();
         }
         /// <summary>
-        /// Renders list of all members with name and member id.
-        /// </summary>
-        public void renderCompactListOfMembers()
-        {
-            Console.Clear();
-            Console.WriteLine(AppStrings.compactListOfMembers);
-            Console.WriteLine(AppStrings.divider);
-            var members = MemberDAL.getMembers();
-
-            foreach (var member in members)
-            {
-                var numerOfBoats = BoatDAL.getBoatsByMemberID(member.MemberID).Count;
-                Console.WriteLine(AppStrings.renderCompactList, member.Name, member.MemberID, numerOfBoats);
-            }
-
-            Console.WriteLine(AppStrings.back, AppStrings.backKey);
-            if (char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey))
-            {
-                return;
-            }
-        }
-        /// <summary>
         /// Displays list with member name, social security number, member id and boats with boat information.
         /// </summary>
         public void renderVerboseListOfMembers()

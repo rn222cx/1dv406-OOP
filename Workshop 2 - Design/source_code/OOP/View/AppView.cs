@@ -23,5 +23,27 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.pressAnyKey);
             Console.ReadLine();
         }
+
+        public void renderCompactListElement(Member member, int numberOfBoats)
+        {
+            Console.WriteLine(AppStrings.renderCompactList, member.Name, member.MemberID, numberOfBoats);
+        }
+
+        public void renderCompactListTitle()
+        {
+            Console.Clear();
+            Console.WriteLine(AppStrings.compactListOfMembers);
+            Console.WriteLine(AppStrings.divider);
+        }
+
+        public void renderGoBackQuestion()
+        {
+            Console.WriteLine(AppStrings.back, AppStrings.backKey);
+        }
+
+        public bool getGoBack()
+        {
+            return char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey);
+        }
     }
 }

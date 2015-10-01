@@ -18,8 +18,8 @@ namespace Workshop_2.Controller
         private ListView ListView;
         #endregion
         #region Model
-        private MemberDAL memberDAL;
-        private BoatDAL boatDAL;
+        private MemberDAL MemberDAL;
+        private BoatDAL BoatDAL;
         #endregion
         public AppController(AppView AppView, BoatView BoatView, MemberView MemberView, MenuView MenuView, ListView ListView)
         {
@@ -28,8 +28,8 @@ namespace Workshop_2.Controller
             this.MemberView = MemberView;
             this.MenuView = MenuView;
             this.ListView = ListView;
-            memberDAL = new MemberDAL();
-            boatDAL = new BoatDAL();
+            MemberDAL = new MemberDAL();
+            BoatDAL = new BoatDAL();
         }
 
         public void doControll()
@@ -39,7 +39,7 @@ namespace Workshop_2.Controller
             Menu.Add(ListOption.viewMember, doViewMember);
             Menu.Add(ListOption.addMember, doAddMember);
             Menu.Add(ListOption.addBoat, doAddBoat);
-            Menu.Add(ListOption.showCompactListOfMembers, ListView.renderCompactListOfMembers);
+            Menu.Add(ListOption.showCompactListOfMembers, doRenderCompactListOfMembers);
             Menu.Add(ListOption.showVerboseListOfMembers, ListView.renderVerboseListOfMembers);
             Menu.Add(ListOption.editMember, doEditMember);
             Menu.Add(ListOption.editBoat, doEditBoat);
@@ -67,7 +67,7 @@ namespace Workshop_2.Controller
         {
             var newMember = MemberView.addMember();
             
-            if (memberDAL.saveMember(newMember))
+            if (MemberDAL.saveMember(newMember))
             {
                 MemberView.renderAddMemberSuccess();
             }
@@ -84,7 +84,7 @@ namespace Workshop_2.Controller
             MemberView.renderMemberByID(memberID);
             BoatView.renderBoatsByID(memberID);
             var newBoat = BoatView.getNewBoat();
-            if (boatDAL.add(memberID, newBoat))
+            if (BoatDAL.add(memberID, newBoat))
             {
                 BoatView.renderAddBoatSuccess();
             }
@@ -99,7 +99,7 @@ namespace Workshop_2.Controller
             int memberID = MemberView.getMemberID();
             MemberView.renderMemberByID(memberID);
             var member = MemberView.getMemberInfo(memberID);
-            if (memberDAL.saveMember(member))
+            if (MemberDAL.saveMember(member))
             {
                 MemberView.renderEditMemberSuccess();
             }
@@ -118,7 +118,7 @@ namespace Workshop_2.Controller
 
             int chooseBoat = BoatView.getBoatToEdit();
 
-            if (boatDAL.updateBoat(memberID, chooseBoat, BoatView.getNewBoat()))
+            if (BoatDAL.updateBoat(memberID, chooseBoat, BoatView.getNewBoat()))
             {
                 BoatView.renderEditBoatSuccess();
             }
@@ -132,7 +132,7 @@ namespace Workshop_2.Controller
         {
             int memberID = MemberView.getMemberID();
             MemberView.renderMemberByID(memberID);
-            if (memberDAL.removeMember(memberID))
+            if (MemberDAL.removeMember(memberID))
             {
                 MemberView.renderRemoveMemberSuccess();
             }
@@ -155,7 +155,7 @@ namespace Workshop_2.Controller
             {
                 // Do nothing
             }
-            else if (boatDAL.removeBoat(memberID, chooseBoat))
+            else if (BoatDAL.removeBoat(memberID, chooseBoat))
             {
                 BoatView.renderRemoveBoatSuccess();
             }
@@ -163,6 +163,27 @@ namespace Workshop_2.Controller
                 AppView.fail();
 
             AppView.waitForUserToRead();
+        }
+        public void doRenderCompactListOfMembers()
+        {
+            AppView.renderCompactListTitle();
+            var members = MemberDAL.getMembers();
+
+            foreach (var member in members)
+            {
+                var numberOfBoats = BoatDAL.getBoatsByMemberID(member.MemberID).Count;
+                AppView.renderCompactListElement(member, numberOfBoats);
+            }
+
+            AppView.renderGoBackQuestion();
+            if (AppView.getGoBack())
+            {
+                return;
+            }
+        }
+        public void doRenderVerboseListOfMembers()
+        {
+            // TODO: Implement
         }
 
     }
