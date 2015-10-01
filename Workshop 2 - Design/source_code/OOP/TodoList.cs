@@ -17,7 +17,6 @@ namespace Workshop_2
         //      “Verbose List”; name, personal number, member id and boats with boat information
         // Change a member’s information
         // Look at a specific member’s information
-        // Register a new boat for a member the boat should have a type(Sailboat, Motorsailer, kayak/Canoe, Other) and a length.
         // Deleta a boat
         // Change a boat’s information
         // An object oriented design and implementation.This includes but is not limited to:

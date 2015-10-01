@@ -159,15 +159,7 @@ namespace Workshop_2.View
                 {
                     if (memberDAL.validateMemberID(ID))
                     {
-                        var member = memberDAL.getMemberByID(ID);
-                        Console.WriteLine(AppStrings.presentMembersName, member.Name);
-                        Console.WriteLine(AppStrings.presentMembersSSN, member.SocialSecurityNumber);
-                        var boats = boatDAL.getBoatsByMemberID(ID);
-                        Console.WriteLine(AppStrings.presentMembersNumberOfBoats, boats.Count);
-                        foreach (Boat boat in boats)
-                        {
-                            Console.WriteLine(AppStrings.presentBoat, boat.Type, boat.Length);
-                        }
+                        presentMemberByID(ID);
                         return ID;
                     }
                     else
@@ -175,6 +167,19 @@ namespace Workshop_2.View
                         Console.Write(AppStrings.getMemberIDFail);
                     }
                 } 
+            }
+        }
+
+        private void presentMemberByID(int ID)
+        {
+            var member = memberDAL.getMemberByID(ID);
+            Console.WriteLine(AppStrings.presentMembersName, member.Name);
+            Console.WriteLine(AppStrings.presentMembersSSN, member.SocialSecurityNumber);
+            var boats = boatDAL.getBoatsByMemberID(ID);
+            Console.WriteLine(AppStrings.presentMembersNumberOfBoats, boats.Count);
+            foreach (Boat boat in boats)
+            {
+                Console.WriteLine(AppStrings.presentBoat, boat.Type, boat.Length);
             }
         }
 
