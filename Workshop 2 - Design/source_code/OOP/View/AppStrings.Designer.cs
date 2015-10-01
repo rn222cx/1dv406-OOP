@@ -169,6 +169,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose boat to edit: .
+        /// </summary>
+        internal static string chooseBoatToEdit {
+            get {
+                return ResourceManager.GetString("chooseBoatToEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose a boat number to remove.
         /// </summary>
         internal static string chooseBoatToRemove {
@@ -358,6 +367,24 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Boat {0}, {1}, {2}m.
+        /// </summary>
+        internal static string presentBoatInformation {
+            get {
+                return ResourceManager.GetString("presentBoatInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} has ID {1} and has {2} boat(s).
+        /// </summary>
+        internal static string presentCompactList {
+            get {
+                return ResourceManager.GetString("presentCompactList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Members name: {0}.
         /// </summary>
         internal static string presentMembersName {
@@ -394,11 +421,29 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name: {0}, Social Security Number: {1}, Member ID: {2}.
+        /// </summary>
+        internal static string presentVerboseList {
+            get {
+                return ResourceManager.GetString("presentVerboseList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove a boat from member.
         /// </summary>
         internal static string removeBoat {
             get {
                 return ResourceManager.GetString("removeBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string removeBoatSuccess {
+            get {
+                return ResourceManager.GetString("removeBoatSuccess", resourceCulture);
             }
         }
         

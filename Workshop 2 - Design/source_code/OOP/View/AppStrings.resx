@@ -240,6 +240,21 @@
   <data name="chooseBoatToRemove" xml:space="preserve">
     <value>Choose a boat number to remove</value>
   </data>
+  <data name="chooseBoatToEdit" xml:space="preserve">
+    <value>Choose boat to edit: </value>
+  </data>
+  <data name="presentBoatInformation" xml:space="preserve">
+    <value>Boat {0}, {1}, {2}m</value>
+  </data>
+  <data name="presentCompactList" xml:space="preserve">
+    <value>{0} has ID {1} and has {2} boat(s)</value>
+  </data>
+  <data name="presentVerboseList" xml:space="preserve">
+    <value>Name: {0}, Social Security Number: {1}, Member ID: {2}</value>
+  </data>
+  <data name="removeBoatSuccess" xml:space="preserve">
+    <value />
+  </data>
   <data name="wrongLength" xml:space="preserve">
     <value>Length must be a whole number, try again: </value>
   </data>

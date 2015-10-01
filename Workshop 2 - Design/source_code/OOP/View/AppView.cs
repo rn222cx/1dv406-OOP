@@ -92,6 +92,12 @@ namespace Workshop_2.View
             return member;
         }
 
+        public int chooseBoatToEdit()
+        {
+            Console.WriteLine(AppStrings.chooseBoatToEdit);
+            return Convert.ToInt32(Console.ReadLine()) - 1;
+        }
+
         public void addMemberSuccess()
         {
             Console.WriteLine(AppStrings.addMemberSuccess);
@@ -164,10 +170,14 @@ namespace Workshop_2.View
             }
         }
 
+        internal void removeBoatSuccess()
+        {
+            Console.WriteLine(AppStrings.removeBoatSuccess);
+        }
+
         public void fail()
         {
             Console.WriteLine(AppStrings.fail);
-            waitForUserTheRead();
         }
 
         public int getMemberID() // TODO: DRY with getNewBoatMemberID()
@@ -250,7 +260,7 @@ namespace Workshop_2.View
             foreach (var member in members)
             {
                 var numerOfBoats = boatDAL.getBoatsByMemberID(member.MemberID).Count;
-                Console.WriteLine("{0} has Id {1} and has {2} boat/boats", member.Name, member.MemberID, numerOfBoats);
+                Console.WriteLine(AppStrings.presentCompactList, member.Name, member.MemberID, numerOfBoats);
             }
 
             Console.WriteLine(AppStrings.back, AppStrings.backKey);
@@ -280,7 +290,7 @@ namespace Workshop_2.View
 
             foreach (var member in members)
             {
-                Console.WriteLine("Name: {0}, Social Security Number: {1}, Member ID: {2}", member.Name, member.SocialSecurityNumber, member.MemberID);
+                Console.WriteLine(AppStrings.presentVerboseList, member.Name, member.SocialSecurityNumber, member.MemberID);
 
                 getBoatsByID(member.MemberID);
                                              
@@ -311,7 +321,7 @@ namespace Workshop_2.View
 
                 foreach (var boat in boats)
                 {
-                    Console.WriteLine("Boat {0}, Type: {1}, Lenght: {2} m", boatNumber, boat.Type, boat.Length);
+                    Console.WriteLine(AppStrings.presentBoatInformation, boatNumber, boat.Type, boat.Length);
                     boatNumber++;
                 }
             }
@@ -327,7 +337,7 @@ namespace Workshop_2.View
         public int chooseBoatToRemove()
         {
             Console.WriteLine(AppStrings.chooseBoatToRemove);
-            return Convert.ToInt32(Console.ReadLine());
+            return Convert.ToInt32(Console.ReadLine()) - 1;
         }
     }
 }

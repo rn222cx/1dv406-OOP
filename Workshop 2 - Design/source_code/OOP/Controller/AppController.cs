@@ -52,6 +52,8 @@ namespace Workshop_2.Controller
             }
             else
                 appView.fail();
+
+            appView.waitForUserTheRead();
         }
 
         private void doAddBoat()
@@ -65,6 +67,8 @@ namespace Workshop_2.Controller
             }
             else
                 appView.fail();
+
+            appView.waitForUserTheRead();
         }
 
         public void doEditMember()
@@ -75,10 +79,11 @@ namespace Workshop_2.Controller
             if (memberDAL.saveMember(member))
             {
                 appView.editMemberSuccess();
-                appView.waitForUserTheRead();
             }
             else
                 appView.fail();
+
+            appView.waitForUserTheRead();
         }
 
         private void doEditBoat()
@@ -88,12 +93,11 @@ namespace Workshop_2.Controller
             appView.presentMemberByID(memberID);
             appView.showBoatsByID(memberID);
 
-            Console.WriteLine("Choose boat to edit");
-            int chooseBoat = Convert.ToInt32(Console.ReadLine()) - 1;
+            int chooseBoat = appView.chooseBoatToEdit();
 
             if (boatDAL.updateBoat(memberID, chooseBoat, appView.getNewBoat()))
             {
-                //TODO: Add success message
+                appView.editBoatSuccess();
             }
             else
                 appView.fail();
@@ -108,10 +112,11 @@ namespace Workshop_2.Controller
             if (memberDAL.removeMember(memberID))
             {
                 appView.removeMemberSuccess();
-                appView.waitForUserTheRead();
             }
             else
                 appView.fail();
+
+            appView.waitForUserTheRead();
         }
 
         public void doRemoveBoat()
@@ -121,14 +126,15 @@ namespace Workshop_2.Controller
             appView.presentMemberByID(memberID);
             appView.showBoatsByID(memberID);
 
-            int chooseBoat = appView.chooseBoatToRemove() -1;
+            int chooseBoat = appView.chooseBoatToRemove();
 
             if (boatDAL.removeBoat(memberID, chooseBoat))
             {
-                //TODO: Add success message
+                appView.removeBoatSuccess();
             }
             else
                 appView.fail();
+
             appView.waitForUserTheRead();
         }
 
