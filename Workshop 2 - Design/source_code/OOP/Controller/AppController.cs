@@ -114,7 +114,7 @@ namespace Workshop_2.Controller
         {
             int memberID = appView.getMemberID();
             
-            appView.getBoatsByID(memberID);
+            appView.showBoatsByID(memberID);
             appView.waitForUserTheRead();
         }
 
