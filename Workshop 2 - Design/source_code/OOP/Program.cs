@@ -1,10 +1,5 @@
-﻿using Workshop_2.Model;
-using System;
-using System.Linq;
-using System.Xml.Linq;
-using Workshop_2.Controller;
+﻿using Workshop_2.Controller;
 using Workshop_2.View;
-using System.Xml;
 
 namespace Workshop_2
 {
