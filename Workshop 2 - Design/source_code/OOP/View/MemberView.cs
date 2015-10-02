@@ -37,11 +37,7 @@ namespace Workshop_2.View
                 }
             }
         }
-        public Member getMemberInfo()
-        {
-            return getMemberInfo(0);
-        }
-        public Member getMemberInfo(int ID)
+        public Member getMemberInfo(int ID = 0)
         {
             Console.Write(AppStrings.addMemberName);
             string name = Console.ReadLine();
