@@ -6,11 +6,14 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-09-30T10:04:04" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2015-09-30T10:04:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2' -  (Package)" />
-  <Message Timestamp="2015-09-30T10:04:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model' -  (Package)" />
-  <Message Timestamp="2015-09-30T10:04:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::MenuEnum' -  (Class)" />
-  <Message Timestamp="2015-09-30T10:04:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::MenuEnum::MenuEnum' -  (Operation)" />
-  <Message Timestamp="2015-09-30T10:04:04" Importance="High" Text="(1) type(s) fully reverse engineered." />
-  <Message Timestamp="2015-09-30T10:04:04" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2' -  (Package)" />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model' -  (Package)" />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType' -  (Enumeration)" />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Canoe' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Motorsailer' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Other' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Sailboat' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-10-02T11:49:33" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>
