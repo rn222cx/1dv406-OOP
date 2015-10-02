@@ -11,15 +11,15 @@ namespace Workshop_2.Model
         {
             try
             {
-                XDocument doc = XDocument.Load(XMLFileInfo.Path);
+                XDocument xElement = XDocument.Load(XMLFileInfo.Path);
 
-                XElement particularMember = doc.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
+                XElement particularMember = xElement.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
                                     .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
                                     .Last();
                 if (particularMember != null)
                     particularMember.Add(createBoat(boat));
-                doc.Save(XMLFileInfo.Path);
-                Console.WriteLine(doc);
+                xElement.Save(XMLFileInfo.Path);
+                Console.WriteLine(xElement);
 
                 return true;
             }
