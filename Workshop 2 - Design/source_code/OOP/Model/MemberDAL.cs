@@ -25,7 +25,7 @@ namespace Workshop_2.Model
         {
             try
             {
-                if (File.Exists(XMLFileInfo.Path) == false)
+                if (!File.Exists(XMLFileInfo.Path) || new FileInfo(XMLFileInfo.Path).Length < 55)
                 {
                     XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
                     xmlWriterSettings.Indent = true;
