@@ -25,6 +25,7 @@ namespace Workshop_2.Model
         {
             try
             {
+                // Check if file exist or if the file length is shorter than 55 // 55 is the length of the xml version info in the file
                 if (!File.Exists(XMLFileInfo.Path) || new FileInfo(XMLFileInfo.Path).Length < 55)
                 {
                     XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
