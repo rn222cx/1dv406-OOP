@@ -23,5 +23,17 @@
         LastKnownName="Globalization"
         LastKnownLocation="Package2_0952.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ceacc4cd-bb84-47d1-9a45-ad13db709e9b"
+        LastKnownName="Xml"
+        LastKnownLocation="Package_1039.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6e3e5ce6-0a03-43dd-a699-c18844fbadfc"
+        LastKnownName="Collections"
+        LastKnownLocation="Package2_1039.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -6,14 +6,72 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2' -  (Package)" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model' -  (Package)" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType' -  (Enumeration)" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Canoe' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Motorsailer' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Other' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::Model::BoatType::Sailboat' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="High" Text="(1) type(s) fully reverse engineered." />
-  <Message Timestamp="2015-10-02T11:49:33" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2015-10-03T11:50:27" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System' -  (Package)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Globalization' -  (Package)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Globalization::CultureInfo' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Resources' -  (Package)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Resources::ResourceManager' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2' -  (Package)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View' -  (Package)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings' -  (Class)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::addBoatLength' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::addBoatSuccess' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::addBoatType' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::addMemberName' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::addMemberSSN' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::addMemberSuccess' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::AppStrings' -  (Operation)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::back' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::backKey' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::boatTypeCanoe' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::boatTypeMotorsailer' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::boatTypeOther' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::boatTypeSailbot' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::compactListOfMembers' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::Culture' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::divider' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::editBoat' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::editBoatSuccess' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::editMember' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::editMemberSuccess' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::failGeneral' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::failMenuWrongChoice' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::failNotValidNumber' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::failWrongLength' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::getBoatToEdit' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::getBoatToRemove' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::getMemberId' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::getMemberIDFail' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::memberHasNoBoat' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuAddNewBoat' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuAddNewMember' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuGoodBye' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuMakeChoice' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuMember' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuQuit' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuRenderCompactListOfMembers' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuRenderVerboseListOfMembers' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::menuWelcome' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::pressAnyKey' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::removeBoat' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::removeBoatSuccess' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::removeMember' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::removeMemberSuccess' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderBoat' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderBoatInformation' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderCompactList' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderMembersName' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderMembersNumberOfBoats' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderMembersSSN' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderShortMember' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderVerboseList' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::renderVerboseListOfMembersTitle' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::resourceCulture' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::resourceMan' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::Workshop_2::View::AppStrings::ResourceManager' -  (Property)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="High" Text="(2) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-10-03T11:50:28" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>
