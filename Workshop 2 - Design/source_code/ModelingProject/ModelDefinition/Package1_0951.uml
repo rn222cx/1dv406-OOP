@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="b7c63b51-a967-4289-8f0c-16d0caea41e4"
   name="View"
@@ -2809,7 +2809,7 @@
                     <enumerationMoniker
                       Id="1d632b85-fc10-4379-a599-17251b93c4bd"
                       LastKnownName="ListOption"
-                      LastKnownLocation="Package2_0951.uml" />
+                      LastKnownLocation="Package1_0951.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -7357,6 +7357,151 @@
           </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="1d632b85-fc10-4379-a599-17251b93c4bd"
+        name="ListOption"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="01ec3ce8-96e7-4f60-a204-20c3cf3e366b"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3c11919a-b1ec-4deb-b0a1-6ca8ccb02835"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="80d5a6f7-8708-49d1-aacf-aeaedf4dca21">
+                <propertyInstance
+                  Id="99bd614e-2eb6-4cbd-b719-cee6d67b8038"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d471844-18e9-4895-ac05-655f2036cac9">
+                <propertyInstance
+                  Id="c8f60cb9-b664-43ac-9139-086bd60feb15"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b688f950-063b-4f9f-94f4-0da805f3dbac">
+                <propertyInstance
+                  Id="85ca68a4-20f1-49f8-869a-dfdd57e9ebff"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="7627c792-f007-4340-a2b7-ba93f6a3e54e"
+            name="addBoat">
+            <referencesInternal>
+              <reference
+                Id="94e72211-4c7a-46ba-9bbf-95b126134894"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DaddBoat"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="0761acbe-47bf-4503-8422-6d3a280d3342"
+            name="addMember">
+            <referencesInternal>
+              <reference
+                Id="71e92e64-8a79-4342-93a2-3699682e19c8"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DaddMember"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="fb692c0f-6def-4cbf-9e4b-862dddfb6702"
+            name="editBoat">
+            <referencesInternal>
+              <reference
+                Id="33e38795-9e5f-4c12-a8f5-3b168108b9cf"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DeditBoat"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="aad498bf-11ce-4b02-ab8c-82a191c885a4"
+            name="editMember">
+            <referencesInternal>
+              <reference
+                Id="1bdc7466-eb7d-4362-bb07-b420bc36225b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DeditMember"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="41f760b1-352e-4b8b-affb-fa9a809d08f0"
+            name="quit">
+            <referencesInternal>
+              <reference
+                Id="59ac1fa5-0014-419b-a1b4-448dbb324c61"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3Dquit"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="73278be4-d4a9-4b9b-aed5-db68137d5e70"
+            name="removeBoat">
+            <referencesInternal>
+              <reference
+                Id="95e1a412-67ec-4dce-aa47-09b73c760337"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DremoveBoat"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="dbc0e507-1b77-4384-bf29-cc4e3e96a040"
+            name="removeMember">
+            <referencesInternal>
+              <reference
+                Id="fa658124-b50b-49a7-8e1d-d0a43085e84e"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DremoveMember"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="c8b3b957-a0fe-4666-8a48-b6ce26207c73"
+            name="showCompactListOfMembers">
+            <referencesInternal>
+              <reference
+                Id="e567cc43-0ba7-4706-9069-ba48c9b748c3"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DshowCompactListOfMembers"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="0d8ae27f-a0ac-47e3-bc7a-818e66a11966"
+            name="showVerboseListOfMembers">
+            <referencesInternal>
+              <reference
+                Id="d66036f0-9c70-4260-9929-f3f5dfaf3783"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DshowVerboseListOfMembers"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="2ae7a709-7145-4740-97df-49b9877dcfa6"
+            name="viewMember">
+            <referencesInternal>
+              <reference
+                Id="7d195b46-b24e-4dfc-81af-cbae64e1e4e1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DviewMember"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
     </packageHasNamedElement>
   </packagedElements>
 </package>

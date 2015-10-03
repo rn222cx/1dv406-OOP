@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="47764a98-5b2c-4b82-b003-41643ced63a2" name="UMLClassDiagram" linkedPackageId="8f14474a-1b51-409e-9fc1-d8f359b3ec0a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="47764a98-5b2c-4b82-b003-41643ced63a2" name="UMLClassDiagram" linkedPackageId="8f14474a-1b51-409e-9fc1-d8f359b3ec0a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="c9925252-7e47-48c7-aabf-5d20df4bb54d" name="Controller" visibility="Private">
@@ -3155,123 +3155,6 @@
                     </reference>
                   </referencesInternal>
                   <elementDefinition Id="ac8a5cc3-76ed-4ab4-bb67-46f95f53daf6" />
-                </enumerationLiteral>
-              </ownedLiterals>
-            </enumeration>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <enumeration Id="02eb24a6-8d6d-4981-a8ea-c6241aef1181" name="ListOption" isAbstract="false" isLeaf="false">
-              <referencesInternal>
-                <reference Id="1f6e1ee6-17a2-4d14-9d4d-c651050d80b1" handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption" tag="ViewCode">
-                  <elementDefinition Id="01ec3ce8-96e7-4f60-a204-20c3cf3e366b" />
-                </reference>
-              </referencesInternal>
-              <appliedStereotypesInternal>
-                <stereotypeInstance Id="0e517a24-7e49-4ca2-bcc2-864318462b3b" name="enum" profile="CSharpProfile">
-                  <elementDefinition Id="3c11919a-b1ec-4deb-b0a1-6ca8ccb02835" />
-                  <propertyInstances>
-                    <stereotypeInstanceHasPropertyInstances Id="2315325b-33d1-49ba-aafd-54488835dfd2">
-                      <propertyInstance Id="26d56931-70c3-4148-a449-c398cf87aeaf" name="ClrAttributes">
-                        <elementDefinition Id="99bd614e-2eb6-4cbd-b719-cee6d67b8038" />
-                      </propertyInstance>
-                      <elementDefinition Id="80d5a6f7-8708-49d1-aacf-aeaedf4dca21" />
-                    </stereotypeInstanceHasPropertyInstances>
-                    <stereotypeInstanceHasPropertyInstances Id="b937b7ea-0a09-40b0-8f69-56a3132279c1">
-                      <propertyInstance Id="4a841480-c4fa-4fef-98b0-6d50cd7f5e08" name="BaseType" value="int">
-                        <elementDefinition Id="c8f60cb9-b664-43ac-9139-086bd60feb15" />
-                      </propertyInstance>
-                      <elementDefinition Id="4d471844-18e9-4895-ac05-655f2036cac9" />
-                    </stereotypeInstanceHasPropertyInstances>
-                    <stereotypeInstanceHasPropertyInstances Id="b9c2f62e-4a86-44b6-a7da-d78879e53bbc">
-                      <propertyInstance Id="63a745ae-ab09-48bb-9b7c-929c38ca25c2" name="PackageVisibility" value="internal">
-                        <elementDefinition Id="85ca68a4-20f1-49f8-869a-dfdd57e9ebff" />
-                      </propertyInstance>
-                      <elementDefinition Id="b688f950-063b-4f9f-94f4-0da805f3dbac" />
-                    </stereotypeInstanceHasPropertyInstances>
-                  </propertyInstances>
-                </stereotypeInstance>
-              </appliedStereotypesInternal>
-              <elementDefinition Id="1d632b85-fc10-4379-a599-17251b93c4bd" />
-              <ownedLiterals>
-                <enumerationLiteral Id="18190efc-b5cc-4e2e-9dc6-a011ef0481a2" name="addBoat">
-                  <referencesInternal>
-                    <reference Id="3d54f687-91f0-4d33-b631-d3f288897b92" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DaddBoat" tag="ViewCode">
-                      <elementDefinition Id="94e72211-4c7a-46ba-9bbf-95b126134894" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="7627c792-f007-4340-a2b7-ba93f6a3e54e" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="261a8193-0697-4693-85db-0dfa25fcc200" name="addMember">
-                  <referencesInternal>
-                    <reference Id="3fa11fda-cf3a-4c71-aa64-4b08c9b29ef9" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DaddMember" tag="ViewCode">
-                      <elementDefinition Id="71e92e64-8a79-4342-93a2-3699682e19c8" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="0761acbe-47bf-4503-8422-6d3a280d3342" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="90342bd6-a2d6-4684-b810-aea8842cb47b" name="editBoat">
-                  <referencesInternal>
-                    <reference Id="24eeaa28-026e-4e39-a00c-cce009150e0f" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DeditBoat" tag="ViewCode">
-                      <elementDefinition Id="33e38795-9e5f-4c12-a8f5-3b168108b9cf" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="fb692c0f-6def-4cbf-9e4b-862dddfb6702" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="b7a5045a-a41f-44ad-acda-95c3bdef0ae8" name="editMember">
-                  <referencesInternal>
-                    <reference Id="c9091969-4211-4a58-8b70-e09f06da6ea5" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DeditMember" tag="ViewCode">
-                      <elementDefinition Id="1bdc7466-eb7d-4362-bb07-b420bc36225b" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="aad498bf-11ce-4b02-ab8c-82a191c885a4" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="a6e203ed-7442-489e-9978-5d7dac66d955" name="quit">
-                  <referencesInternal>
-                    <reference Id="1bdb8ef3-bb78-44b3-8b39-809362b0d498" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3Dquit" tag="ViewCode">
-                      <elementDefinition Id="59ac1fa5-0014-419b-a1b4-448dbb324c61" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="41f760b1-352e-4b8b-affb-fa9a809d08f0" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="946cb584-a4f4-4efa-8f41-475a958840aa" name="removeBoat">
-                  <referencesInternal>
-                    <reference Id="c7573bb0-7664-4c52-9438-7af49ad435e2" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DremoveBoat" tag="ViewCode">
-                      <elementDefinition Id="95e1a412-67ec-4dce-aa47-09b73c760337" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="73278be4-d4a9-4b9b-aed5-db68137d5e70" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="71f73695-db3f-4582-8934-8fd0b7b9ce18" name="removeMember">
-                  <referencesInternal>
-                    <reference Id="52ab0677-74a3-45cc-8f3f-72c1c9391693" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DremoveMember" tag="ViewCode">
-                      <elementDefinition Id="fa658124-b50b-49a7-8e1d-d0a43085e84e" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="dbc0e507-1b77-4384-bf29-cc4e3e96a040" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="0d772a2d-2f7c-4a55-acb1-3af29a891c52" name="showCompactListOfMembers">
-                  <referencesInternal>
-                    <reference Id="c6eedfad-804f-4815-a5d3-8aac844c85d1" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DshowCompactListOfMembers" tag="ViewCode">
-                      <elementDefinition Id="e567cc43-0ba7-4706-9069-ba48c9b748c3" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="c8b3b957-a0fe-4666-8a48-b6ce26207c73" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="342b37a8-e58a-47cf-8253-bdaa125f1f9a" name="showVerboseListOfMembers">
-                  <referencesInternal>
-                    <reference Id="52e322fb-add1-41bf-b731-997ee69d87ec" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DshowVerboseListOfMembers" tag="ViewCode">
-                      <elementDefinition Id="d66036f0-9c70-4260-9929-f3f5dfaf3783" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="0d8ae27f-a0ac-47e3-bc7a-818e66a11966" />
-                </enumerationLiteral>
-                <enumerationLiteral Id="961e6192-e6a9-49eb-8aff-06407089cd09" name="viewMember">
-                  <referencesInternal>
-                    <reference Id="5f954412-88ab-4a97-9a07-fc313d465e2e" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DviewMember" tag="ViewCode">
-                      <elementDefinition Id="7d195b46-b24e-4dfc-81af-cbae64e1e4e1" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="2ae7a709-7145-4740-97df-49b9877dcfa6" />
                 </enumerationLiteral>
               </ownedLiterals>
             </enumeration>
@@ -8828,6 +8711,123 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="02eb24a6-8d6d-4981-a8ea-c6241aef1181" name="ListOption" isAbstract="false" isLeaf="false">
+              <referencesInternal>
+                <reference Id="1f6e1ee6-17a2-4d14-9d4d-c651050d80b1" handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption" tag="ViewCode">
+                  <elementDefinition Id="01ec3ce8-96e7-4f60-a204-20c3cf3e366b" />
+                </reference>
+              </referencesInternal>
+              <appliedStereotypesInternal>
+                <stereotypeInstance Id="0e517a24-7e49-4ca2-bcc2-864318462b3b" name="enum" profile="CSharpProfile">
+                  <elementDefinition Id="3c11919a-b1ec-4deb-b0a1-6ca8ccb02835" />
+                  <propertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="2315325b-33d1-49ba-aafd-54488835dfd2">
+                      <propertyInstance Id="26d56931-70c3-4148-a449-c398cf87aeaf" name="ClrAttributes">
+                        <elementDefinition Id="99bd614e-2eb6-4cbd-b719-cee6d67b8038" />
+                      </propertyInstance>
+                      <elementDefinition Id="80d5a6f7-8708-49d1-aacf-aeaedf4dca21" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="b937b7ea-0a09-40b0-8f69-56a3132279c1">
+                      <propertyInstance Id="4a841480-c4fa-4fef-98b0-6d50cd7f5e08" name="BaseType" value="int">
+                        <elementDefinition Id="c8f60cb9-b664-43ac-9139-086bd60feb15" />
+                      </propertyInstance>
+                      <elementDefinition Id="4d471844-18e9-4895-ac05-655f2036cac9" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="b9c2f62e-4a86-44b6-a7da-d78879e53bbc">
+                      <propertyInstance Id="63a745ae-ab09-48bb-9b7c-929c38ca25c2" name="PackageVisibility" value="internal">
+                        <elementDefinition Id="85ca68a4-20f1-49f8-869a-dfdd57e9ebff" />
+                      </propertyInstance>
+                      <elementDefinition Id="b688f950-063b-4f9f-94f4-0da805f3dbac" />
+                    </stereotypeInstanceHasPropertyInstances>
+                  </propertyInstances>
+                </stereotypeInstance>
+              </appliedStereotypesInternal>
+              <elementDefinition Id="1d632b85-fc10-4379-a599-17251b93c4bd" />
+              <ownedLiterals>
+                <enumerationLiteral Id="18190efc-b5cc-4e2e-9dc6-a011ef0481a2" name="addBoat">
+                  <referencesInternal>
+                    <reference Id="3d54f687-91f0-4d33-b631-d3f288897b92" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DaddBoat" tag="ViewCode">
+                      <elementDefinition Id="94e72211-4c7a-46ba-9bbf-95b126134894" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="7627c792-f007-4340-a2b7-ba93f6a3e54e" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="261a8193-0697-4693-85db-0dfa25fcc200" name="addMember">
+                  <referencesInternal>
+                    <reference Id="3fa11fda-cf3a-4c71-aa64-4b08c9b29ef9" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DaddMember" tag="ViewCode">
+                      <elementDefinition Id="71e92e64-8a79-4342-93a2-3699682e19c8" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="0761acbe-47bf-4503-8422-6d3a280d3342" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="90342bd6-a2d6-4684-b810-aea8842cb47b" name="editBoat">
+                  <referencesInternal>
+                    <reference Id="24eeaa28-026e-4e39-a00c-cce009150e0f" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DeditBoat" tag="ViewCode">
+                      <elementDefinition Id="33e38795-9e5f-4c12-a8f5-3b168108b9cf" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="fb692c0f-6def-4cbf-9e4b-862dddfb6702" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="b7a5045a-a41f-44ad-acda-95c3bdef0ae8" name="editMember">
+                  <referencesInternal>
+                    <reference Id="c9091969-4211-4a58-8b70-e09f06da6ea5" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DeditMember" tag="ViewCode">
+                      <elementDefinition Id="1bdc7466-eb7d-4362-bb07-b420bc36225b" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="aad498bf-11ce-4b02-ab8c-82a191c885a4" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="a6e203ed-7442-489e-9978-5d7dac66d955" name="quit">
+                  <referencesInternal>
+                    <reference Id="1bdb8ef3-bb78-44b3-8b39-809362b0d498" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3Dquit" tag="ViewCode">
+                      <elementDefinition Id="59ac1fa5-0014-419b-a1b4-448dbb324c61" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="41f760b1-352e-4b8b-affb-fa9a809d08f0" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="946cb584-a4f4-4efa-8f41-475a958840aa" name="removeBoat">
+                  <referencesInternal>
+                    <reference Id="c7573bb0-7664-4c52-9438-7af49ad435e2" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DremoveBoat" tag="ViewCode">
+                      <elementDefinition Id="95e1a412-67ec-4dce-aa47-09b73c760337" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="73278be4-d4a9-4b9b-aed5-db68137d5e70" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="71f73695-db3f-4582-8934-8fd0b7b9ce18" name="removeMember">
+                  <referencesInternal>
+                    <reference Id="52ab0677-74a3-45cc-8f3f-72c1c9391693" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DremoveMember" tag="ViewCode">
+                      <elementDefinition Id="fa658124-b50b-49a7-8e1d-d0a43085e84e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="dbc0e507-1b77-4384-bf29-cc4e3e96a040" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="0d772a2d-2f7c-4a55-acb1-3af29a891c52" name="showCompactListOfMembers">
+                  <referencesInternal>
+                    <reference Id="c6eedfad-804f-4815-a5d3-8aac844c85d1" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DshowCompactListOfMembers" tag="ViewCode">
+                      <elementDefinition Id="e567cc43-0ba7-4706-9069-ba48c9b748c3" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="c8b3b957-a0fe-4666-8a48-b6ce26207c73" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="342b37a8-e58a-47cf-8253-bdaa125f1f9a" name="showVerboseListOfMembers">
+                  <referencesInternal>
+                    <reference Id="52e322fb-add1-41bf-b731-997ee69d87ec" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DshowVerboseListOfMembers" tag="ViewCode">
+                      <elementDefinition Id="d66036f0-9c70-4260-9929-f3f5dfaf3783" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="0d8ae27f-a0ac-47e3-bc7a-818e66a11966" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="961e6192-e6a9-49eb-8aff-06407089cd09" name="viewMember">
+                  <referencesInternal>
+                    <reference Id="5f954412-88ab-4a97-9a07-fc313d465e2e" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FMicke%2FDocuments%2FGitHub%2F1dv607-OOP%2FWorkshop 2 - Design%2Fsource_code%2FOOP%2Fbin%2FDebug%2FWorkshop_2.exe&quot; Namespace%3DWorkshop_2.Model Type%3DListOption Member%3DviewMember" tag="ViewCode">
+                      <elementDefinition Id="7d195b46-b24e-4dfc-81af-cbae64e1e4e1" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="2ae7a709-7145-4740-97df-49b9877dcfa6" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -8907,7 +8907,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="5b5efea5-1a70-4fa6-b5b6-a953afc150fd" name="ListOption" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::Workshop_2::Model::ListOption">
+      <referencedType Id="5b5efea5-1a70-4fa6-b5b6-a953afc150fd" name="ListOption" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::Workshop_2::View::ListOption">
         <elementDefinition Id="1d632b85-fc10-4379-a599-17251b93c4bd" />
       </referencedType>
     </packageHasNamedElement>
