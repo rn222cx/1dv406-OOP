@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="b7c63b51-a967-4289-8f0c-16d0caea41e4"
   name="View"
@@ -957,6 +957,13 @@
               LastKnownName="MemberDAL"
               LastKnownLocation="Package2_0951.uml" />
           </dependency>
+          <dependency
+            Id="93227894-6cfa-4b17-bb02-4ab7ecbb3462">
+            <classMoniker
+              Id="512efc7e-d326-4b66-95f0-6920e433c8bc"
+              LastKnownName="Member"
+              LastKnownLocation="Package2_0951.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -1775,6 +1782,20 @@
             <classMoniker
               Id="1d3f3e82-5af6-43a6-b433-d4ea2d903aea"
               LastKnownName="BoatDAL"
+              LastKnownLocation="Package2_0951.uml" />
+          </dependency>
+          <dependency
+            Id="88ec07b7-900f-425e-be6e-2a6f528f9633">
+            <enumerationMoniker
+              Id="4255148e-12b4-469b-abd5-031d45c9003a"
+              LastKnownName="BoatType"
+              LastKnownLocation="Package2_0951.uml" />
+          </dependency>
+          <dependency
+            Id="a8cc7482-aada-403d-892c-1ab9e1e8c136">
+            <classMoniker
+              Id="32f94d62-86d4-4535-b0ba-6ea4228e5f71"
+              LastKnownName="Boat"
               LastKnownLocation="Package2_0951.uml" />
           </dependency>
         </suppliersInternal>
