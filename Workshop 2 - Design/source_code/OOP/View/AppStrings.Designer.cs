@@ -484,6 +484,15 @@ namespace Workshop_2.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There is no members yet.
+        /// </summary>
+        internal static string renderNoMembers {
+            get {
+                return ResourceManager.GetString("renderNoMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} has Id {1} and has boat/boats..
         /// </summary>
         internal static string renderShortMember {

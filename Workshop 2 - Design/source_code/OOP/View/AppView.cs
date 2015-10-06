@@ -31,16 +31,6 @@ namespace Workshop_2.View
             Console.WriteLine(AppStrings.divider);
         }
 
-        public void renderGoBackQuestion()
-        {
-            Console.WriteLine(AppStrings.back, AppStrings.backKey);
-        }
-
-        public bool getGoBack()
-        {
-            return char.ToUpper(Console.ReadKey().KeyChar) == char.Parse(AppStrings.backKey);
-        }
-
         public void renderDivider()
         {
             Console.WriteLine(AppStrings.divider);
@@ -54,6 +44,11 @@ namespace Workshop_2.View
         public void consoleClear()
         {
             Console.Clear();
+        }
+
+        public void renderNoMembers()
+        {
+            Console.WriteLine(AppStrings.renderNoMembers);
         }
     }
 }

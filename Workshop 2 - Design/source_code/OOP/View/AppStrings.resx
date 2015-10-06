@@ -267,4 +267,7 @@
   <data name="failNotValidNumber" xml:space="preserve">
     <value>Not a valid number, try again: </value>
   </data>
+  <data name="renderNoMembers" xml:space="preserve">
+    <value>There is no members yet</value>
+  </data>
 </root>

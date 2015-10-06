@@ -52,9 +52,16 @@ namespace Workshop_2.Controller
         }
         private void doViewMember()
         {
-            int memberID = MemberView.getMemberID();
-            MemberView.renderMemberByID(memberID);
-            BoatView.renderShortInformationAboutBoatsByID(memberID);
+            if(MemberDAL.getMembers().Count != 0)
+            {
+                int memberID = MemberView.getMemberID();
+                MemberView.renderMemberByID(memberID);
+                BoatView.renderShortInformationAboutBoatsByID(memberID);
+            }
+            else
+            {
+                AppView.renderNoMembers();
+            }
             AppView.waitForUserToRead();
         }
         private void doAddMember()
@@ -170,11 +177,7 @@ namespace Workshop_2.Controller
                 AppView.renderCompactListElement(member, numberOfBoats);
             }
 
-            AppView.renderGoBackQuestion();
-            if (AppView.getGoBack())
-            {
-                return;
-            }
+            AppView.waitForUserToRead();
         }
         private void doRenderVerboseListOfMembers()
         {
@@ -188,11 +191,7 @@ namespace Workshop_2.Controller
                 AppView.renderDivider();
             }
 
-            AppView.renderGoBackQuestion();
-            if (AppView.getGoBack())
-            {
-                return;
-            }
+            AppView.waitForUserToRead();
         }
     }
 }
