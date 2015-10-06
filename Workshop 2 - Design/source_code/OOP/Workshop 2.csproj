@@ -58,7 +58,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TodoList.cs" />
     <Compile Include="View\AppView.cs" />
     <Compile Include="View\AppStrings.Designer.cs">
       <AutoGen>True</AutoGen>
