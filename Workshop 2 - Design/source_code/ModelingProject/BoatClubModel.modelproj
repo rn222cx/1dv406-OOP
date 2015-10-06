@@ -43,6 +43,15 @@
     <Content Include="ModelDefinition\Package_0952.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Pictures\AddNewMemberSequenceDiagram.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Pictures\CompactListSequenceDiagram.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Pictures\DesignModel.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="SequenceDiagram\AddNewMember.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -68,6 +77,7 @@
     <Content Include="ModelDefinition\ModelingProject.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="Pictures" />
     <Folder Include="SequenceDiagram" />
   </ItemGroup>
 </Project>
