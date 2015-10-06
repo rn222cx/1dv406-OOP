@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="47764a98-5b2c-4b82-b003-41643ced63a2" name="UMLClassDiagram" linkedPackageId="8f14474a-1b51-409e-9fc1-d8f359b3ec0a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="47764a98-5b2c-4b82-b003-41643ced63a2" name="UMLClassDiagram" linkedPackageId="8f14474a-1b51-409e-9fc1-d8f359b3ec0a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="c9925252-7e47-48c7-aabf-5d20df4bb54d" name="Controller" visibility="Private">
@@ -1401,34 +1401,6 @@
                 </stereotypeInstance>
               </appliedStereotypesInternal>
               <elementDefinition Id="512efc7e-d326-4b66-95f0-6920e433c8bc" />
-              <targetEnds>
-                <association Id="106bb4f6-c675-49cc-84a3-6497f1c121cf" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Boat" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="e5f0a2cc-578d-4193-82f3-4b6572d73c60" LastKnownName="Boat" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="6dec5675-eece-4ae3-a1c9-bbf4c4d42c0e" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="5dd7bd8e-17a1-4149-a03e-8d62274925d2" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="331ccc3f-dec8-4c5b-aae0-0c300283090f" name="Boat" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
-                        <lowerValueInternal>
-                          <literalString Id="d3535e6c-49dd-4ac2-9935-48e6bf889fc2" name="Lower" value="*">
-                            <elementDefinition Id="3f1b1e90-1b54-4c71-8432-41c061ea1c62" />
-                          </literalString>
-                        </lowerValueInternal>
-                        <upperValueInternal>
-                          <literalString Id="83a61c5c-018e-4e19-a933-64912331abd2" name="Upper" value="*">
-                            <elementDefinition Id="a81e6eaf-a1f9-4aef-b8e4-1656f2c1b630" />
-                          </literalString>
-                        </upperValueInternal>
-                        <elementDefinition Id="ee695b65-ac57-438a-9c5a-2126692033f5" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="9be47f79-87fc-4d38-9059-04e50249d618" />
-                </association>
-              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="96974869-6e84-4d93-8d09-90f0e6c5fd66" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <referencesInternal>
