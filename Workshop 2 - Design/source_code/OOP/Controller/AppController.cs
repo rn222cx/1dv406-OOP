@@ -106,7 +106,6 @@ namespace Workshop_2.Controller
             var boats = new List<Boat>();
 
             MemberView.renderMemberByID(memberID);
-            BoatView.renderShortInformationAboutBoatsByID(memberID);
 
             boats = BoatView.getBoatByID(memberID);
             int chooseBoat = BoatView.getBoatToEdit(boats);
