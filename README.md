@@ -15,10 +15,15 @@
 * Mikael Eriksson
 * Roy Nilsson
 
-##Workshop 2 - Design
-* [Image on first UML for workshop 1, grade 2](Workshop 2 - Design/source_code/ModelingProject/Pictures/DesignModel.png)
+##Workshop 2 - Design, grade 2
+* [Image on class model](Workshop 2 - Design/source_code/ModelingProject/Pictures/DesignModel.png)
 
-* [Image on final UML for workshop 1, grade 2](Workshop 1 - Domain Modeling/UML_grade2-final.png)
+* [Image on Sequence Diagram for Compact List](Workshop 2 - Design/source_code/ModelingProject/Pictures/CompactListSequenceDiagram.png)
+
+* [Image on Sequence Diagram for add new member](Workshop 2 - Design/source_code/ModelingProject/Pictures/AddNewMemberSequenceDiagram.png)
+
+* [Image on Sequence Diagram for add new member](Workshop 2 - Design/source_code/ModelingProject/Pictures/AddNewMemberSequenceDiagram.png)
+
 
 ##Workshop 3 - Design Using Patterns
 * -
