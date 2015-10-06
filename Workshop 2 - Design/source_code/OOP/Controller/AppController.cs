@@ -112,7 +112,7 @@ namespace Workshop_2.Controller
 
             if (chooseBoat == -1)
             {
-                // Do nothing
+                // Do nothing, -1 indicates that there is no boats
             }
             else if (BoatDAL.updateBoat(memberID, chooseBoat, BoatView.getNewBoat()))
             {
@@ -148,7 +148,7 @@ namespace Workshop_2.Controller
 
             if (chooseBoat == -1)
             {
-                // Do nothing
+                // Do nothing, -1 indicates that there is no boats
             }
             else if (BoatDAL.removeBoat(memberID, chooseBoat))
             {
