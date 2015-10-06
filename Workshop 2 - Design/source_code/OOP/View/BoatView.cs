@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Workshop_2.Model;
 
 namespace Workshop_2.View
@@ -67,13 +68,13 @@ namespace Workshop_2.View
                     Console.Write(AppStrings.failWrongLength);
             }
         }
-        public int getBoatToRemove(int memberID)
+        public List<Boat> getBoatByID(int memberID)
         {
             var boats = boatDAL.getBoatsByMemberID(memberID);
             if (boats.Count == 0)
             {
                 Console.WriteLine(AppStrings.memberHasNoBoat);
-                return 0;
+                return null;
             }
             else
             {
@@ -83,24 +84,47 @@ namespace Workshop_2.View
                     Console.WriteLine(AppStrings.renderBoatInformation, numOfBoats, boat.Type, boat.Length);
                     numOfBoats++;
                 }
-
-                Console.WriteLine(AppStrings.getBoatToRemove);
-
-                int boatNumber;
-                string Result = Console.ReadLine();
-
-                while (!Int32.TryParse(Result, out boatNumber) || boatNumber > boats.Count)
-                {
-                    Console.WriteLine(AppStrings.failNotValidNumber);
-                    Result = Console.ReadLine();
-                }
-                return boatNumber - 1;
+                return boats;
             }
         }
-        public int getBoatToEdit()
+
+        public int getBoatToRemove(List<Boat> boats)
         {
+            if (boats == null)
+            {
+                return -1;
+            }
+
+            Console.WriteLine(AppStrings.getBoatToRemove);
+
+            int boatNumber;
+            string Result = Console.ReadLine();
+
+            while (!Int32.TryParse(Result, out boatNumber) || boatNumber > boats.Count)
+            {
+                Console.WriteLine(AppStrings.failNotValidNumber);
+                Result = Console.ReadLine();
+            }
+            return boatNumber - 1;
+        }
+        public int getBoatToEdit(List<Boat> boats)
+        {
+            if (boats == null)
+            {
+                return -1;
+            }
+
             Console.WriteLine(AppStrings.getBoatToEdit);
-            return Convert.ToInt32(Console.ReadLine()) - 1;
+
+            int boatNumber;
+            string Result = Console.ReadLine();
+
+            while (!Int32.TryParse(Result, out boatNumber) || boatNumber > boats.Count)
+            {
+                Console.WriteLine(AppStrings.failNotValidNumber);
+                Result = Console.ReadLine();
+            }
+            return boatNumber - 1;
         }
         #endregion
         #region Render

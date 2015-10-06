@@ -103,13 +103,19 @@ namespace Workshop_2.Controller
         private void doEditBoat()
         {
             int memberID = MemberView.getMemberID();
+            var boats = new List<Boat>();
 
             MemberView.renderMemberByID(memberID);
             BoatView.renderShortInformationAboutBoatsByID(memberID);
 
-            int chooseBoat = BoatView.getBoatToEdit();
+            boats = BoatView.getBoatByID(memberID);
+            int chooseBoat = BoatView.getBoatToEdit(boats);
 
-            if (BoatDAL.updateBoat(memberID, chooseBoat, BoatView.getNewBoat()))
+            if (chooseBoat == -1)
+            {
+                // Do nothing
+            }
+            else if (BoatDAL.updateBoat(memberID, chooseBoat, BoatView.getNewBoat()))
             {
                 BoatView.renderEditBoatSuccess();
             }
@@ -134,13 +140,14 @@ namespace Workshop_2.Controller
         private void doRemoveBoat()
         {
             int memberID = MemberView.getMemberID();
+            var boats = new List<Boat>();
 
             MemberView.renderMemberByID(memberID);
-            BoatView.renderShortInformationAboutBoatsByID(memberID);
 
-            int chooseBoat = BoatView.getBoatToRemove(memberID);
+            boats = BoatView.getBoatByID(memberID);
+            int chooseBoat = BoatView.getBoatToRemove(boats);
 
-            if (chooseBoat == 0)
+            if (chooseBoat == -1)
             {
                 // Do nothing
             }
