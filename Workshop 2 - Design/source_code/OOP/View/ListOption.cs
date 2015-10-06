@@ -1,4 +1,4 @@
-﻿namespace Workshop_2.Model
+﻿namespace Workshop_2.View
 {
     public enum ListOption
     {

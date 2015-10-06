@@ -951,20 +951,60 @@
         </appliedStereotypesInternal>
         <suppliersInternal>
           <dependency
-            Id="e4a1baa7-b16d-456e-beda-4d4492cf32ed">
-            <classMoniker
-              Id="3722f5f2-9af7-4acf-8c33-b7d4fd79c486"
-              LastKnownName="MemberDAL"
-              LastKnownLocation="Package2_0951.uml" />
-          </dependency>
-          <dependency
             Id="93227894-6cfa-4b17-bb02-4ab7ecbb3462">
             <classMoniker
               Id="512efc7e-d326-4b66-95f0-6920e433c8bc"
               LastKnownName="Member"
               LastKnownLocation="Package2_0951.uml" />
           </dependency>
+          <dependency
+            Id="9aa212bc-55b7-4268-bb6c-2c5c731f8dbf">
+            <classMoniker
+              Id="c1572416-45b5-486e-af00-8f14710eae09"
+              LastKnownName="AppStrings"
+              LastKnownLocation="Package1_0951.uml" />
+          </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="925ad032-4e92-44d5-936a-e63d6d338551"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="memberDAL"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3722f5f2-9af7-4acf-8c33-b7d4fd79c486"
+              LastKnownName="MemberDAL"
+              LastKnownLocation="Package2_0951.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5f52585-e85c-4856-9a3b-6ad729777caf"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed6b4467-62b2-4d59-9d2b-6b7aaa608d41"
+                  name="memberDAL"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="e2fa705e-c618-424c-8e32-77b5cca31d03"
@@ -1778,13 +1818,6 @@
         </appliedStereotypesInternal>
         <suppliersInternal>
           <dependency
-            Id="655bfee8-1d78-4bf4-9071-65be84b597cd">
-            <classMoniker
-              Id="1d3f3e82-5af6-43a6-b433-d4ea2d903aea"
-              LastKnownName="BoatDAL"
-              LastKnownLocation="Package2_0951.uml" />
-          </dependency>
-          <dependency
             Id="88ec07b7-900f-425e-be6e-2a6f528f9633">
             <enumerationMoniker
               Id="4255148e-12b4-469b-abd5-031d45c9003a"
@@ -1798,7 +1831,54 @@
               LastKnownName="Boat"
               LastKnownLocation="Package2_0951.uml" />
           </dependency>
+          <dependency
+            Id="4d7d3ceb-96a7-4bef-97f9-13b0a66ab7d7">
+            <classMoniker
+              Id="c1572416-45b5-486e-af00-8f14710eae09"
+              LastKnownName="AppStrings"
+              LastKnownLocation="Package1_0951.uml" />
+          </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="bceee59f-90b6-4de4-8e8d-37844a2940ed"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="boatDAL"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1d3f3e82-5af6-43a6-b433-d4ea2d903aea"
+              LastKnownName="BoatDAL"
+              LastKnownLocation="Package2_0951.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17405978-ea06-454c-91f2-cb2252bea972"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9eed87a5-f894-4ead-8ed9-900438affd05"
+                  name="boatDAL"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="a2f54996-4033-4d35-9603-4f0a3b32b094"

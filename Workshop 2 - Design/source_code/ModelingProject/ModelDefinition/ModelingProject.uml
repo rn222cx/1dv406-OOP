@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="57dd2072-9d2f-4b5d-a703-f813ce612f4c"
   name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -915,16 +915,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="50667322-0e52-402e-9d93-e26da849cac8"
-            name="OperandOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="6368b4fd-20b0-4ab2-b776-c8ad520931da"
-                LastKnownName="AppView"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="406f4391-7690-4440-b8aa-96353cb340a0"
             name="OperandOccurrenceSpecification6">
             <covered>
@@ -941,6 +931,16 @@
               <lifelineMoniker
                 Id="dbba0134-8e17-4666-91b0-e225ca0af267"
                 LastKnownName="AppController"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="50667322-0e52-402e-9d93-e26da849cac8"
+            name="OperandOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="6368b4fd-20b0-4ab2-b776-c8ad520931da"
+                LastKnownName="AppView"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1730,24 +1730,6 @@
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="ee67e67c-a6e8-491f-b27c-f32df6c29ca2"
-            name="ExecutionOccurrenceSpecification10">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="5aa9967a-a298-4623-bc45-51c29c04e41d"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="ab2089df-0ebf-4702-95f5-99fd90187208"
-                LastKnownName="MenuView"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
             Id="c3d59ae9-5efe-4b2a-aac2-21fe78d513b3"
             name="ExecutionOccurrenceSpecification11">
             <event>
@@ -1762,6 +1744,24 @@
               <lifelineMoniker
                 Id="e264b9ea-3903-4dd8-8570-4603f8978feb"
                 LastKnownName="AppController"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ee67e67c-a6e8-491f-b27c-f32df6c29ca2"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5aa9967a-a298-4623-bc45-51c29c04e41d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ab2089df-0ebf-4702-95f5-99fd90187208"
+                LastKnownName="MenuView"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1978,22 +1978,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="3e0660af-cda7-4523-9f3b-9070b8a1bc6f"
-            name="MessageOccurrenceSpecification20">
-            <covered>
-              <lifelineMoniker
-                Id="e264b9ea-3903-4dd8-8570-4603f8978feb"
-                LastKnownName="AppController"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="55575aeb-3861-40c4-8ddd-31c26d671a81"
             name="MessageOccurrenceSpecification21">
             <covered>
               <lifelineMoniker
                 Id="c5a32ccd-5683-4bf7-be9c-796c031c5d8d"
                 LastKnownName="MemberDAL"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3e0660af-cda7-4523-9f3b-9070b8a1bc6f"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="e264b9ea-3903-4dd8-8570-4603f8978feb"
+                LastKnownName="AppController"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2022,16 +2022,16 @@
             customInteractionOperator="ForEach">
             <coveredLifelines>
               <lifelineMoniker
-                Id="04e9fe80-037d-41c5-acf1-5e1a4a307019"
-                LastKnownName="BoatDAL"
-                LastKnownLocation="ModelingProject.uml" />
-              <lifelineMoniker
                 Id="e264b9ea-3903-4dd8-8570-4603f8978feb"
                 LastKnownName="AppController"
                 LastKnownLocation="ModelingProject.uml" />
               <lifelineMoniker
                 Id="a44fa27e-45f7-4afc-b289-a425527984b0"
                 LastKnownName="AppView"
+                LastKnownLocation="ModelingProject.uml" />
+              <lifelineMoniker
+                Id="04e9fe80-037d-41c5-acf1-5e1a4a307019"
+                LastKnownName="BoatDAL"
                 LastKnownLocation="ModelingProject.uml" />
             </coveredLifelines>
             <operands>
@@ -2040,16 +2040,16 @@
                 name="InteractionOperand1">
                 <coveredLifelines>
                   <lifelineMoniker
-                    Id="04e9fe80-037d-41c5-acf1-5e1a4a307019"
-                    LastKnownName="BoatDAL"
-                    LastKnownLocation="ModelingProject.uml" />
-                  <lifelineMoniker
                     Id="e264b9ea-3903-4dd8-8570-4603f8978feb"
                     LastKnownName="AppController"
                     LastKnownLocation="ModelingProject.uml" />
                   <lifelineMoniker
                     Id="a44fa27e-45f7-4afc-b289-a425527984b0"
                     LastKnownName="AppView"
+                    LastKnownLocation="ModelingProject.uml" />
+                  <lifelineMoniker
+                    Id="04e9fe80-037d-41c5-acf1-5e1a4a307019"
+                    LastKnownName="BoatDAL"
                     LastKnownLocation="ModelingProject.uml" />
                 </coveredLifelines>
                 <guard>
