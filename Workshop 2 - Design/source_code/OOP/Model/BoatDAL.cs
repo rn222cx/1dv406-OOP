@@ -19,7 +19,6 @@ namespace Workshop_2.Model
                 if (particularMember != null)
                     particularMember.Add(createBoat(boat));
                 xElement.Save(XMLFileInfo.Path);
-                Console.WriteLine(xElement);
 
                 return true;
             }
