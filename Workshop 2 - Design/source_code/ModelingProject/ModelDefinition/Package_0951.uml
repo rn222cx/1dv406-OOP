@@ -102,7 +102,7 @@
           <association
             Id="7ce49183-5734-4f14-a575-c1be3d081724"
             isDerived="false"
-            sourceEndRoleName="AppController"
+            sourceEndRoleName=" "
             targetEndRoleName="MenuView"
             isLeaf="false"
             isAbstract="false">
@@ -114,7 +114,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="d4b91a7e-d59f-4014-ad2f-8ced4f118ffb"
-                  name="AppController"
+                  name=" "
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

@@ -70,11 +70,11 @@
                 </dependency>
               </suppliersInternal>
               <targetEnds>
-                <association Id="a0309e90-3a83-4fa6-9211-bd4b753cefb5" isDerived="false" sourceEndRoleName="AppController" targetEndRoleName="MenuView" isLeaf="false" isAbstract="false">
+                <association Id="a0309e90-3a83-4fa6-9211-bd4b753cefb5" isDerived="false" sourceEndRoleName=" " targetEndRoleName="MenuView" isLeaf="false" isAbstract="false">
                   <classMoniker Id="aa10eab7-f4b4-47b3-98a9-7ef828ff3cae" LastKnownName="MenuView" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="473a17cf-00b5-4ba8-9bdf-540e23a1cce2" name="AppController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="473a17cf-00b5-4ba8-9bdf-540e23a1cce2" name=" " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <lowerValueInternal>
                           <literalString Id="da38d1bc-c64f-4ec9-85e7-c98666453fc2" name="Lower">
                             <elementDefinition Id="68d85d60-2269-49ca-acd6-6618daa17647" />
@@ -1234,11 +1234,11 @@
               </appliedStereotypesInternal>
               <elementDefinition Id="32f94d62-86d4-4535-b0ba-6ea4228e5f71" />
               <targetEnds>
-                <association Id="3bb0ab36-839d-4c16-b157-c70841f0aac7" isDerived="false" sourceEndRoleName="Boat" targetEndRoleName="BoatType" isLeaf="false" isAbstract="false">
+                <association Id="3bb0ab36-839d-4c16-b157-c70841f0aac7" isDerived="false" sourceEndRoleName=" " targetEndRoleName="BoatType" isLeaf="false" isAbstract="false">
                   <enumerationMoniker Id="da6d043a-d7b7-4734-8af4-24771f252c63" LastKnownName="BoatType" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="91d3bdfc-0f0d-49b0-aee4-ac4d49edd9f0" name="Boat" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="91d3bdfc-0f0d-49b0-aee4-ac4d49edd9f0" name=" " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <lowerValueInternal>
                           <literalString Id="7167966c-ea6b-4b3d-bbc4-5c5c29032a60" name="Lower">
                             <elementDefinition Id="d7aced32-7c6b-4928-84b3-f50e28303e33" />

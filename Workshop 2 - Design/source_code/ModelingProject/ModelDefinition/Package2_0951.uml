@@ -1767,7 +1767,7 @@
           <association
             Id="105d3508-f226-4ef6-93f5-f83d020e290c"
             isDerived="false"
-            sourceEndRoleName="Boat"
+            sourceEndRoleName=" "
             targetEndRoleName="BoatType"
             isLeaf="false"
             isAbstract="false">
@@ -1779,7 +1779,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="bfbe2433-aedd-484f-b3cc-f499cdc22a83"
-                  name="Boat"
+                  name=" "
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
