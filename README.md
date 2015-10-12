@@ -22,4 +22,6 @@
 * [For run instructions see the wiki](https://github.com/rn222cx/1dv607-OOP/wiki)
 
 ##Workshop 3 - Design Using Patterns
-* -
+* Oskar Klintrot
+* Mikael Eriksson
+* Roy Nilsson
