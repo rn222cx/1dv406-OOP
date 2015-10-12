@@ -45,6 +45,32 @@ namespace BlackJack.model
             }
             return false;
         }
+        // Roy Created Stand()
+        public bool Stand()
+        {
+            if(m_deck != null)
+            {
+                ShowHand();
+                foreach (Card c in GetHand())
+                {
+                    c.Show(true);
+                }
+
+                while (m_hitRule.DoHit(this))
+                {
+                    m_hitRule.DoHit(this);
+                    m_deck.GetCard();
+                                       
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("is null");
+                Console.ReadLine();
+            }
+            return true;
+        }
 
         public bool IsDealerWinner(Player a_player)
         {
