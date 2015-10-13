@@ -14,17 +14,19 @@ namespace BlackJack.model.rules
 
         public bool DoHit(model.Player a_dealer)
         {
+            //Console.WriteLine((int)Card.Value.Ace);
             var hand = a_dealer.GetHand();
             int score = a_dealer.CalcScore();
 
-            // See if one of the dealers card is an Ace.
+            // Loops through the dealers cards.
             foreach (var card in hand)
             {
+                Console.Write(card.GetValue());
                 // If the dealer has 17.
                 if (score == g_hitLimit)
                 {
                     // But in a comibination of Ace and 6.
-                    if (card.GetValue() == Card.Value.Ace && score - (int)Card.Value.Ace == 6)
+                    if (card.GetValue() == Card.Value.Ace && score - 11 == 6)
                     {
                         // The dealer can get another card valued 10 but still have 17.
                         score -= 10;
