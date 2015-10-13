@@ -45,31 +45,33 @@ namespace BlackJack.model
             }
             return false;
         }
-        // Roy Created Stand()
-        public bool Stand()
+        //Roy Created Stand()
+        public bool Stand(Player a_player)
         {
-            if(m_deck != null)
-            {
                 ShowHand();
-                foreach (Card c in GetHand())
-                {
-                    c.Show(true);
-                }
 
                 while (m_hitRule.DoHit(this))
                 {
-                    m_hitRule.DoHit(this);
-                    m_deck.GetCard();
-                                       
+                    Hit(a_player);
                 }
-
-            }
-            else
-            {
-                Console.WriteLine("is null");
-                Console.ReadLine();
-            }
+            ShowHand();
             return true;
+        }
+
+        public bool Stand()
+        {
+            if (m_deck != null)
+            {
+                ShowHand();
+                while (m_hitRule.DoHit(this))
+                {
+                    Card c = m_deck.GetCard();
+                    c.Show(true);
+                    DealCard(c);
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool IsDealerWinner(Player a_player)

@@ -40,7 +40,8 @@ namespace BlackJack.model
         {
             // TODO: Implement this according to Game_Stand.sequencediagram
             //return true;
-            return m_dealer.Stand();
+            return m_dealer.Stand(m_dealer);
+           // return m_dealer.Stand();
         }
 
         public IEnumerable<Card> GetDealerHand()
