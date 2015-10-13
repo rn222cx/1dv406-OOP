@@ -13,7 +13,12 @@ namespace BlackJack.model.rules
         {
             return maxScore;
         }
-
+        /// <summary>
+        /// Returns true if the dealer wins. On equal score the dealer wins.
+        /// </summary>
+        /// <param name="a_dealer"></param>
+        /// <param name="a_player"></param>
+        /// <returns></returns>
         public bool IsDealerWinner(Dealer a_dealer, Player a_player)
         {
             if (a_player.CalcScore() > maxScore)
