@@ -20,7 +20,6 @@ namespace BlackJack.controller
             }
 
             view.MenuValue input = a_view.GetInput();
-            // int input = a_view.GetInput();
 
             if (input == view.MenuValue.Start)
             {
