@@ -46,36 +46,15 @@ namespace BlackJack.model
             }
             return false;
         }
-        //Roy Created Stand()
         public bool Stand(Player a_player)
         {
-                ShowHand();
-
-                while (m_hitRule.DoHit(this))
-                {
-                    Hit(a_player);
-                }
             ShowHand();
+            while (m_hitRule.DoHit(this))
+            {
+                Hit(a_player);
+            }
             return true;
         }
-
-        public bool Stand()
-        {
-            if (m_deck != null)
-            {
-
-                ShowHand();
-                while (m_hitRule.DoHit(this))
-                {
-                    Card c = m_deck.GetCard();
-                    c.Show(true);
-                    DealCard(c);
-                    return true;
-                }
-            }
-            return false;
-        }
-
         public bool IsDealerWinner(Player a_player)
         {
             return m_winnerRule.IsDealerWinner(this, a_player);
