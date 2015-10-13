@@ -5,10 +5,18 @@ using System.Text;
 
 namespace BlackJack.view
 {
+    public enum MenuValue
+    {
+        None,
+        Start,
+        Hit,
+        Stand,
+        Quit
+    }
     interface IView
     {
+        MenuValue GetInput();
         void DisplayWelcomeMessage();
-        int GetInput();
         void DisplayCard(model.Card a_card);
         void DisplayPlayerHand(IEnumerable<model.Card> a_hand, int a_score);
         void DisplayDealerHand(IEnumerable<model.Card> a_hand, int a_score);
