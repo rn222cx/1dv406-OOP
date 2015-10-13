@@ -57,8 +57,8 @@ namespace BlackJack.model
         }
         public bool Stand()
         {
-            if (m_deck != null)
-            {
+            //if (m_deck != null)
+            //{
                 ShowHand();
 
                 while (m_hitRule.DoHit(this))
@@ -68,7 +68,7 @@ namespace BlackJack.model
                     DealCard(c);
                 }
                 
-            }
+           // }
             return true;
         }
         public bool IsDealerWinner(Player a_player)
