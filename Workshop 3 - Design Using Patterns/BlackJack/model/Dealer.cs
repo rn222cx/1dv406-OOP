@@ -63,6 +63,7 @@ namespace BlackJack.model
         {
             if (m_deck != null)
             {
+
                 ShowHand();
                 while (m_hitRule.DoHit(this))
                 {

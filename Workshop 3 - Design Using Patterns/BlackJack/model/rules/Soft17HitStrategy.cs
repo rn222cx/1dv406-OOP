@@ -14,24 +14,24 @@ namespace BlackJack.model.rules
 
         public bool DoHit(model.Player a_dealer)
         {
-            //Console.WriteLine((int)Card.Value.Ace);
             var hand = a_dealer.GetHand();
             int score = a_dealer.CalcScore();
 
-            // Loops through the dealers cards.
-            foreach (var card in hand)
+            // If the dealer has 17.
+            if (score == g_hitLimit)
             {
-                Console.Write(card.GetValue());
-                // If the dealer has 17.
-                if (score == g_hitLimit)
-                {
-                    // But in a comibination of Ace and 6.
+                // Loops through the dealers cards.
+                foreach (var card in hand)
+                {                                       
+                    // In a comibination of Ace and 6.
                     if (card.GetValue() == Card.Value.Ace && score - 11 == 6)
                     {
-                        // The dealer can get another card valued 10 but still have 17.
-                        score -= 10;
+                        // TODO: Ta bort.
+                        Console.WriteLine("SOFT17!!!");
+                        // The dealer does another hit.
+                        return true;
                     }
-                }
+                } 
             }
 
             return score < g_hitLimit;

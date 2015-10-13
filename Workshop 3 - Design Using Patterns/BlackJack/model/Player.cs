@@ -30,7 +30,6 @@ namespace BlackJack.model
             {
                 c.Show(true);
             }
-
         }
 
         public int CalcScore()

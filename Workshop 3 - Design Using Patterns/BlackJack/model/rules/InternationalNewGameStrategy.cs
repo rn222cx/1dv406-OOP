@@ -10,6 +10,14 @@ namespace BlackJack.model.rules
 
         public bool NewGame(Deck a_deck, Dealer a_dealer, Player a_player)
         {
+            /* Kan köras för att testa Soft17Strategy genom att ge rätt kort till dealern. Ändra Car.m_isHidden till false. Ta bort innan inlämning :) */ 
+            //Card card1 = new Card(Card.Color.Clubs, Card.Value.Three);
+            //Card card2 = new Card(Card.Color.Hearts, Card.Value.Three);
+            //Card card3 = new Card(Card.Color.Hearts, Card.Value.Ace);
+            //a_dealer.DealCard(card1);
+            //a_dealer.DealCard(card2);
+            //a_dealer.DealCard(card3);
+
             Card c;
 
             c = a_deck.GetCard();
