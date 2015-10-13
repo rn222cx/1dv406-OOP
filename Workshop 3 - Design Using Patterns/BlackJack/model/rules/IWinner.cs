@@ -7,7 +7,7 @@ namespace BlackJack.model.rules
 {
     interface IWinner
     {
-        int GetMaxScore();
+        int maxScore { get; }
         bool IsDealerWinner(Dealer a_dealer, Player a_player);
     }
 }

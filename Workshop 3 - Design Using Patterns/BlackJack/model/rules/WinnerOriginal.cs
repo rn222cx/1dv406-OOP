@@ -7,11 +7,9 @@ namespace BlackJack.model.rules
 {
     class WinnerOriginal : IWinner
     {
-        private const int maxScore = 21;
-
-        public int GetMaxScore()
+        public int maxScore
         {
-            return maxScore;
+            get { return 21; }
         }
         /// <summary>
         /// Returns true if the dealer wins. On equal score the dealer wins.

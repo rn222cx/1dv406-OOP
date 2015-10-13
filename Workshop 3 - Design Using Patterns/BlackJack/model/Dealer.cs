@@ -35,7 +35,7 @@ namespace BlackJack.model
 
         public bool Hit(Player a_player)
         {
-            if (m_deck != null && a_player.CalcScore() < m_winnerRule.GetMaxScore() && !IsGameOver())
+            if (m_deck != null && a_player.CalcScore() < m_winnerRule.maxScore && !IsGameOver())
             {
                 Card c;
                 c = m_deck.GetCard();
