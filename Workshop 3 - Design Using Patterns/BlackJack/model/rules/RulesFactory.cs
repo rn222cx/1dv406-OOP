@@ -20,7 +20,7 @@ namespace BlackJack.model.rules
 
         public IWinner GetWinnerRule()
         {
-            return new Winner();
+            return new WinnerOriginal();
         }
     }
 }

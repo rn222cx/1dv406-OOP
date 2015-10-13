@@ -81,7 +81,8 @@
     <Compile Include="model\rules\IWinner.cs" />
     <Compile Include="model\rules\RulesFactory.cs" />
     <Compile Include="model\rules\Soft17HitStrategy.cs" />
-    <Compile Include="model\rules\Winner.cs" />
+    <Compile Include="model\rules\WinnerOriginal.cs" />
+    <Compile Include="model\rules\WinnerProPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\IView.cs" />
