@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="4367e02e-3403-4d35-8f93-91c5a27a49f6"
   name="view" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -36,6 +36,13 @@
               LastKnownName="IView"
               LastKnownLocation="Package_0950.uml" />
           </interfaceRealization>
+          <dependency
+            Id="8f5a8799-f2e0-4d00-8298-f1de5c0825e4">
+            <enumerationMoniker
+              Id="8e5f3b97-3e0b-40a5-b533-81b105b3b146"
+              LastKnownName="MenuValue"
+              LastKnownLocation="Package_0950.uml" />
+          </dependency>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
@@ -54,8 +61,22 @@
               LastKnownName="IView"
               LastKnownLocation="Package_0950.uml" />
           </interfaceRealization>
+          <dependency
+            Id="52d3b1a2-e9de-4f79-a611-a32752be739a">
+            <enumerationMoniker
+              Id="8e5f3b97-3e0b-40a5-b533-81b105b3b146"
+              LastKnownName="MenuValue"
+              LastKnownLocation="Package_0950.uml" />
+          </dependency>
         </suppliersInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="8e5f3b97-3e0b-40a5-b533-81b105b3b146"
+        name="MenuValue"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

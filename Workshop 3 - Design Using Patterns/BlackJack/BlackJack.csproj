@@ -83,7 +83,7 @@
     <Compile Include="model\rules\Soft17HitStrategy.cs" />
     <Compile Include="model\rules\WinnerOriginal.cs" />
     <Compile Include="view\MenuValue.cs" />
-    <Compile Include="view\WinnerProPlayer.cs" />
+    <Compile Include="model\rules\WinnerProPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\IView.cs" />
@@ -106,6 +106,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeMap.dgml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
