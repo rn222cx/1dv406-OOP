@@ -19,7 +19,7 @@ namespace BlackJack.controller
         }
         public void HasNewCard()
         {
-            Play();
+            RenderPlayground();
             a_view.PauseGame();
         }
 
@@ -27,10 +27,7 @@ namespace BlackJack.controller
         {
             a_game.SubscribeToNewCard(this);
 
-            a_view.DisplayWelcomeMessage();
-
-            a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
-            a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
+            RenderPlayground();
 
             if (a_game.IsGameOver())
             {
@@ -56,6 +53,14 @@ namespace BlackJack.controller
             }
 
             return input != MenuValue.Quit;
+        }
+
+        private void RenderPlayground()
+        {
+            a_view.DisplayWelcomeMessage();
+
+            a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
+            a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
         }
     }
 }
