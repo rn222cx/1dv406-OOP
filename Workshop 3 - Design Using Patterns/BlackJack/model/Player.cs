@@ -15,7 +15,7 @@ namespace BlackJack.model
         }
         public void DealCard(Card a_card)
         {
-            Notify();
+            Notify(a_card);
             m_hand.Add(a_card);
         }
 
@@ -69,10 +69,9 @@ namespace BlackJack.model
             m_observers.Add(observer);
         }
 
-        public void Notify()
+        public void Notify(Card card)
         {
-            Console.WriteLine("NewCard");
-            m_observers.ForEach(x => x.HasNewCard());
+            m_observers.ForEach(x => x.HasNewCard(card));
         }
     }
 }

@@ -80,9 +80,10 @@ namespace BlackJack.view
             }
         }
 
-        public void HasNewCard()
+        public void HasNewCard(Card card)
         {
-            Thread.Sleep(500);
+            DisplayCard(card);
+            Thread.Sleep(1000);
         }
     }
 }

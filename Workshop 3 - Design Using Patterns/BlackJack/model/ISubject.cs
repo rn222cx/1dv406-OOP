@@ -9,6 +9,6 @@ namespace BlackJack.model
     {
             void SubscribeToNewCard(IBlackJackObserver observer);
             //void Unsubscribe(IBlackJackObserver observer);
-            void Notify();
+            void Notify(Card card);
     }
 }

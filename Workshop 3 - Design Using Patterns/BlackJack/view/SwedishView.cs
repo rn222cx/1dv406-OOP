@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -84,7 +85,7 @@ namespace BlackJack.view
             System.Console.WriteLine("");
         }
 
-        public void HasNewCard()
+        public void HasNewCard(Card card)
         {
             Thread.Sleep(500);
         }
