@@ -79,5 +79,10 @@ namespace BlackJack.view
                 System.Console.WriteLine("You Won!");
             }
         }
+
+        public void PauseGame()
+        {
+            Thread.Sleep(800);
+        }
     }
 }

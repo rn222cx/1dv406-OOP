@@ -20,13 +20,11 @@ namespace BlackJack.controller
         public void HasNewCard()
         {
             Play();
-            //Thread.Sleep(1000);
+            a_view.PauseGame();
         }
 
         public bool Play()
         {
-            MenuValue input = MenuValue.None;
-            
             a_game.SubscribeToNewCard(this);
 
             a_view.DisplayWelcomeMessage();
@@ -39,7 +37,7 @@ namespace BlackJack.controller
                 a_view.DisplayGameOver(a_game.IsDealerWinner());
             }
 
-            input = a_view.GetInput();
+            var input = a_view.GetInput();
 
             if (input == MenuValue.Start)
             {

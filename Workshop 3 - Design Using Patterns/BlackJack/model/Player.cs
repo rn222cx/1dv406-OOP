@@ -14,9 +14,9 @@ namespace BlackJack.model
             m_observers = new List<IBlackJackObserver>();
         }
         public void DealCard(Card a_card)
-        {
-            Notify(a_card);
+        {            
             m_hand.Add(a_card);
+            Notify(a_card);
         }
 
         public IEnumerable<Card> GetHand()
