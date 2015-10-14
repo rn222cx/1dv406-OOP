@@ -14,7 +14,6 @@ namespace BlackJack
             controller.PlayGame ctrl = new controller.PlayGame(game, view);
 
             while (ctrl.Play());
-            //ctrl.Play();
         }
     }
 }
