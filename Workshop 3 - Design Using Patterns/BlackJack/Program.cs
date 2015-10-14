@@ -13,6 +13,7 @@ namespace BlackJack
             model.Player player = new model.Player();
             model.Game game = new model.Game(dealer, player);
             view.IView view = new view.SimpleView(); // new view.SwedishView();
+            game.Subscribe(view);
             controller.PlayGame ctrl = new controller.PlayGame();
 
             while (ctrl.Play(game, view));
