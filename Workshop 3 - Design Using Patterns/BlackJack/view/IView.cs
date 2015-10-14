@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Text;
 namespace BlackJack.view
 {
 
-    interface IView
+    interface IView : IBlackJackObserver
     {
         MenuValue GetInput();
         void DisplayWelcomeMessage();
