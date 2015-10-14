@@ -20,7 +20,6 @@ namespace BlackJack.model.rules
             // If the dealer has 17.
             if (score == g_hitLimit)
             {
-                // Loops through the dealers cards.
                 foreach (var card in hand)
                 {                                       
                     // In a comibination of Ace and 6.
