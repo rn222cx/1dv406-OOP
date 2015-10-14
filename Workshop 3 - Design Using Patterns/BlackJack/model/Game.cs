@@ -9,16 +9,16 @@ namespace BlackJack.model
     {
         private model.Dealer m_dealer;
         private model.Player m_player;
-        List<BlackJackObserver> m_observers;
+        List<IBlackJackObserver> m_observers;
 
         public Game()
         {
             m_dealer = new Dealer(new rules.RulesFactory());
             m_player = new Player();
-            m_observers = new List<BlackJackObserver>();
+            m_observers = new List<IBlackJackObserver>();
         }
 
-        public void AddSubsciber(BlackJackObserver a_sub)
+        public void AddSubsciber(IBlackJackObserver a_sub)
         {
             m_observers.Add(a_sub);
         }
