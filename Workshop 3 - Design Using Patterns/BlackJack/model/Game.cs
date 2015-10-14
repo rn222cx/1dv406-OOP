@@ -11,10 +11,10 @@ namespace BlackJack.model
         private model.Player m_player;
         List<IBlackJackObserver> m_observers;
 
-        public Game()
+        public Game(Dealer dealer, Player player)
         {
-            m_dealer = new Dealer(new rules.RulesFactory());
-            m_player = new Player();
+            m_dealer = dealer;
+            m_player = player;
             m_observers = new List<IBlackJackObserver>();
         }
 
