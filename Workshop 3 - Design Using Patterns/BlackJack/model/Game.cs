@@ -5,17 +5,15 @@ using System.Text;
 
 namespace BlackJack.model
 {
-    class Game : ISubject
+    class Game
     {
         private model.Dealer m_dealer;
         private model.Player m_player;
-        List<IBlackJackObserver> m_observers;
 
-        public Game(Dealer dealer, Player player)
+        public Game()
         {
-            m_dealer = dealer;
-            m_player = player;
-            m_observers = new List<IBlackJackObserver>();
+            m_dealer = new model.Dealer(new model.rules.RulesFactory());
+            m_player = new model.Player();
         }
 
         public bool IsGameOver()
@@ -35,13 +33,11 @@ namespace BlackJack.model
 
         public bool Hit()
         {
-            Notify();
             return m_dealer.Hit(m_player);
         }
 
         public bool Stand()
         {
-            Notify();
             // TODO: Implement this according to Game_Stand.sequencediagram
             //return m_dealer.Stand(m_dealer);
             return m_dealer.Stand();
@@ -67,14 +63,10 @@ namespace BlackJack.model
             return m_player.CalcScore();
         }
 
-        public void Subscribe(IBlackJackObserver observer)
+        public void SubscribeToNewCard(IBlackJackObserver observer)
         {
-            m_observers.Add(observer);
-        }
-
-        public void Notify()
-        {
-            m_observers.ForEach(x => x.HasNewCard());
+            m_player.SubscribeToNewCard(observer);
+            m_dealer.SubscribeToNewCard(observer);
         }
     }
 }

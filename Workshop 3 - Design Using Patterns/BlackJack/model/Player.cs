@@ -5,12 +5,17 @@ using System.Text;
 
 namespace BlackJack.model
 {
-    class Player
+    class Player : ISubject
     {
         private List<Card> m_hand = new List<Card>();
-
+        List<IBlackJackObserver> m_observers;
+        public Player()
+        {
+            m_observers = new List<IBlackJackObserver>();
+        }
         public void DealCard(Card a_card)
         {
+            Notify();
             m_hand.Add(a_card);
         }
 
@@ -57,6 +62,16 @@ namespace BlackJack.model
             }
 
             return score;
+        }
+
+        public void SubscribeToNewCard(IBlackJackObserver observer)
+        {
+            m_observers.Add(observer);
+        }
+
+        public void Notify()
+        {
+            m_observers.ForEach(x => x.HasNewCard());
         }
     }
 }

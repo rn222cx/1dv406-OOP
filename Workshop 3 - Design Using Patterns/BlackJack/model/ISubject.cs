@@ -7,7 +7,7 @@ namespace BlackJack.model
 {
     interface ISubject
     {
-            void Subscribe(IBlackJackObserver observer);
+            void SubscribeToNewCard(IBlackJackObserver observer);
             //void Unsubscribe(IBlackJackObserver observer);
             void Notify();
     }
