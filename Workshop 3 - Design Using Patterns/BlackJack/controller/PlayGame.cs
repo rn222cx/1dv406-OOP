@@ -1,16 +1,36 @@
-﻿using System;
+﻿using BlackJack.model;
+using BlackJack.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BlackJack.controller
 {
-    class PlayGame
+    class PlayGame : IBlackJackObserver
     {
-        public bool Play(model.Game a_game, view.IView a_view)
+        Game a_game = new Game();
+        view.IView a_view;
+        public PlayGame(Game a_game, view.IView a_view)
         {
-            a_view.DisplayWelcomeMessage();
+            this.a_game = a_game;
+            this.a_view = a_view;
+        }
+        public void HasNewCard()
+        {
+            Play();
+            //Thread.Sleep(1000);
+        }
+
+        public bool Play()
+        {
+            MenuValue input = MenuValue.None;
             
+            a_game.SubscribeToNewCard(this);
+
+            a_view.DisplayWelcomeMessage();
+
             a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
             a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
 
@@ -19,22 +39,25 @@ namespace BlackJack.controller
                 a_view.DisplayGameOver(a_game.IsDealerWinner());
             }
 
-            view.MenuValue input = a_view.GetInput();
+            input = a_view.GetInput();
 
-            if (input == view.MenuValue.Start)
+            if (input == MenuValue.Start)
             {
                 a_game.NewGame();
+            input = MenuValue.None;
             }
-            else if (input == view.MenuValue.Hit)
+            else if (input == MenuValue.Hit)
             {
                 a_game.Hit();
+                input = MenuValue.None;
             }
-            else if (input == view.MenuValue.Stand)
+            else if (input == MenuValue.Stand)
             {
                 a_game.Stand();
+                input = MenuValue.None;
             }
 
-            return input != view.MenuValue.Quit;
+            return input != MenuValue.Quit;
         }
     }
 }

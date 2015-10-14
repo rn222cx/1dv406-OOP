@@ -66,12 +66,15 @@ namespace BlackJack.model
 
         public void SubscribeToNewCard(IBlackJackObserver observer)
         {
-            m_observers.Add(observer);
+            if (!m_observers.Contains(observer))
+            {
+                m_observers.Add(observer);
+            }
         }
 
         public void Notify(Card card)
         {
-            m_observers.ForEach(x => x.HasNewCard(card));
+            m_observers.ForEach(x => x.HasNewCard());
         }
     }
 }

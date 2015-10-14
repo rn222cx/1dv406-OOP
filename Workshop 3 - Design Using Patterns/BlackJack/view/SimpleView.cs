@@ -79,11 +79,5 @@ namespace BlackJack.view
                 System.Console.WriteLine("You Won!");
             }
         }
-
-        public void HasNewCard(Card card)
-        {
-            DisplayCard(card);
-            Thread.Sleep(1000);
-        }
     }
 }
