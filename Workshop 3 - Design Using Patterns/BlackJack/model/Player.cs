@@ -71,6 +71,7 @@ namespace BlackJack.model
 
         public void Notify()
         {
+            Console.WriteLine("NewCard");
             m_observers.ForEach(x => x.HasNewCard());
         }
     }
