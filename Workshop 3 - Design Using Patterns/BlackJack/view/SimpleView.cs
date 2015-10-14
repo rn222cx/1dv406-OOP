@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BlackJack.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace BlackJack.view
 {
-    class SimpleView : IView
+    class SimpleView : IView : IBlackJackObserver
     {
 
         public void DisplayWelcomeMessage()
@@ -77,6 +78,11 @@ namespace BlackJack.view
                 System.Console.WriteLine("You Won!");
             }
             
+        }
+
+        public void HasNewCard()
+        {
+            throw new NotImplementedException();
         }
     }
 }

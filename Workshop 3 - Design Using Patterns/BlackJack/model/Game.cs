@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BlackJack.model
 {
-    class Game
+    class Game : ISubject
     {
         private model.Dealer m_dealer;
         private model.Player m_player;
@@ -16,11 +16,6 @@ namespace BlackJack.model
             m_dealer = new Dealer(new rules.RulesFactory());
             m_player = new Player();
             m_observers = new List<IBlackJackObserver>();
-        }
-
-        public void AddSubsciber(IBlackJackObserver a_sub)
-        {
-            m_observers.Add(a_sub);
         }
 
         public bool IsGameOver()
@@ -68,6 +63,16 @@ namespace BlackJack.model
         public int GetPlayerScore()
         {
             return m_player.CalcScore();
+        }
+
+        public void Subscribe(IBlackJackObserver observer)
+        {
+            m_observers.Add(observer);
+        }
+
+        public void Notify()
+        {
+            m_observers.ForEach(x => x.HasNewCard());
         }
     }
 }
