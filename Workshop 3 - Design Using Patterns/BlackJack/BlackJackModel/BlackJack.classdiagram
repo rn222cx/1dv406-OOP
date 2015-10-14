@@ -444,6 +444,12 @@
           <packageHasNamedElement>
             <class Id="7a87146f-5a18-4aac-acf0-1737540224bb" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="08739ce8-677c-41a8-b0cf-e6796231e3a0" />
+              <suppliersInternal>
+                <interfaceRealization Id="3ee979de-3e65-4fbe-af6b-68727685aa17">
+                  <interfaceMoniker Id="e7c58359-7f84-431f-ae8a-b7e064ba10ce" LastKnownName="IBlackJackObserver" />
+                  <elementDefinition Id="4bfc22b4-7e97-4dda-a79f-e1da99cb0810" />
+                </interfaceRealization>
+              </suppliersInternal>
               <targetEnds>
                 <association Id="9b2ee47a-7e95-4105-8047-a7a25b616f03" isDerived="false" sourceEndRoleName="" targetEndRoleName="m_player" isLeaf="false" isAbstract="false">
                   <classMoniker Id="5008487d-acb2-4d99-b615-b610fd487a16" LastKnownName="Player" />
@@ -519,6 +525,11 @@
                 </association>
               </targetEnds>
             </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="e7c58359-7f84-431f-ae8a-b7e064ba10ce" name="IBlackJackObserver" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="3bc8efe0-f7b7-4d49-a698-1e863769685c" />
+            </Interface>
           </packageHasNamedElement>
         </packagedElements>
       </package>

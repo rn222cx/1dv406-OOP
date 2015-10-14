@@ -443,6 +443,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="4bfc22b4-7e97-4dda-a79f-e1da99cb0810">
+            <interfaceMoniker
+              Id="3bc8efe0-f7b7-4d49-a698-1e863769685c"
+              LastKnownName="IBlackJackObserver"
+              LastKnownLocation="Package1_0950.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="87296099-9a34-44e0-8455-4d19a7dd077d"
@@ -566,6 +575,13 @@
           </association>
         </targetEnds>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3bc8efe0-f7b7-4d49-a698-1e863769685c"
+        name="IBlackJackObserver"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
 </package>
