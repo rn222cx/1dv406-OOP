@@ -66,7 +66,6 @@ namespace BlackJack.model
         public void SubscribeToNewCard(IBlackJackObserver observer)
         {
             m_player.SubscribeToNewCard(observer);
-            m_dealer.SubscribeToNewCard(observer);
         }
     }
 }
