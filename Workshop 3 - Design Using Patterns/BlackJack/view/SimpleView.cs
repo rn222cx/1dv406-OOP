@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BlackJack.view
 {
-    class SimpleView : IView : IBlackJackObserver
+    class SimpleView : IView, IBlackJackObserver
     {
 
         public void DisplayWelcomeMessage()
