@@ -5,14 +5,7 @@ using System.Text;
 
 namespace BlackJack.view
 {
-    public enum MenuValue
-    {
-        None,
-        Start,
-        Hit,
-        Stand,
-        Quit
-    }
+
     interface IView
     {
         MenuValue GetInput();
