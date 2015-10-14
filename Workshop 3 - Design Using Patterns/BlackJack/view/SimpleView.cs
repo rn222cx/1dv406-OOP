@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BlackJack.view
 {
@@ -77,12 +78,11 @@ namespace BlackJack.view
             {
                 System.Console.WriteLine("You Won!");
             }
-            
         }
 
         public void HasNewCard()
         {
-            throw new NotImplementedException();
+            Thread.Sleep(500);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BlackJack.view
 {
@@ -85,7 +86,7 @@ namespace BlackJack.view
 
         public void HasNewCard()
         {
-            throw new NotImplementedException();
+            Thread.Sleep(500);
         }
     }
 }
