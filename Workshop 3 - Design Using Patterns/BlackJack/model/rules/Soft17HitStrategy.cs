@@ -25,8 +25,6 @@ namespace BlackJack.model.rules
                     // In a comibination of Ace and 6.
                     if (card.GetValue() == Card.Value.Ace && score - 11 == 6)
                     {
-                        // TODO: Ta bort.
-                        Console.WriteLine("SOFT17!!!");
                         // The dealer does another hit.
                         return true;
                     }

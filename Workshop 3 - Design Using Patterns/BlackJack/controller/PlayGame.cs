@@ -18,10 +18,9 @@ namespace BlackJack.controller
         }
         public void HasNewCard()
         {
-            RenderPlayground();
             a_view.PauseGame();
+            RenderPlayground();
         }
-
         public bool Play()
         {
             a_game.SubscribeToNewCard(this);
@@ -53,7 +52,6 @@ namespace BlackJack.controller
 
             return input != MenuValue.Quit;
         }
-
         private void RenderPlayground()
         {
             a_view.DisplayWelcomeMessage();

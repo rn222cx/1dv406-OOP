@@ -6,7 +6,6 @@ using System.Text;
 
 namespace BlackJack.view
 {
-
     interface IView
     {
         MenuValue GetInput();
