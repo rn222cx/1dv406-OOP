@@ -9,18 +9,29 @@ namespace BlackJack.model.rules
     {
         public IHitStrategy GetHitRule()
         {
-            //return new BasicHitStrategy();
-            return new Soft17HitStrategy();
+            var basicHitStrategy = false;
+            if (basicHitStrategy)
+                return new BasicHitStrategy();
+            else
+                return new Soft17HitStrategy();
         }
 
         public INewGameStrategy GetNewGameRule()
         {
-            return new InternationalNewGameStrategy();
+            var internationalNewGameStrategy = true;
+            if (internationalNewGameStrategy)
+                return new InternationalNewGameStrategy();
+            else
+                return new AmericanNewGameStrategy();
         }
 
         public IWinner GetWinnerRule()
         {
-            return new WinnerOriginal();
+            var winnerOriginal = true;
+            if (winnerOriginal)
+                return new WinnerOriginal();
+            else
+                return new WinnerProPlayer();
         }
     }
 }
