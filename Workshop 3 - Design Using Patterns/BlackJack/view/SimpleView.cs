@@ -1,5 +1,4 @@
-﻿using BlackJack.model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,15 +11,15 @@ namespace BlackJack.view
 
         public void DisplayWelcomeMessage()
         {
-            System.Console.Clear();
-            System.Console.WriteLine("Hello Black Jack World");
-            System.Console.WriteLine("Type 'p' to Play, 'h' to Hit, 's' to Stand or 'q' to Quit\n");
+            Console.Clear();
+            Console.WriteLine("Hello Black Jack World");
+            Console.WriteLine("Type 'p' to Play, 'h' to Hit, 's' to Stand or 'q' to Quit\n");
         }
 
         public MenuValue GetInput()
         {
-            //char c = System.Console.ReadKey().KeyChar;
-            int c = System.Console.In.Read();
+            //char c = Console.ReadKey().KeyChar;
+            int c = Console.In.Read();
             if (c == 'q')
             {
                 return MenuValue.Quit;
@@ -43,7 +42,7 @@ namespace BlackJack.view
 
         public void DisplayCard(model.Card a_card)
         {
-            System.Console.WriteLine("{0} of {1}", a_card.GetValue(), a_card.GetColor());
+            Console.WriteLine("{0} of {1}", a_card.GetValue(), a_card.GetColor());
         }
 
         public void DisplayPlayerHand(IEnumerable<model.Card> a_hand, int a_score)
@@ -58,13 +57,13 @@ namespace BlackJack.view
 
         private void DisplayHand(String a_name, IEnumerable<model.Card> a_hand, int a_score)
         {
-            System.Console.WriteLine("{0} Has: ", a_name);
+            Console.WriteLine("{0} Has: ", a_name);
             foreach (model.Card c in a_hand)
             {
                 DisplayCard(c);
             }
-            System.Console.WriteLine("Score: {0}", a_score);
-            System.Console.WriteLine("");
+            Console.WriteLine("Score: {0}", a_score);
+            Console.Write(Environment.NewLine);
         }
 
         public void DisplayGameOver(bool a_dealerIsWinner)
@@ -82,9 +81,7 @@ namespace BlackJack.view
 
         public void PauseGame()
         {
-            var origRow = Console.CursorTop;
-            var origCol = Console.CursorLeft;
-            Console.SetCursorPosition(origCol, origRow - 1);
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
             Console.Write(" \nDealing.");
             Thread.Sleep(400);
             Console.Write(".");
