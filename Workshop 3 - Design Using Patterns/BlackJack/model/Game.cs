@@ -38,8 +38,6 @@ namespace BlackJack.model
 
         public bool Stand()
         {
-            // TODO: Implement this according to Game_Stand.sequencediagram
-            //return m_dealer.Stand(m_dealer);
             return m_dealer.Stand();
         }
 
