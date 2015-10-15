@@ -37,7 +37,7 @@ namespace BlackJack.model
         {
             if (m_deck != null && a_player.CalcScore() < m_winnerRule.maxScore && !IsGameOver())
             {
-                DealCard(true, this);
+                DealCard(true, a_player);
                 return true;
             }
             return false;
