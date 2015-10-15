@@ -82,7 +82,11 @@ namespace BlackJack.view
 
         public void PauseGame()
         {
-            Console.WriteLine("Dealing...");
+            Console.Write("Dealing.");
+            Thread.Sleep(400);
+            Console.Write(".");
+            Thread.Sleep(400);
+            Console.Write(".");
             Thread.Sleep(1000);
         }
     }
