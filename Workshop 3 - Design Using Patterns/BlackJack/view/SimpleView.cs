@@ -85,8 +85,12 @@ namespace BlackJack.view
             var origRow = Console.CursorTop;
             var origCol = Console.CursorLeft;
             Console.SetCursorPosition(origCol, origRow - 1);
-            Console.WriteLine(" \nDealing...");
-            Thread.Sleep(1000);
+            Console.Write(" \nDealing.");
+            Thread.Sleep(400);
+            Console.Write(".");
+            Thread.Sleep(400);
+            Console.Write(".");
+            Thread.Sleep(400);
         }
     }
 }
