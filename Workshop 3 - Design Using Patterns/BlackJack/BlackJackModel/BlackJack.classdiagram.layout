@@ -62,7 +62,7 @@
         <interfaceShapeMoniker Id="6933bd82-3324-454e-9bc3-ec1086b73c61" />
       </nodes>
     </realizationConnector>
-    <dependencyConnector edgePoints="[(15.6274097759162 : 4.75); (15.6274097759162 : 3.7591668705662); (10.1630563396088 : 3.7591668705662); (10.1630563396088 : 3.375)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+    <dependencyConnector edgePoints="[(15.6274097759162 : 4.75); (15.6274097759162 : 4.05116431595459); (10.1630563396088 : 4.05116431595459); (10.1630563396088 : 3.375)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
       <dependencyMoniker Id="174386c7-3544-41a0-87b6-a7c4cb744811" />
       <relativeChildShapes />
       <nodes>
