@@ -87,7 +87,7 @@ namespace BlackJack.view
             Console.Write(".");
             Thread.Sleep(400);
             Console.Write(".");
-            Thread.Sleep(1000);
+            Thread.Sleep(400);
         }
     }
 }
