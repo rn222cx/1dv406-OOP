@@ -18,24 +18,6 @@ namespace BlackJack.model.rules
 
             a_dealer.DealCard(true, a_dealer);
 
-            //Card c;
-
-            //c = a_deck.GetCard();
-            //c.Show(true);
-            //a_player.DealCard(c);
-
-            //c = a_deck.GetCard();
-            //c.Show(true);
-            //a_dealer.DealCard(c);
-
-            //c = a_deck.GetCard();
-            //c.Show(true);
-            //a_player.DealCard(c);
-
-            //c = a_deck.GetCard();
-            //c.Show(false);
-            //a_dealer.DealCard(c);
-
             return true;
         }
     }
