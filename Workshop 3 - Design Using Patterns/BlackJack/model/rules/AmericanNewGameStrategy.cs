@@ -16,7 +16,7 @@ namespace BlackJack.model.rules
 
             a_dealer.DealCard(true, a_player);
 
-            a_dealer.DealCard(true, a_dealer);
+            a_dealer.DealCard(false, a_dealer);
 
             return true;
         }
