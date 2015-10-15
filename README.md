@@ -21,12 +21,12 @@
 * [Image on Sequence Diagram for add new member](Workshop 2 - Design/source_code/ModelingProject/Pictures/AddNewMemberSequenceDiagram.png)
 * [For run instructions see the wiki](https://github.com/rn222cx/1dv607-OOP/wiki)
 
-##Workshop 3 - Design Using Patterns
-
 ## Contributors for workshop 3
 * Oskar Klintrot
 * Mikael Eriksson
 * Roy Nilsson
+
+##Workshop 3 - Design Using Patterns
 
 * [Image on class diagram](Workshop 3 - Design Using Patterns/BlackJack/BlackJackModel/Pics/DesignModel.png)
 * [For run instructions see the wiki](https://github.com/rn222cx/1dv607-OOP/wiki)
