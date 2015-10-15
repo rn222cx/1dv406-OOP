@@ -19,6 +19,58 @@
               LastKnownLocation="Package1_0950.uml" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="1f5d07ff-f613-4501-95e8-5fa9ae73fd8a"
+            isDerived="false"
+            sourceEndRoleName=" "
+            targetEndRoleName="MenuValue"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="8e5f3b97-3e0b-40a5-b533-81b105b3b146"
+              LastKnownName="MenuValue"
+              LastKnownLocation="Package_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eb3d973b-5a49-44a0-9138-a353a3609544"
+                  name=" "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c2ce05bc-e00e-46c3-93c3-8463b7bb50e6"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7d47f1f6-3654-48b8-82d2-e6ba7d179762"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="21921a73-efbc-4ad2-afea-ef1261790ebf"
+                  name="MenuValue"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -36,13 +88,6 @@
               LastKnownName="IView"
               LastKnownLocation="Package_0950.uml" />
           </interfaceRealization>
-          <dependency
-            Id="8f5a8799-f2e0-4d00-8298-f1de5c0825e4">
-            <enumerationMoniker
-              Id="8e5f3b97-3e0b-40a5-b533-81b105b3b146"
-              LastKnownName="MenuValue"
-              LastKnownLocation="Package_0950.uml" />
-          </dependency>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
@@ -61,13 +106,6 @@
               LastKnownName="IView"
               LastKnownLocation="Package_0950.uml" />
           </interfaceRealization>
-          <dependency
-            Id="52d3b1a2-e9de-4f79-a611-a32752be739a">
-            <enumerationMoniker
-              Id="8e5f3b97-3e0b-40a5-b533-81b105b3b146"
-              LastKnownName="MenuValue"
-              LastKnownLocation="Package_0950.uml" />
-          </dependency>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>

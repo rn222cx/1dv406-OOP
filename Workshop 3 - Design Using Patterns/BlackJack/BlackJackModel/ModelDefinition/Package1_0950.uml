@@ -370,6 +370,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="29619f60-4a94-4f60-a808-0ecb9ee77bba">
+            <interfaceMoniker
+              Id="6429aa54-8ecc-4c33-91d7-ac372b422a4b"
+              LastKnownName="ISubject"
+              LastKnownLocation="Package1_0950.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="4e104d3a-3dd0-4e57-b8cb-0ec9d65fa0ab"
@@ -433,6 +442,67 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="8ff9c657-f4b1-4a63-8104-b91b518257be"
+            isDerived="false"
+            sourceEndRoleName=" "
+            targetEndRoleName="IBlackJackObserver"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="5cda25b0-901e-4258-a3ea-e7d9aeb7ae2e"
+              LastKnownName="IBlackJackObserver"
+              LastKnownLocation="Package1_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1c4f6cfa-fd83-4d0a-9e84-81f5c814cb47"
+                  name=" "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ee5e9823-58d6-4338-adf2-330fa0b7c20a"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d1a5a3a5-2921-43c6-b9ad-11384fbe69a8"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="89b2bcaf-1053-4d28-b695-a5ae3d10f17c"
+                  name="IBlackJackObserver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="02cec24a-344c-48aa-b633-adf207f4ded1"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="70273521-3a98-433e-b504-d302c7cc701d"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -451,6 +521,13 @@
               LastKnownName="IBlackJackObserver"
               LastKnownLocation="Package1_0950.uml" />
           </interfaceRealization>
+          <dependency
+            Id="f45fa9f2-94c8-40fa-b0fb-09c7ae884749">
+            <interfaceMoniker
+              Id="5cda25b0-901e-4258-a3ea-e7d9aeb7ae2e"
+              LastKnownName="IBlackJackObserver"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
         </suppliersInternal>
         <targetEnds>
           <association
@@ -582,6 +659,30 @@
         name="IBlackJackObserver"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5cda25b0-901e-4258-a3ea-e7d9aeb7ae2e"
+        name="IBlackJackObserver"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6429aa54-8ecc-4c33-91d7-ac372b422a4b"
+        name="ISubject"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="4aa2d163-3df7-46e1-b157-df10090a8352">
+            <interfaceMoniker
+              Id="5cda25b0-901e-4258-a3ea-e7d9aeb7ae2e"
+              LastKnownName="IBlackJackObserver"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
+        </suppliersInternal>
+      </Interface>
     </packageHasNamedElement>
   </packagedElements>
 </package>

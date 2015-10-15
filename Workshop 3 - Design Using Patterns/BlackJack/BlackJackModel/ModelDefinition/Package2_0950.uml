@@ -88,17 +88,17 @@
               LastKnownLocation="Package2_0950.uml" />
           </dependency>
           <dependency
-            Id="b84f68a1-bf94-4f25-968c-950ccefeeca8">
-            <classMoniker
-              Id="7f7945c2-00d1-4ff2-9261-fdd4e8156c06"
-              LastKnownName="BasicHitStrategy"
-              LastKnownLocation="Package2_0950.uml" />
-          </dependency>
-          <dependency
             Id="c951d21e-c635-4739-962e-02a1ab42268c">
             <classMoniker
               Id="801a4f94-8cbe-4c92-ad8b-bbcd78206fd3"
               LastKnownName="WinnerOriginal"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="4ca8cbd0-6fe5-4984-881c-a73277b0c95a">
+            <classMoniker
+              Id="28a5749b-7b5c-434a-b3e1-055fff0c95b2"
+              LastKnownName="Soft17HitStrategy"
               LastKnownLocation="Package2_0950.uml" />
           </dependency>
         </suppliersInternal>
