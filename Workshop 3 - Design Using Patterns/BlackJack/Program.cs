@@ -10,7 +10,12 @@ namespace BlackJack
         static void Main(string[] args)
         {
             model.Game game = new model.Game();
-            view.IView view = new view.SimpleView(); // new view.SwedishView();
+            var swedishView = false;
+            view.IView view;
+            if (swedishView)
+                view = new view.SwedishView();
+            else
+                view = new view.SimpleView();
             controller.PlayGame ctrl = new controller.PlayGame(game, view);
 
             while (ctrl.Play());
