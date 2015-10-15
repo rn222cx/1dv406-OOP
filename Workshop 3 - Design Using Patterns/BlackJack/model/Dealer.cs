@@ -28,7 +28,7 @@ namespace BlackJack.model
                 m_deck = new Deck();
                 ClearHand();
                 a_player.ClearHand();
-                return m_newGameRule.NewGame(m_deck, this, a_player);   
+                return m_newGameRule.NewGame(this, a_player);   
             }
             return false;
         }
@@ -57,14 +57,19 @@ namespace BlackJack.model
         }
         public bool Stand()
         {
-            ShowHand();
+            //if (m_deck != null)
+            //{
+                ShowHand();
 
-            while (m_hitRule.DoHit(this))
-            {
-                Card c = m_deck.GetCard();
-                c.Show(true);
-                DealCard(c);
+                while (m_hitRule.DoHit(this))
+                {
+                    //Card c = m_deck.GetCard();
+                    //c.Show(true);
+                    //DealCard(c);
+                DealCard(true, this);
             }
+                
+           // }
             return true;
         }
         public bool IsDealerWinner(Player a_player)
@@ -79,6 +84,14 @@ namespace BlackJack.model
                 return true;
             }
             return false;
+        }
+
+        public void DealCard(bool show, Player a_player)
+        {
+            Card c;
+            c = m_deck.GetCard();
+            c.Show(show);
+            a_player.DealCard(c);
         }
     }
 }
