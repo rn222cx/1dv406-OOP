@@ -217,6 +217,18 @@
                         <classMoniker Id="d7a23d63-f227-482d-a66f-f06339fd93f6" LastKnownName="Soft17HitStrategy" />
                         <elementDefinition Id="4ca8cbd0-6fe5-4984-881c-a73277b0c95a" />
                       </dependency>
+                      <dependency Id="fdaa44be-da6b-4006-aaf8-f666e30e00ef">
+                        <classMoniker Id="66dbb5c1-8fee-4479-bae9-38c874f43ffe" LastKnownName="BasicHitStrategy" />
+                        <elementDefinition Id="523fb713-2c9d-42ad-b9d4-7da3c93831a8" />
+                      </dependency>
+                      <dependency Id="219a8517-048a-4c8a-9334-ab353406d83f">
+                        <classMoniker Id="8110c67e-5e31-425c-93d5-db6f4c35fbd7" LastKnownName="AmericanNewGameStrategy" />
+                        <elementDefinition Id="28974268-b87a-4671-9d33-d9bd3d8d1eba" />
+                      </dependency>
+                      <dependency Id="213ef261-bfa8-41c9-86d3-ba36e5c63746">
+                        <classMoniker Id="9dd27262-c7d7-4244-9f43-c9cfff8a8ef3" LastKnownName="WinnerProPlayer" />
+                        <elementDefinition Id="96a6b399-40df-49f1-b724-763102cf971e" />
+                      </dependency>
                     </suppliersInternal>
                   </class>
                 </packageHasNamedElement>

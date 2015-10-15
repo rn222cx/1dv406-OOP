@@ -101,6 +101,27 @@
               LastKnownName="Soft17HitStrategy"
               LastKnownLocation="Package2_0950.uml" />
           </dependency>
+          <dependency
+            Id="523fb713-2c9d-42ad-b9d4-7da3c93831a8">
+            <classMoniker
+              Id="7f7945c2-00d1-4ff2-9261-fdd4e8156c06"
+              LastKnownName="BasicHitStrategy"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="28974268-b87a-4671-9d33-d9bd3d8d1eba">
+            <classMoniker
+              Id="626e626d-f1c8-4379-8b67-f1bfcca61c56"
+              LastKnownName="AmericanNewGameStrategy"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="96a6b399-40df-49f1-b724-763102cf971e">
+            <classMoniker
+              Id="90cba5e6-77d6-4f6b-b215-c9e26cdcc894"
+              LastKnownName="WinnerProPlayer"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
