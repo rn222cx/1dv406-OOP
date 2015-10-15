@@ -30,5 +30,5 @@
 
 * [Image on class diagram](Workshop 3 - Design Using Patterns/BlackJack/BlackJackModel/Pics/DesignModel.png)
 * [For run instructions see the wiki](https://github.com/rn222cx/1dv607-OOP/wiki)
-
+* [For presentation se the wiki](https://github.com/rn222cx/1dv607-OOP/wiki/WS3-Presentation)
 
