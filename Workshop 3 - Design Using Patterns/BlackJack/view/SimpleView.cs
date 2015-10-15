@@ -1,5 +1,4 @@
-﻿using BlackJack.model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,7 +63,7 @@ namespace BlackJack.view
                 DisplayCard(c);
             }
             System.Console.WriteLine("Score: {0}", a_score);
-            System.Console.WriteLine("");
+            System.Console.WriteLine(Environment.NewLine);
         }
 
         public void DisplayGameOver(bool a_dealerIsWinner)
@@ -83,6 +82,7 @@ namespace BlackJack.view
         public void PauseGame()
         {
             ConsoleSpiner spin = new ConsoleSpiner();
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
             Console.Write("Dealing....");
             int x = 0;
             while (x < 10)
