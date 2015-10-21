@@ -54,9 +54,9 @@ namespace Workshop_2.Controller
         {
             if(MemberDAL.getMembers().Count != 0)
             {
-                int memberID = MemberView.getMemberID();
-                MemberView.renderMemberByID(memberID);
-                BoatView.renderShortInformationAboutBoatsByID(memberID);
+                Member member = MemberView.getMemberByID();
+                MemberView.renderMemberByID(member);
+                BoatView.renderShortInformationAboutBoatsByMember(member);
             }
             else
             {
@@ -80,11 +80,11 @@ namespace Workshop_2.Controller
         private void doAddBoat()
         {
             BoatView.addBoat();
-            var memberID = MemberView.getMemberID();
-            MemberView.renderMemberByID(memberID);
-            BoatView.renderShortInformationAboutBoatsByID(memberID);
+            var member = MemberView.getMemberByID();
+            MemberView.renderMemberByID(member);
+            BoatView.renderShortInformationAboutBoatsByMember(member);
             var newBoat = BoatView.getNewBoat();
-            if (BoatDAL.add(memberID, newBoat))
+            if (BoatDAL.add(member, newBoat))
             {
                 BoatView.renderAddBoatSuccess();
             }
@@ -95,10 +95,10 @@ namespace Workshop_2.Controller
         }
         private void doEditMember()
         {
-            int memberID = MemberView.getMemberID();
-            MemberView.renderMemberByID(memberID);
-            var member = MemberView.getMemberInfo(memberID);
-            if (MemberDAL.saveMember(member))
+            Member member = MemberView.getMemberByID();
+            MemberView.renderMemberByID(member);
+            var newMember = MemberView.getMemberInfo(member.MemberID);
+            if (MemberDAL.saveMember(newMember))
             {
                 MemberView.renderEditMemberSuccess();
             }
@@ -109,19 +109,19 @@ namespace Workshop_2.Controller
         }
         private void doEditBoat()
         {
-            int memberID = MemberView.getMemberID();
+            var member = MemberView.getMemberByID();
             var boats = new List<Boat>();
 
-            MemberView.renderMemberByID(memberID);
+            MemberView.renderMemberByID(member);
 
-            boats = BoatView.getBoatByID(memberID);
+            boats = BoatView.getBoatsByMember(member);
             int chooseBoat = BoatView.getBoatToEdit(boats);
 
             if (chooseBoat == -1)
             {
                 // Do nothing, -1 indicates that there is no boats
             }
-            else if (BoatDAL.updateBoat(memberID, chooseBoat, BoatView.getNewBoat()))
+            else if (BoatDAL.updateBoat(member, chooseBoat, BoatView.getNewBoat()))
             {
                 BoatView.renderEditBoatSuccess();
             }
@@ -132,9 +132,9 @@ namespace Workshop_2.Controller
         }
         private void doRemoveMember()
         {
-            int memberID = MemberView.getMemberID();
-            MemberView.renderMemberByID(memberID);
-            if (MemberDAL.removeMember(memberID))
+            var member = MemberView.getMemberByID();
+            MemberView.renderMemberByID(member);
+            if (MemberDAL.removeMember(member.MemberID))
             {
                 MemberView.renderRemoveMemberSuccess();
             }
@@ -145,19 +145,19 @@ namespace Workshop_2.Controller
         }
         private void doRemoveBoat()
         {
-            int memberID = MemberView.getMemberID();
+            var member = MemberView.getMemberByID();
             var boats = new List<Boat>();
 
-            MemberView.renderMemberByID(memberID);
+            MemberView.renderMemberByID(member);
 
-            boats = BoatView.getBoatByID(memberID);
+            boats = BoatView.getBoatsByMember(member);
             int chooseBoat = BoatView.getBoatToRemove(boats);
 
             if (chooseBoat == -1)
             {
                 // Do nothing, -1 indicates that there is no boats
             }
-            else if (BoatDAL.removeBoat(memberID, chooseBoat))
+            else if (BoatDAL.removeBoat(member, chooseBoat))
             {
                 BoatView.renderRemoveBoatSuccess();
             }
@@ -173,7 +173,7 @@ namespace Workshop_2.Controller
 
             foreach (var member in members)
             {
-                var numberOfBoats = BoatDAL.getBoatsByMemberID(member.MemberID).Count;
+                var numberOfBoats = member.getBoats().Count;
                 AppView.renderCompactListElement(member, numberOfBoats);
             }
 
@@ -187,7 +187,7 @@ namespace Workshop_2.Controller
             foreach (var member in members)
             {
                 AppView.renderVerboseListElement(member);
-                BoatView.renderLongInformationAboutBoatsByID(member.MemberID);
+                BoatView.renderLongInformationAboutBoatsByMember(member);
                 AppView.renderDivider();
             }
 

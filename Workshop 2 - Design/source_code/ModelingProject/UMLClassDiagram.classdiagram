@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="47764a98-5b2c-4b82-b003-41643ced63a2" name="UMLClassDiagram" linkedPackageId="8f14474a-1b51-409e-9fc1-d8f359b3ec0a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="47764a98-5b2c-4b82-b003-41643ced63a2" name="UMLClassDiagram" linkedPackageId="8f14474a-1b51-409e-9fc1-d8f359b3ec0a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="c9925252-7e47-48c7-aabf-5d20df4bb54d" name="Controller" visibility="Private">
@@ -1511,6 +1511,34 @@
                 </stereotypeInstance>
               </appliedStereotypesInternal>
               <elementDefinition Id="512efc7e-d326-4b66-95f0-6920e433c8bc" />
+              <targetEnds>
+                <association Id="b4ed38c5-a209-4cba-8db6-5826ab20f9f0" isDerived="false" sourceEndRoleName=" " targetEndRoleName="BoatDAL" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="5a73306c-7c0b-4063-9599-23df07468eaa" LastKnownName="BoatDAL" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c8a07dc2-190a-4a07-ac38-be8911d80c11" name=" " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="91a41c53-c2b3-41bb-bb60-4978569ba305" name="Lower">
+                            <elementDefinition Id="7a3ac3d2-7a8f-4329-9183-8ad466206447" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="39f540e6-70c5-43ec-b5c5-f08710250079" name="Upper">
+                            <elementDefinition Id="da36c304-764d-4745-864b-8738313cc5ea" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="faa5c941-9c85-4f5d-a4a5-6e7b593d5ec3" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="171c61e4-f9f2-4118-832c-c17775d0f02f" name="BoatDAL" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="3af6e4b5-9e67-4fc6-b450-409fc29b9dc9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="0de9acca-58a6-420d-9639-7749ff5279fa" />
+                </association>
+              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="96974869-6e84-4d93-8d09-90f0e6c5fd66" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <referencesInternal>
@@ -1690,6 +1718,12 @@
                   <elementDefinition Id="e39fded7-65a8-413a-af60-47602b490aec" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="4ac6a524-ea5b-4e3f-b8ea-811a3a0a4c24" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="74eecffd-1ac1-4117-9b7f-354100af5b91" name="BoatDAL" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="253738c6-31bb-4dc5-be0c-504b59bb7c8c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="65f67588-9edd-418a-95f8-6e9f205c7b22" LastKnownName="BoatDAL" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -3966,6 +4000,10 @@
                 <dependency Id="8b19ea91-0b25-42c9-b3e6-aa17c534297d">
                   <classMoniker Id="e5f0a2cc-578d-4193-82f3-4b6572d73c60" LastKnownName="Boat" />
                   <elementDefinition Id="a8cc7482-aada-403d-892c-1ab9e1e8c136" />
+                </dependency>
+                <dependency Id="8a4ae758-0b99-4c93-a832-debc8a62878f">
+                  <classMoniker Id="17a16743-2976-4b63-9501-e2c822298ab3" LastKnownName="Member" />
+                  <elementDefinition Id="d55f7b58-4a83-4e72-9daf-cc35be1fb768" />
                 </dependency>
               </suppliersInternal>
               <targetEnds>

@@ -7,7 +7,7 @@ namespace Workshop_2.Model
         public int MemberID { get; set; }
         public string Name { get; set; }
         public string SocialSecurityNumber { get; set; }
-        private List<Boat> membersBoats = new List<Boat>();
+        private BoatDAL BoatDAL;
 
         public Member(string Name, string SocialSecurityNumber)
             : this(Name, SocialSecurityNumber, 0)
@@ -20,21 +20,12 @@ namespace Workshop_2.Model
             this.Name = Name;
             this.SocialSecurityNumber = SocialSecurityNumber;
             this.MemberID = MemberID;
+            BoatDAL = new BoatDAL();
         }
         
-        /// <summary>
-        /// Add boat to members list of boats.
-        /// </summary>
-        /// <param name="boat"></param>
-        public void addBoat(Boat boat)
-        {
-            membersBoats.Add(boat);
-        }
-        
-        // Get the members boats.
         public List<Boat> getBoats()
         {
-            return membersBoats;
+            return BoatDAL.getBoatsByMember(this);
         }
     }
 }

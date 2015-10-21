@@ -18,7 +18,7 @@ namespace Workshop_2.View
         }
         #endregion
         #region Get
-        public int getMemberID()
+        public Member getMemberByID()
         {
             Console.Write(AppStrings.getMemberId);
             while (true)
@@ -28,7 +28,7 @@ namespace Workshop_2.View
                 {
                     if (memberDAL.validateMemberID(ID))
                     {
-                        return ID;
+                        return memberDAL.getMemberByID(ID);
                     }
                     else
                     {
@@ -51,9 +51,8 @@ namespace Workshop_2.View
         }
         #endregion
         #region Render
-        public void renderMemberByID(int ID)
+        public void renderMemberByID(Member member)
         {
-            var member = memberDAL.getMemberByID(ID);
             Console.WriteLine(AppStrings.renderMembersName, member.Name);
             Console.WriteLine(AppStrings.renderMembersSSN, member.SocialSecurityNumber);
         }

@@ -68,9 +68,9 @@ namespace Workshop_2.View
                     Console.Write(AppStrings.failWrongLength);
             }
         }
-        public List<Boat> getBoatByID(int memberID)
+        public List<Boat> getBoatsByMember(Member member)
         {
-            var boats = boatDAL.getBoatsByMemberID(memberID);
+            var boats = member.getBoats();
             if (boats.Count == 0)
             {
                 Console.WriteLine(AppStrings.memberHasNoBoat);
@@ -128,18 +128,18 @@ namespace Workshop_2.View
         }
         #endregion
         #region Render
-        public void renderShortInformationAboutBoatsByID(int ID)
+        public void renderShortInformationAboutBoatsByMember(Member member)
         {
-            var boats = boatDAL.getBoatsByMemberID(ID);
+            var boats = member.getBoats();
             Console.WriteLine(AppStrings.renderMembersNumberOfBoats, boats.Count);
             foreach (Boat boat in boats)
             {
                 Console.WriteLine(AppStrings.renderBoat, boat.Type, boat.Length);
             }
         }
-        public void renderLongInformationAboutBoatsByID(int ID)
+        public void renderLongInformationAboutBoatsByMember(Member member)
         {
-            var boats = boatDAL.getBoatsByMemberID(ID);
+            var boats = member.getBoats();
             if (boats.Count == 0)
             {
                 Console.WriteLine(AppStrings.memberHasNoBoat);

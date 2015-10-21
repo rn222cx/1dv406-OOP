@@ -7,14 +7,14 @@ namespace Workshop_2.Model
 {
     class BoatDAL
     {
-        public bool add(int id, Boat boat)
+        public bool add(Member member, Boat boat)
         {
             try
             {
                 XDocument xElement = XDocument.Load(XMLFileInfo.Path);
 
                 XElement particularMember = xElement.Element(XMLFileInfo.Members).Elements(XMLFileInfo.Member)
-                                    .Where(member => member.Element(XMLFileInfo.ID).Value == id.ToString())
+                                    .Where(a => a.Element(XMLFileInfo.ID).Value == member.MemberID.ToString())
                                     .Last();
                 if (particularMember != null)
                     particularMember.Add(createBoat(boat));
@@ -29,14 +29,14 @@ namespace Workshop_2.Model
 
         }
 
-        public bool updateBoat(int memberID, int boatsToBeSkipped, Boat boatToAdd)
+        public bool updateBoat(Member member, int boatsToBeSkipped, Boat boatToAdd)
         {
             try
             {
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
                 XElement memberToUpdate = (from Member in xElement.Elements(XMLFileInfo.Member)
-                                               where (string)Member.Element(XMLFileInfo.ID) == memberID.ToString()
+                                               where (string)Member.Element(XMLFileInfo.ID) == member.MemberID.ToString()
                                                select Member).First();
 
                 XElement boat = memberToUpdate.Elements(XMLFileInfo.Boat)
@@ -56,19 +56,19 @@ namespace Workshop_2.Model
             }
         }
 
-        public List<Boat> getBoatsByMemberID(int memberID)
+        public List<Boat> getBoatsByMember(Member member)
         {
             List<Boat> boats = new List<Boat>();
 
             XElement xElement = XElement.Load(XMLFileInfo.Path);
 
             var memberInfo = from Member in xElement.Elements(XMLFileInfo.Member)
-                             where (string)Member.Element(XMLFileInfo.ID) == memberID.ToString()
+                             where (string)Member.Element(XMLFileInfo.ID) == member.MemberID.ToString()
                              select Member;
 
-            XElement member = memberInfo.First();
+            XElement memberToGetBoatsFrom = memberInfo.First();
             
-            foreach (XElement boat in member.Elements(XMLFileInfo.Boat))
+            foreach (XElement boat in memberToGetBoatsFrom.Elements(XMLFileInfo.Boat))
             {
                 BoatType type = (BoatType)Enum.Parse(typeof(BoatType), boat.Attribute(XMLFileInfo.Type).Value);
                 var boatToBeAdded = new Boat(type, int.Parse(boat.Value));
@@ -80,14 +80,14 @@ namespace Workshop_2.Model
             return boats;
         }
 
-        public bool removeBoat(int memberID, int boat)
+        public bool removeBoat(Member member, int boat)
         {
             try
             {
                 XElement xElement = XElement.Load(XMLFileInfo.Path);
 
                 xElement.Descendants(XMLFileInfo.Member)
-                    .Where(a => a.Element(XMLFileInfo.ID).Value == memberID.ToString())
+                    .Where(a => a.Element(XMLFileInfo.ID).Value == member.MemberID.ToString())
                     .SelectMany(a => a.Elements(XMLFileInfo.Boat))
                     .Skip(boat).Take(1)
                     .Remove();
