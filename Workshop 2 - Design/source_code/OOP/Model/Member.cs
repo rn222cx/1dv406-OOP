@@ -30,9 +30,14 @@ namespace Workshop_2.Model
         {
             membersBoats.Add(boat);
         }
+
+        public void removeBoat(Boat boat)
+        {
+            membersBoats.Remove(boat);
+        }
         
         // Get the members boats.
-        public List<Boat> getBoats()
+        public IEnumerable<Boat> getBoats()
         {
             return membersBoats;
         }
