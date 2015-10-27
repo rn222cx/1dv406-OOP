@@ -111,6 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CodeMap.dgml" />
+    <None Include="Workshop3-PeerReviewDanielNilsson.pdf" />
+    <None Include="Workshop3-PeerreviewDanielVedin.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BlackJack.exe" />
